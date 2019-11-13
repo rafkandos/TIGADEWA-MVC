@@ -113,7 +113,8 @@
         </div>
         </div>
 
-        <?php
+            <div class="container mt-3">
+                <?php
                             $notifikasi = $this->session->flashdata('notif_gagal');
                             if ($notifikasi != null) {
                                 echo '
@@ -133,6 +134,7 @@
                                 ';
                             }
                         ?>
+            </div>
 
         <div class="site-section">
         <div class="container">
@@ -564,7 +566,7 @@
                         <div class="col-md-6">
                             <label class="font-weight-bold" for="country">Region</label>
                             <!-- <input type="text" id="country" class="form-control" name="country" required="true"> -->
-                            <select onchange="selRegion()" class="custom-select form-control" name="country" id="country" required>
+                            <select onchange="selRegion()" class="custom-select form-control" name="region" id="region" required>
                                 <option value="Indonesia">Indonesia</option>
                                 <option value="International">International</option>
                             </select>
@@ -595,7 +597,7 @@
                                 
                                 
                             </select> -->
-                            <input type="text" id="province" class="form-control" name="province">
+                            <input type="text" id="country" class="form-control" name="country">
                         </div>
                         <div class="col-md-6" style="display: none" id="int2">
                             <label class="font-weight-bold" for="city">City</label>
@@ -603,7 +605,7 @@
                                 
                                 
                             </select> -->
-                            <input type="text" id="city" class="form-control" name="city">
+                            <input type="text" id="_city" class="form-control" name="_city">
                         </div>
                     </div>
 
@@ -779,13 +781,13 @@
         });
 
         function selRegion() {
-            if (document.getElementById("country").value === "Indonesia") {
+            if (document.getElementById("region").value === "Indonesia") {
                 document.getElementById("idn1").style.display = "block";
                 document.getElementById("idn2").style.display = "block";
                 document.getElementById("int1").style.display = "none";
                 document.getElementById("int2").style.display = "none";
             }
-            if (document.getElementById("country").value === "International") {
+            if (document.getElementById("region").value === "International") {
                 document.getElementById("idn1").style.display = "none";
                 document.getElementById("idn2").style.display = "none";
                 document.getElementById("int1").style.display = "block";
