@@ -1,0 +1,10 @@
+<div class="text-center mt-3">
+          <!-- <a href="regist.html" class="btn btn-orange" style="width: 500px;">Get Packages Now</a> -->
+          <button class="btn btn-orange" style="width: 500px;" onclick="funcHidden()">Get Packages Now</button>
+        </div>
+
+1. Home, Trip, Gallery, About, Shop
+2. Index => semeru mountain ==> popular trip
+2. Index => our produucts di hapus
+3. Trip => open, private trip (dropdown)
+4. 

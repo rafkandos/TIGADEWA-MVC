@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>halooo</title>
+</head>
+<body>
+	<a href="#eng" data-reload>engilish</a>
+	<a href="#id" data-reload>Indo</a>
+
+	<p id="hi">Welcome</p>
+
+	<script>
+		var	dataReload = document.querySelectorAll("[data-reload]");
+
+		var language = {
+			eng: {
+				hasu: "Welcome"
+			},
+			id: {
+				hasu: "Keset"
+			}
+		};
+
+		if (window.location.hash) {
+			if (window.location.hash === "#id") {
+				hi.textContent = language.id.hasu;
+			};
+		};
+
+		for (i = 0; i <= 100; i++) {
+			dataReload[i].onclick() = function() {
+				location.reload(true);
+			};
+		};
+	</script>
+</body>
+</html>
