@@ -144,10 +144,17 @@
                     <div class="text-white text-center">
                     <h1 class="pt-2">SCHEDULE</h1>
                         <?php
-                            foreach ($schedule as $s) {
-                                echo '
-                                    <h5 class="pt-2 pb-2">'.$s->scheduleDate.'</h5>            
-                                ';
+                            foreach ($sch as $s) {
+                                if ($s->slot != 0) {
+                                    echo '
+                                        <h5 class="pt-2 pb-2">'.$s->scheduleDate.'</h5>            
+                                    ';
+                                } else {
+                                    echo '
+                                        <h5 class="pt-2 pb-2">'.$s->scheduleDate.' (closed)</h5>            
+                                    ';
+                                }
+                                
                             }
                         ?>
                         <!-- <h5 class="pt-2">#29 (09 - 12 April 2020)</h5>
@@ -742,7 +749,7 @@
                 <p>
                 Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script>
                 </p>
-                <button onclick="APIcity(32)">welek</button>
+                
               </div>
               
             </div>

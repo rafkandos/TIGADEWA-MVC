@@ -39,6 +39,7 @@ class OpenTrip extends CI_Controller
   {
     $data['price'] = $this->OpenTrip_model->get_price($id_opentrip);
     $data['schedule'] = $this->OpenTrip_model->get_schedule($id_opentrip);
+    $data['sch'] = $this->OpenTrip_model->get_sch($id_opentrip);
     $data['detail'] = $this->OpenTrip_model->get_detail($id_opentrip);
     $this->load->view('user/opentrip_detail', $data);
     $array = array(

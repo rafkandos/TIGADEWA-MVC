@@ -48,7 +48,15 @@ class OpenTrip_model extends CI_Model {
 
   public function get_schedule($id_opentrip)
   {
-    return $this->db->where('id_opentrip', $id_opentrip)->get('schedule')->result();
+    return $this->db->where('id_opentrip', $id_opentrip)
+                    ->where('slot >', '0')
+                    ->get('schedule')->result();
+  }
+
+  public function get_sch($id_opentrip)
+  {
+    return $this->db->where('id_opentrip', $id_opentrip)
+                    ->get('schedule')->result();
   }
 
   public function get_price($id_opentrip)
@@ -89,9 +97,22 @@ class OpenTrip_model extends CI_Model {
       'bookingCode'       => $this->input->post('booking_code')
     );
 
+    $id_sl = $this->input->post('schedule');
+    $sl = $this->db->where('id_schedule', $id_sl)
+                   ->get('schedule')->row();
+    $ak = ($sl->slot - 1);
+
     $this->db->insert('register', $data);
 
     if ($this->db->affected_rows() > 0) {
+
+        $dt = array(
+          'slot' => $ak
+        );
+
+        $this->db->where('id_schedule', $id_sl)
+                 ->update('schedule', $dt);
+
         return true;
     } else {
         return false;
