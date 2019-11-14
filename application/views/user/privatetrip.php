@@ -47,7 +47,7 @@
             <div class="row align-items-center">
                 <div class="col-8 col-md-8 col-lg-4">
                 
-                <a href="index.html">
+                <a href="<?=base_url();?>index.php/Home">
                     <img src="<?=base_url()?>assets/images/tigadewa1.png" style="width: 250px;">
                 </a>
                 </div>
@@ -68,18 +68,18 @@
                         <li><a href="<?=base_url();?>index.php/InternationalTrip">International Trip</a></li>
                         </ul>
                     </li>
-                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="<?=base_url()?>index.php/Gallery">Gallery</a></li>
                     <li class="has-children">
                         <a href="#">About</a>
                         <ul class="dropdown arrow-top">
-                        <li><a href="aboutus.html">About us</a></li>
-                        <li><a href="ourguides.html">Our guides</a></li>
-                        <li><a href="contactus.html">Contact us</a></li>
-                        <li><a href="partners.html">Partners</a></li>
-                        <li><a href="testimonials.html">Testimonials</a></li>
+                          <li><a href="<?=base_url()?>index.php/About/aboutus">About us</a></li>
+                          <li><a href="<?=base_url()?>index.php/About/ourguides">Our guides</a></li>
+                          <li><a href="<?=base_url()?>index.php/About/contactus">Contact us</a></li>
+                          <li><a href="<?=base_url()?>index.php/About/partners">Partners</a></li>
+                          <li><a href="<?=base_url()?>index.php/About/testimonials">Testimonials</a></li>
                         </ul>
                     </li>
-                    <li><a href="merchantdise.html">Merchantdise</a></li>
+                    <li><a href="<?=base_url()?>index.php/Merchantdise">Merchantdise</a></li>
                     </ul>
                 </nav>
                 </div>
@@ -148,8 +148,8 @@
     <div class="bg-prm" style="margin-top: 100px;">
       <div class="container">
         <div class="row text-center">
-          <a href="#" class="col-6 text-center py-4 social-icon d-block"><span class="icon-instagram text-white"></span></a>
-          <a href="#" class="col-6 text-center py-4 social-icon d-block"><span class="icon-whatsapp text-white"></span></a>
+          <a target="_blank" href="https://www.instagram.com/tigadewaadventureindonesia/" class="col-6 text-center py-4 social-icon d-block"><span class="icon-instagram text-white"></span></a>
+          <a target="_blank" href="https://api.whatsapp.com/send?phone=6281216012160" class="col-6 text-center py-4 social-icon d-block"><span class="icon-whatsapp text-white"></span></a>
         </div>
       </div>
     </div>
@@ -170,25 +170,25 @@
               </div>
               <div class="col-md-6 col-lg-4">
                 <ul class="list-unstyled">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="opentrip.html">Open Trip</a></li>
-                  <li><a href="privatetrip.html">Private Trip</a></li>
-                  <li><a href="internationaltrip.html">International</a></li>
+                  <li><a href="<?=base_url()?>index.php/Home">Home</a></li>
+                  <li><a href="<?=base_url()?>index.php/OpenTrip">Open Trip</a></li>
+                  <li><a href="<?=base_url()?>index.php/PrivateTrip">Private Trip</a></li>
+                  <li><a href="<?=base_url()?>index.php/InternationalTrip">International</a></li>
                 </ul>
               </div>
               <div class="col-md-6 col-lg-4">
                 <ul class="list-unstyled">
-                  <li><a href="gallery.html">Gallery</a></li>
-                  <li><a href="aboutus.html">About Us</a></li>
-                  <li><a href="ourguides.html">Our Guides</a></li>
-                  <li><a href="contactus.html">Contact Us</a></li>
+                  <li><a href="<?=base_url()?>index.php/Gallery">Gallery</a></li>
+                  <li><a href="<?=base_url()?>index.php/About/aboutus">About Us</a></li>
+                  <li><a href="<?=base_url()?>index.php/About/ourguides">Our Guides</a></li>
+                  <li><a href="<?=base_url()?>index.php/About/contactus">Contact Us</a></li>
                 </ul>
               </div>
               <div class="col-md-6 col-lg-4">
                 <ul class="list-unstyled">
-                  <li><a href="partners.html">Partners</a></li>
-                  <li><a href="testimonials.html">Testimonials</a></li>
-                  <li><a href="merchantdise.html">Merchantdise</a></li>
+                  <li><a href="<?=base_url()?>index.php/About/partners">Partners</a></li>
+                  <li><a href="<?=base_url()?>index.php/About/testimonials">Testimonials</a></li>
+                  <li><a href="<?=base_url()?>index.php/Merchantdise">Merchantdise</a></li>
                 </ul>
               </div>
             </div>
