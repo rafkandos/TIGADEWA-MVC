@@ -58,14 +58,14 @@
 
                     <ul class="site-menu js-clone-nav d-none d-lg-block">
                     <li>
-                        <a href="<?=base_url();?>index.php/home">Home</a>
+                        <a href="<?=base_url();?>index.php/Home">Home</a>
                     </li>
                     <li class="has-children active">
                         <a href="#">Trip</a>
                         <ul class="dropdown arrow-top">
                         <li><a href="#">Open Trip</a></li>
-                        <li><a href="<?=base_url();?>index.php/privateTrip">Private Trip</a></li>
-                        <li><a href="<?=base_url();?>index.php/internationalTrip">International Trip</a></li>
+                        <li><a href="<?=base_url();?>index.php/PrivateTrip">Private Trip</a></li>
+                        <li><a href="<?=base_url();?>index.php/InternationalTrip">International Trip</a></li>
                         </ul>
                     </li>
                     <li><a href="gallery.html">Gallery</a></li>
@@ -124,14 +124,14 @@
             </div>
             </div>
 
-            <div class="row">
+            <div class="row justify-content-center">
 
                 <?php
                     foreach ($opentrip as $o) {
                         echo '
                             <div class="col-md-6 col-lg-4 mb-3 mb-lg-5">
                                 <div class="team-2one">
-                                    <a href="'.base_url('index.php/opentrip/detail/'.$o->id_opentrip).'">
+                                    <a href="'.base_url('index.php/OpenTrip/Detail/'.$o->id_opentrip).'">
                                         <img src="'.base_url('assets/images/semerumlg.jpg').'" alt="Image" class="img-fluid">
                                     </a>
                                 </div>
@@ -139,30 +139,6 @@
                         ';
                     }
                 ?>
-
-            <!-- <div class="col-md-6 col-lg-4 mb-3 mb-lg-5">
-                <div class="team-2one">
-                    <a href="<?=base_url();?>index.php/opentrip/detail">
-                        <img src="<?=base_url()?>assets/images/semerumlg.jpg" alt="Image" class="img-fluid">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 mb-3 mb-lg-5">
-                <div class="team-2one">
-                    <a href="<?=base_url();?>index.php/opentrip/detail">
-                        <img src="<?=base_url()?>assets/images/semerumlg.jpg" alt="Image" class="img-fluid">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 mb-3 mb-lg-5">
-                <div class="team-2one">
-                    <a href="<?=base_url();?>index.php/opentrip/detail">
-                        <img src="<?=base_url()?>assets/images/semerumlg.jpg" alt="Image" class="img-fluid">
-                    </a>
-                </div>
-            </div> -->
 
             </div>
         </div>

@@ -505,7 +505,7 @@
             
                     <div class="col-md-12 mb-5">
             
-                    <form action="<?=base_url('index.php/OpenTrip/registrasi');?>" 
+                    <form action="<?=base_url('index.php/PrivateTrip/registrasi');?>" 
                         class="contact-form" method="post">
                     
                     <div class="row form-group">

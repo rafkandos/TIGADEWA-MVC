@@ -51,9 +51,9 @@
                   <li class="has-children">
                     <a href="#">Trip</a>
                     <ul class="dropdown arrow-top">
-                      <li><a href="<?=base_url()?>index.php/opentrip">Open Trip</a></li>
-                      <li><a href="<?=base_url()?>index.php/privatetrip">Private Trip</a></li>
-                      <li><a href="<?=base_url()?>index.php/internationaltrip">International Trip</a></li>
+                      <li><a href="<?=base_url()?>index.php/OpenTrip">Open Trip</a></li>
+                      <li><a href="<?=base_url()?>index.php/PrivateTrip">Private Trip</a></li>
+                      <li><a href="<?=base_url()?>index.php/InternationalTrip">International Trip</a></li>
                     </ul>
                   </li>
                   <li><a href="gallery.html">Gallery</a></li>
@@ -112,19 +112,19 @@
             <div class="container-fluid">
               <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-4 ml-auto text-center">
-                  <a href="opentrip.html" class="btn btn-hai text-uppercase font-weight-bold mt-1">
+                  <a href="<?=base_url()?>index.php/OpenTrip" class="btn btn-hai text-uppercase font-weight-bold mt-1">
                     <span class="icon-unlock" style="font-size: 30px;"></span><br>
                     Open trip
                   </a>
                 </div>
                 <div class="col-md-12 col-lg-4 ml-auto text-center">
-                  <a href="privatetrip.html" class="btn btn-hai text-uppercase font-weight-bld mt-1">
+                  <a href="<?=base_url()?>index.php/PrivateTrip" class="btn btn-hai text-uppercase font-weight-bld mt-1">
                     <span class="icon-lock" style="font-size: 30px;"></span><br>
                     Private Trip
                   </a>
                 </div>
                 <div class="col-md-12 col-lg-4 ml-auto text-center">
-                  <a href="internationaltrip.html" class="btn btn-hai text-uppercase font-weight-bld mt-1">
+                  <a href="<?=base_url()?>index.php/InternationalTrip" class="btn btn-hai text-uppercase font-weight-bld mt-1">
                     <span class="icon-flag" style="font-size: 30px;"></span><br>
                     International Trip
                   </a>

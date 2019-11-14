@@ -58,13 +58,13 @@
 
                     <ul class="site-menu js-clone-nav d-none d-lg-block">
                     <li>
-                        <a href="<?=base_url();?>index.php/home">Home</a>
+                        <a href="<?=base_url();?>index.php/Home">Home</a>
                     </li>
                     <li class="has-children active">
                         <a href="#">Trip</a>
                         <ul class="dropdown arrow-top">
-                        <li><a href="<?=base_url();?>index.php/openTrip">Open Trip</a></li>
-                        <li><a href="<?=base_url();?>index.php/privateTrip">Private Trip</a></li>
+                        <li><a href="<?=base_url();?>index.php/OpenTrip">Open Trip</a></li>
+                        <li><a href="<?=base_url();?>index.php/PrivateTrip">Private Trip</a></li>
                         <li><a href="#">International Trip</a></li>
                         </ul>
                     </li>
@@ -122,55 +122,21 @@
             </div>
             </div>
 
-            <div class="row">
+            <div class="row justify-content-center">
 
-            <div class="col-md-6 col-lg-4 mb-3 mb-lg-5">
-                <div class="team-2one">
-                <a href="<?=base_url();?>index.php/internationaltrip/detail">
-                    <img src="<?=base_url()?>assets/images/semerumlg.jpg" alt="Image" class="img-fluid">
-                </a>
-                <!-- <div class="text">
-                    <h2 class="fwb2 h5">Meeting Point Malang</h2>
-                    <div class="row">
-                    <div class="col-md-12 text-center" data-aos="fade-up">
-                        <button class="btn btn-brown1" onclick="pack1()">Get Detail</button>
-                    </div>
-                    </div>
-                </div> -->
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 mb-3 mb-lg-5">
-                <div class="team-2one">
-                <a href="<?=base_url();?>index.php/internationaltrip/detail">
-                    <img src="<?=base_url()?>assets/images/semerumlg.jpg" alt="Image" class="img-fluid">
-                </a>
-                <!-- <div class="text">
-                    <h2 class="fwb2 h5">Meeting Point Jakarta</h2>
-                    <div class="row">
-                    <div class="col-md-12 text-center mt-3" data-aos="fade-up">
-                        <button class="btn btn-brown1" onclick="pack2()">Get Detail</button>
-                    </div>
-                    </div>
-                </div> -->
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 mb-3 mb-lg-5">
-                <div class="team-2one">
-                <a href="<?=base_url();?>index.php/internationaltrip/detail">
-                    <img src="<?=base_url()?>assets/images/semerumlg.jpg" alt="Image" class="img-fluid">
-                </a>
-                <!-- <div class="text">
-                    <h2 class="fwb2 h5">Meeting Point Bandung</h2>
-                    <div class="row">
-                    <div class="col-md-12 text-center mt-3" data-aos="fade-up">
-                        <button class="btn btn-brown1" onclick="pack3()">Get Detail</button>
-                    </div>
-                    </div>
-                </div> -->
-                </div>
-            </div>
+                <?php
+                    foreach ($internationaltrip as $o) {
+                        echo '
+                            <div class="col-md-6 col-lg-4 mb-3 mb-lg-5">
+                                <div class="team-2one">
+                                    <a href="'.base_url('index.php/InternationalTrip/Detail/'.$o->id_internationaltrip).'">
+                                        <img src="'.base_url('assets/images/semerumlg.jpg').'" alt="Image" class="img-fluid">
+                                    </a>
+                                </div>
+                            </div>
+                        ';
+                    }
+                ?>
 
             </div>
         </div>
