@@ -5,7 +5,8 @@ class PrivateTrip_model extends CI_Model {
 
   public function get_privatetrip()
   {
-    return $this->db->get('privatetrip')->result();
+    return $this->db->where('id_privatetrip != ', 11111)
+                    ->get('privatetrip')->result();
   }
 
   public function get_detail($id_privatetrip)
@@ -16,20 +17,20 @@ class PrivateTrip_model extends CI_Model {
 
   public function get_schedule($id_privatetrip)
   {
-    return $this->db->where('id_privatetrip', $id_privatetrip)
+    return $this->db->where('pt_id', $id_privatetrip)
                     ->where('slot >', '0')
                     ->get('schedule')->result();
   }
 
   public function get_sch($id_privatetrip)
   {
-    return $this->db->where('id_privatetrip', $id_privatetrip)
+    return $this->db->where('pt_id', $id_privatetrip)
                     ->get('schedule')->result();
   }
 
   public function get_price($id_privatetrip)
   {
-    return $this->db->where('id_privatetrip', $id_privatetrip)->get('pricing')->result();
+    return $this->db->where('id_pt', $id_privatetrip)->get('pricing')->result();
   }
 
   public function register()
@@ -62,7 +63,10 @@ class PrivateTrip_model extends CI_Model {
       'emergencyContact'  => $this->input->post('emergency_contact'),
       'id_schedule'       => $this->input->post('schedule'),
       'id_pricing'        => $this->input->post('selitem'),
-      'bookingCode'       => $this->input->post('booking_code')
+      'bookingCode'       => $this->input->post('booking_code'),
+      'id_privatetrip'    => $this->session->userdata('id_privatetrip'),
+      'id_opentrip'       => 11111,
+      'id_internationaltrip'  => 11111
     );
 
     $id_sl = $this->input->post('schedule');

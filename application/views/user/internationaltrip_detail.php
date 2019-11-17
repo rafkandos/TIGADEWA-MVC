@@ -103,7 +103,7 @@
                 <?php
                     foreach ($detail as $d) {
                         echo '
-                            <h1 class="mb-4" style="color: #fe6700; font-weight: bold;">'.$d->tripName.'</h1>
+                            <h1 class="mb-4" style="color: #fe6700; font-weight: bold;">'.$d->ItripName.'</h1>
                         ';
                     }
                 ?>

@@ -104,7 +104,7 @@
                 <?php
                     foreach ($detail as $d) {
                         echo '
-                            <h1 class="mb-4" style="color: #fe6700; font-weight: bold;">'.$d->tripName.'</h1>
+                            <h1 class="mb-4" style="color: #fe6700; font-weight: bold;">'.$d->OtripName.'</h1>
                         ';
                     }
                 ?>
@@ -183,18 +183,6 @@
                                     ';
                                 }
                             ?>
-                            <!-- <tr>
-                            <td>#1 Stasiun Malang</td>
-                            <td>699K</td>
-                            </tr>
-                            <tr>
-                            <td>#2 Stasiun Malang</td>
-                            <td>799K</td>
-                            </tr>
-                            <tr>
-                            <td>#3 Stasiun Malang</td>
-                            <td>999K</td>
-                            </tr> -->
                         </tbody>
                     </table>
                 </div>

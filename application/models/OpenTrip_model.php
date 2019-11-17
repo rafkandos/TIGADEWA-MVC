@@ -37,31 +37,33 @@ class OpenTrip_model extends CI_Model {
 
   public function get_opentrip()
   {
-    return $this->db->get('opentrip')->result();
+    return $this->db->where('id_opentrip !=', 11111)
+                    ->get('opentrip')->result();
   }
 
   public function get_detail($id_opentrip)
   {
     //int i = 1;
-    return $this->db->where('id_opentrip', $id_opentrip)->get('opentrip')->result();
+    return $this->db->where('id_opentrip', $id_opentrip)          
+                    ->get('opentrip')->result();
   }
 
   public function get_schedule($id_opentrip)
   {
-    return $this->db->where('id_opentrip', $id_opentrip)
+    return $this->db->where('ot_id', $id_opentrip)
                     ->where('slot >', '0')
                     ->get('schedule')->result();
   }
 
   public function get_sch($id_opentrip)
   {
-    return $this->db->where('id_opentrip', $id_opentrip)
+    return $this->db->where('ot_id', $id_opentrip)
                     ->get('schedule')->result();
   }
 
   public function get_price($id_opentrip)
   {
-    return $this->db->where('id_opentrip', $id_opentrip)->get('pricing')->result();
+    return $this->db->where('id_ot', $id_opentrip)->get('pricing')->result();
   }
 
   public function register()
@@ -94,7 +96,10 @@ class OpenTrip_model extends CI_Model {
       'emergencyContact'  => $this->input->post('emergency_contact'),
       'id_schedule'       => $this->input->post('schedule'),
       'id_pricing'        => $this->input->post('selitem'),
-      'bookingCode'       => $this->input->post('booking_code')
+      'bookingCode'       => $this->input->post('booking_code'),
+      'id_opentrip'       => $this->session->userdata('id_opentrip'),
+      'id_privatetrip'    => 11111,
+      'id_internationaltrip'  => 11111
     );
 
     $id_sl = $this->input->post('schedule');

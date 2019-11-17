@@ -5,7 +5,8 @@ class InternationalTrip_model extends CI_Model {
 
   public function get_internationaltrip()
   {
-    return $this->db->get('internationaltrip')->result();
+    return $this->db->where('id_internationaltrip !=', 11111)
+                    ->get('internationaltrip')->result();
   }
 
   public function get_detail($id_internationaltrip)
@@ -16,20 +17,20 @@ class InternationalTrip_model extends CI_Model {
 
   public function get_schedule($id_internationaltrip)
   {
-    return $this->db->where('id_internationaltrip', $id_internationaltrip)
+    return $this->db->where('it_id', $id_internationaltrip)
                     ->where('slot >', '0')
                     ->get('schedule')->result();
   }
 
   public function get_sch($id_internationaltrip)
   {
-    return $this->db->where('id_internationaltrip', $id_internationaltrip)
+    return $this->db->where('it_id', $id_internationaltrip)
                     ->get('schedule')->result();
   }
 
   public function get_price($id_internationaltrip)
   {
-    return $this->db->where('id_internationaltrip', $id_internationaltrip)->get('pricing')->result();
+    return $this->db->where('id_it', $id_internationaltrip)->get('pricing')->result();
   }
 
   public function register()
@@ -62,12 +63,15 @@ class InternationalTrip_model extends CI_Model {
       'emergencyContact'  => $this->input->post('emergency_contact'),
       'id_schedule'       => $this->input->post('schedule'),
       'id_pricing'        => $this->input->post('selitem'),
-      'bookingCode'       => $this->input->post('booking_code')
+      'bookingCode'       => $this->input->post('booking_code'),
+      'id_internationaltrip'       => $this->session->userdata('id_internationaltrip'),
+      'id_privatetrip'    => 11111,
+      'id_opentrip'       => 11111
     );
 
     $id_sl = $this->input->post('schedule');
     $sl = $this->db->where('id_schedule', $id_sl)
-                   ->get('schedule')->row();
+                    ->get('schedule')->row();
     $ak = ($sl->slot - 1);
 
     $this->db->insert('register', $data);
