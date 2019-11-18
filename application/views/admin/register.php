@@ -166,17 +166,17 @@
                                                     <td><?php echo $r->name; ?></td>
                                                     <td><?php echo $r->identityNumber; ?></td>
                                                     <?php 
-                                                        if ($r->id_opentrip != null && $r->id_privatetrip == null && $r->id_internationaltrip == null) {
+                                                        if ($r->id_opentrip != 11111 && $r->id_privatetrip == 11111 && $r->id_internationaltrip == 11111) {
                                                             echo '
                                                                 <td>OpenTrip</td>
                                                             ';
                                                         }
-                                                        if ($r->id_opentrip == null && $r->id_privatetrip != null && $r->id_internationaltrip == null) {
+                                                        if ($r->id_opentrip == 11111 && $r->id_privatetrip != 11111 && $r->id_internationaltrip == 11111) {
                                                             echo '
                                                                 <td>PrivateTrip</td>
                                                             ';
                                                         }
-                                                        if ($r->id_opentrip == null && $r->id_privatetrip == null && $r->id_internationaltrip != null) {
+                                                        if ($r->id_opentrip == 11111 && $r->id_privatetrip == 11111 && $r->id_internationaltrip != 11111) {
                                                             echo '
                                                                 <td>InternationalTrip</td>
                                                             ';
