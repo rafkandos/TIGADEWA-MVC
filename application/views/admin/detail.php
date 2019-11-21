@@ -86,13 +86,13 @@
                             </a>
                         </li>
                         <li> 
-                            <a class="waves-effect waves-dark" href="table-basic.html" aria-expanded="false">
+                            <a class="waves-effect waves-dark" href="<?=base_url()?>index.php/_privatetrip" aria-expanded="false">
                                 <i class="mdi mdi-lock"></i>
                                 <span class="hide-menu">Private Trip</span>
                             </a>
                         </li>
                         <li> 
-                            <a class="waves-effect waves-dark" href="icon-material.html" aria-expanded="false">    <i class="mdi mdi-earth"></i>
+                            <a class="waves-effect waves-dark" href="<?=base_url()?>index.php/_internationaltrip" aria-expanded="false">    <i class="mdi mdi-earth"></i>
                                 <span class="hide-menu">International Trip</span>
                             </a>
                         </li>

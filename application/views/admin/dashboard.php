@@ -53,7 +53,8 @@
                     </ul>
                     <ul class="navbar-nav my-lg-0">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/users/1.jpg" alt="user" class="profile-pic m-r-10" />Markarn Doe</a>
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Markarn Doe</a>
                         </li>
                     </ul>
                 </div>
@@ -85,13 +86,13 @@
                             </a>
                         </li>
                         <li> 
-                            <a class="waves-effect waves-dark" href="table-basic.html" aria-expanded="false">
+                            <a class="waves-effect waves-dark" href="<?=base_url()?>index.php/_privatetrip" aria-expanded="false">
                                 <i class="mdi mdi-lock"></i>
                                 <span class="hide-menu">Private Trip</span>
                             </a>
                         </li>
                         <li> 
-                            <a class="waves-effect waves-dark" href="icon-material.html" aria-expanded="false">    <i class="mdi mdi-earth"></i>
+                            <a class="waves-effect waves-dark" href="<?=base_url()?>index.php/_internationaltrip" aria-expanded="false">    <i class="mdi mdi-earth"></i>
                                 <span class="hide-menu">International Trip</span>
                             </a>
                         </li>

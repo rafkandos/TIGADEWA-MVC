@@ -81,12 +81,13 @@
                             </a>
                         </li>
                         <li> 
-                            <a class="waves-effect waves-dark active" href="#" aria-expanded="false">     <i class="mdi mdi-lock-open"></i>
+                            <a class="waves-effect waves-dark" href="<?=base_url()?>index.php/_opentrip" aria-expanded="false">     
+                                <i class="mdi mdi-lock-open"></i>
                                 <span class="hide-menu">Open Trip</span>
                             </a>
                         </li>
                         <li> 
-                            <a class="waves-effect waves-dark" href="<?=base_url()?>index.php/_privatetrip" aria-expanded="false">
+                            <a class="waves-effect waves-dark active" href="#" aria-expanded="false">
                                 <i class="mdi mdi-lock"></i>
                                 <span class="hide-menu">Private Trip</span>
                             </a>
@@ -112,10 +113,10 @@
 
                 <div class="row page-titles">
                     <div class="col-md-5 col-8 align-self-center">
-                        <h3 class="text-themecolor">Open Trip</h3>
+                        <h3 class="text-themecolor">Private Trip</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript:void(0)" style="color: #fe6700">TDA Indonesia</a></li>
-                            <li class="breadcrumb-item active">Open Trip</li>
+                            <li class="breadcrumb-item active">Private Trip</li>
                         </ol>
                     </div>
                 </div>
@@ -148,7 +149,7 @@
                             <div class="card-block">
                                 <div class="row mb-2">
                                     <div class="col-md-6">
-                                        <h4 class="card-title text-uppercase">Open Trip</h4>
+                                        <h4 class="card-title text-uppercase">Private Trip</h4>
                                     </div>
                                     <div class="col-md-6">
                                         <a href="#" data-toggle="modal" data-target="#add" class="btn waves-effect waves-light btn-warning pull-right">
@@ -171,26 +172,26 @@
                                         
                                         <tbody>
                                             <?php
-                                                foreach ($opentrip as $o ) {
+                                                foreach ($privatetrip as $o ) {
                                                     echo '
                                                         <tr>
-                                                            <td>'.$o->id_opentrip.'</td>
-                                                            <td>'.$o->OtripName.'</td>
+                                                            <td>'.$o->id_privatetrip.'</td>
+                                                            <td>'.$o->PtripName.'</td>
                                                             <td>'.$o->overview.'</td>
                                                             <td>'.$o->preparation.'</td>
                                                             <td align="center"><img src="'.base_url('assets/uploads/'.$o->tripImages).'" style="width: 70px;" alt="img"></td>
                                                             
                                                             <td align="center">
-                                                                <a onclick="edit('.$o->id_opentrip.')" href="#" 
+                                                                <a onclick="edit('.$o->id_privatetrip.')" href="#" 
                                                                     data-toggle="modal" data-target="#update" 
                                                                     class="m-t-5 waves-effect waves-dark btn btn-primary">
                                                                     <i class="mdi mdi-grease-pencil"></i> Edit
                                                                 </a>
-                                                                <a href="'.base_url('index.php/_opentrip/delete/'.$o->id_opentrip).'" 
+                                                                <a href="'.base_url('index.php/_privatetrip/delete/'.$o->id_privatetrip).'" 
                                                                     class="m-t-5 waves-effect waves-light btn btn-danger">
                                                                     <i class="mdi mdi-delete"></i> Delete
                                                                 </a>
-                                                                <a onclick="upload('.$o->id_opentrip.')" href="#" 
+                                                                <a onclick="upload('.$o->id_privatetrip.')" href="#" 
                                                                     data-toggle="modal" data-target="#upload" 
                                                                     class="m-t-5 waves-effect waves-dark btn btn-success">
                                                                     <i class="mdi mdi-upload"></i> Upload Banner
@@ -240,8 +241,8 @@
                                                 foreach ($mp as $m ) {
                                                     echo '
                                                         <tr>
-                                                            <td>'.$m->id_ot.'</td>
-                                                            <td>'.$m->OtripName.'</td>
+                                                            <td>'.$m->id_pt.'</td>
+                                                            <td>'.$m->PtripName.'</td>
                                                             <td>'.$m->meetingPoint.'</td>
                                                             <td>'.$m->price.'</td>
                                                             <td align="center">
@@ -250,7 +251,7 @@
                                                                     class="m-t-5 waves-effect waves-dark btn btn-primary">
                                                                     <i class="mdi mdi-grease-pencil"></i> Edit
                                                                 </a>
-                                                                <a href="'.base_url('index.php/_opentrip/deletemp/'.$m->id_pricing).'" 
+                                                                <a href="'.base_url('index.php/_privatetrip/deletemp/'.$m->id_pricing).'" 
                                                                     class="m-t-5 waves-effect waves-light btn btn-danger">
                                                                     <i class="mdi mdi-delete"></i> Delete
                                                                 </a>
@@ -296,8 +297,8 @@
                                                 foreach ($sch as $m ) {
                                                     echo '
                                                         <tr>
-                                                            <td>'.$m->ot_id.'</td>
-                                                            <td>'.$m->OtripName.'</td>
+                                                            <td>'.$m->pt_id.'</td>
+                                                            <td>'.$m->PtripName.'</td>
                                                             <td>'.$m->scheduleDate.'</td>
                                                             <td>'.$m->slot.'</td>
                                                             <td align="center">
@@ -306,7 +307,7 @@
                                                                     class="m-t-5 waves-effect waves-dark btn btn-primary">
                                                                     <i class="mdi mdi-grease-pencil"></i> Edit
                                                                 </a>
-                                                                <a href="'.base_url('index.php/_opentrip/deletesch/'.$m->id_schedule).'" 
+                                                                <a href="'.base_url('index.php/_privatetrip/deletesch/'.$m->id_schedule).'" 
                                                                     class="m-t-5 waves-effect waves-light btn btn-danger">
                                                                     <i class="mdi mdi-delete"></i> Delete
                                                                 </a>
@@ -336,12 +337,12 @@
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="<?php base_url()?>_opentrip/add" method="post">
+                <form action="<?php base_url()?>_privatetrip/add" method="post">
                     <div class="modal-body">
                         <div class="tab-pane" id="settings" role="tabpanel">
                             <div class="card-block">
                                     <div class="form-horizontal form-material form-group">
-                                        <input type="hidden" name="id_opentrip">
+                                        <input type="hidden" name="id_privatetrip">
                                         <label class="font-weight-bold">TripName</label>
                                         <input type="text" class="form-control form-control-line" name="tn">
                                         <br><br>
@@ -371,18 +372,18 @@
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="<?php base_url()?>_opentrip/addmp" method="post">
+                <form action="<?php base_url()?>_privatetrip/addmp" method="post">
                     <div class="modal-body">
                         <div class="tab-pane" id="settings" role="tabpanel">
                             <div class="card-block">
                                     <div class="form-horizontal form-material form-group">
-                                        <input type="hidden" name="id_opentrip">
+                                        <input type="hidden" name="id_privatetrip">
                                         <label class="font-weight-bold">TripName</label>
                                         <select name="tn" class="form-control form-control-line">
                                             <?php 
-                                                foreach ($opentrip as $o) {
+                                                foreach ($privatetrip as $o) {
                                                     echo '
-                                                        <option value="'.$o->id_opentrip.'">'.$o->OtripName.'</option>
+                                                        <option value="'.$o->id_privatetrip.'">'.$o->PtripName.'</option>
                                                     ';
                                                 }
                                             ?>
@@ -415,7 +416,7 @@
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="<?php base_url()?>_opentrip/addsch" method="post">
+                <form action="<?php base_url()?>_privatetrip/addsch" method="post">
                     <div class="modal-body">
                         <div class="tab-pane" id="settings" role="tabpanel">
                             <div class="card-block">
@@ -424,9 +425,9 @@
                                         <label class="font-weight-bold">TripName</label>
                                         <select name="tn" class="form-control form-control-line">
                                             <?php 
-                                                foreach ($opentrip as $o) {
+                                                foreach ($privatetrip as $o) {
                                                     echo '
-                                                        <option value="'.$o->id_opentrip.'">'.$o->OtripName.'</option>
+                                                        <option value="'.$o->id_privatetrip.'">'.$o->PtripName.'</option>
                                                     ';
                                                 }
                                             ?>
@@ -459,12 +460,12 @@
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="<?php base_url()?>_opentrip/update" method="post">
+                <form action="<?php base_url()?>_privatetrip/update" method="post">
                     <div class="modal-body">
                         <div class="tab-pane" id="settings" role="tabpanel">
                             <div class="card-block">
                                     <div class="form-horizontal form-material form-group">
-                                        <input type="hidden" name="id_opentrip" id="id_opentrip">
+                                        <input type="hidden" name="id_privatetrip" id="id_privatetrip">
                                         <label class="font-weight-bold">TripName</label>
                                         <input type="text" class="form-control form-control-line" name="tn" id="tn">
                                         <br><br>
@@ -496,7 +497,7 @@
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="<?php base_url()?>_opentrip/updatemp" method="post">
+                <form action="<?php base_url()?>_privatetrip/updatemp" method="post">
                     <div class="modal-body">
                         <div class="tab-pane" id="settings" role="tabpanel">
                             <div class="card-block">
@@ -505,9 +506,9 @@
                                         <label class="font-weight-bold">TripName</label>
                                         <select name="tn" id="tnmp" class="form-control form-control-line">
                                             <?php 
-                                                foreach ($opentrip as $o) {
+                                                foreach ($privatetrip as $o) {
                                                     echo '
-                                                        <option value="'.$o->id_opentrip.'">'.$o->OtripName.'</option>
+                                                        <option value="'.$o->id_privatetrip.'">'.$o->PtripName.'</option>
                                                     ';
                                                 }
                                             ?>
@@ -540,7 +541,7 @@
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="<?php base_url()?>_opentrip/updatesch" method="post">
+                <form action="<?php base_url()?>_privatetrip/updatesch" method="post">
                     <div class="modal-body">
                         <div class="tab-pane" id="settings" role="tabpanel">
                             <div class="card-block">
@@ -549,9 +550,9 @@
                                         <label class="font-weight-bold">TripName</label>
                                         <select name="tn" id="tnsch" class="form-control form-control-line">
                                             <?php 
-                                                foreach ($opentrip as $o) {
+                                                foreach ($privatetrip as $o) {
                                                     echo '
-                                                        <option value="'.$o->id_opentrip.'">'.$o->OtripName.'</option>
+                                                        <option value="'.$o->id_privatetrip.'">'.$o->PtripName.'</option>
                                                     ';
                                                 }
                                             ?>
@@ -584,7 +585,7 @@
 	                    <span aria-hidden="true">&times;</span>
 	                    </button>
 	                </div>
-	                <form action="<?php base_url()?>_opentrip/upload" method="post" enctype="multipart/form-data">
+	                <form action="<?php base_url()?>_privatetrip/upload" method="post" enctype="multipart/form-data">
 	                    <div class="modal-body">
 	                        <div class="tab-pane" id="settings" role="tabpanel">
 	                            <div class="card-block">
@@ -636,22 +637,22 @@
             $('#dtTables').DataTable();
         } );
 
-        function upload(id_opentrip){
-            $("#id_reg").val(id_opentrip);
+        function upload(id_privatetrip){
+            $("#id_reg").val(id_privatetrip);
         }
 
-        //opentrip
+        //privatetrip
         function edit(id) {
-            $('#id_opentrip').val();
+            $('#id_privatetrip').val();
             $('#ov').val();
             $('#pre').val();
             $('#tn').val();
 
-            $.getJSON("<?php echo base_url('index.php/_opentrip/get_id_ot/') ?>"+ id, function(data){
-                $('#id_opentrip').val(data.id_opentrip);
+            $.getJSON("<?php echo base_url('index.php/_privatetrip/get_id_pt/') ?>"+ id, function(data){
+                $('#id_privatetrip').val(data.id_privatetrip);
                 $('#ov').val(data.overview);
                 $('#pre').val(data.preparation);
-                $('#tn').val(data.OtripName);
+                $('#tn').val(data.PtripName);
             });
         }
 
@@ -662,9 +663,9 @@
             $('#mpmp').val();
             $('#prmp').val();
 
-            $.getJSON("<?php echo base_url('index.php/_opentrip/get_id_pr/') ?>"+ id, function(data){
+            $.getJSON("<?php echo base_url('index.php/_privatetrip/get_id_pr/') ?>"+ id, function(data){
                 $('#id_pricing').val(data.id_pricing);
-                $('#tnmp').val(data.id_ot);
+                $('#tnmp').val(data.id_pt);
                 $('#mpmp').val(data.meetingPoint);
                 $('#prmp').val(data.price);
             });
@@ -677,9 +678,9 @@
             $('#sdsch').val();
             $('#slsch').val();
 
-            $.getJSON("<?php echo base_url('index.php/_opentrip/get_id_sch/') ?>"+ id, function(data){
+            $.getJSON("<?php echo base_url('index.php/_privatetrip/get_id_sch/') ?>"+ id, function(data){
                 $('#id_schedule').val(data.id_schedule);
-                $('#tnsch').val(data.ot_id);
+                $('#tnsch').val(data.pt_id);
                 $('#sdsch').val(data.scheduleDate);
                 $('#slsch').val(data.slot);
             });
