@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 18 Nov 2019 pada 01.54
+-- Generation Time: 22 Nov 2019 pada 10.22
 -- Versi Server: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -34,6 +34,13 @@ CREATE TABLE `admin` (
   `password` varchar(200) NOT NULL,
   `adminName` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `admin`
+--
+
+INSERT INTO `admin` (`id_admin`, `username`, `password`, `adminName`) VALUES
+(1, 'admin', 'admin', 'ADMIN KECE');
 
 -- --------------------------------------------------------
 
@@ -299,7 +306,7 @@ ALTER TABLE `schedule`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `gallery`
@@ -317,7 +324,7 @@ ALTER TABLE `internationaltrip`
 -- AUTO_INCREMENT for table `opentrip`
 --
 ALTER TABLE `opentrip`
-  MODIFY `id_opentrip` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11114;
+  MODIFY `id_opentrip` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11112;
 
 --
 -- AUTO_INCREMENT for table `pricing`
@@ -341,7 +348,7 @@ ALTER TABLE `register`
 -- AUTO_INCREMENT for table `schedule`
 --
 ALTER TABLE `schedule`
-  MODIFY `id_schedule` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_schedule` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
