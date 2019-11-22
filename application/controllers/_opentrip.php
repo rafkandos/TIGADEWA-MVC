@@ -7,7 +7,10 @@ class _opentrip extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('_opentripmodel', 'otm');
+        $this->load->model('_opentripmodel', 'otm');
+        if ($this->session->userdata('logged_in') != true) {
+            redirect('Login','refresh');
+        }
 	}
 	
 

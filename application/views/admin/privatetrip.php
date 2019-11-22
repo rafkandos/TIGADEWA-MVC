@@ -54,8 +54,12 @@
                     </ul>
                     <ul class="navbar-nav my-lg-0">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Markarn Doe</a>
+                            <a class="font-weight-bold nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <?php echo
+                                    
+                                    $this->session->userdata('adminName');
+                                    
+                                ?></a>
                         </li>
                     </ul>
                 </div>
@@ -101,9 +105,9 @@
                 </nav>
             </div>
             <div class="sidebar-footer">
-                <a href="" class="link" data-toggle="tooltip" title="Settings"><i class="ti-settings"></i></a>
-                <a href="" class="link" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a>
-                <a href="" class="link" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
+                <a href="<?=base_url()?>index.php/Admin/logout" class="link" data-toggle="tooltip" title="Logout">
+                    <i class="mdi mdi-power"></i>
+                </a>
             </div>
         </aside>
 
