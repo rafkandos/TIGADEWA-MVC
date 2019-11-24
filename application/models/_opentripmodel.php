@@ -61,7 +61,13 @@ class _opentripmodel extends CI_Model {
     $data = array(
       'OtripName'       => $this->input->post('tn'), 
       'overview'        => $this->input->post('ov'),
-      'preparation'     => $this->input->post('pre')
+      'preparation'     => $this->input->post('pre'),
+      'day1'            => $this->input->post('d1'),
+      'day2'            => $this->input->post('d2'),
+      'day3'            => $this->input->post('d3'),
+      'day4'            => $this->input->post('d4'),
+      'include'         => $this->input->post('ic'),
+      'exclude'         => $this->input->post('ec')
     );
 
     return $this->db->insert('opentrip', $data);

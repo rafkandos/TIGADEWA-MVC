@@ -352,8 +352,27 @@
                                         <label class="font-weight-bold">Overview</label>
                                         <textarea rows="5" class="form-control form-control-line" name="ov"></textarea>
                                         <br><br>
+                                        <label class="font-weight-bold">Itinerary - Day 1</label>
+                                        <textarea rows="5" class="form-control form-control-line" name="d1"></textarea>
+                                        <br><br>
+                                        <label class="font-weight-bold">Itinerary - Day 2</label>
+                                        <textarea rows="5" class="form-control form-control-line" name="d2"></textarea>
+                                        <br><br>
+                                        <label class="font-weight-bold">Itinerary - Day 3</label>
+                                        <textarea rows="5" class="form-control form-control-line" name="d3"></textarea>
+                                        <br><br>
+                                        <label class="font-weight-bold">Itinerary Day 4</label>
+                                        <textarea rows="5" class="form-control form-control-line" name="d4"></textarea>
+                                        <br><br>
                                         <label class="font-weight-bold">Preparation</label>
                                         <textarea rows="5" class="form-control form-control-line" name="pre"></textarea>
+                                        <br><br>
+                                        <label class="font-weight-bold">Include</label>
+                                        <textarea rows="5" class="form-control form-control-line" name="ic"></textarea>
+                                        <br><br>
+                                        <label class="font-weight-bold">Exclude</label>
+                                        <textarea rows="5" class="form-control form-control-line" name="ec"></textarea>
+                                        <br><br>
                                     </div>
                             </div>
                         </div>

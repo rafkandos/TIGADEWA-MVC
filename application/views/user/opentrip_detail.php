@@ -253,45 +253,57 @@
                             <tr>
                             <th scope="row" style="font-size: 13pt">DAY 1</th>
                             <td>
-                                <B>08.00 – 09.00</B> : Meeting Point Stasiun Malang <br>
+                                <!-- <B>08.00 – 09.00</B> : Meeting Point Stasiun Malang <br>
                                 <b>09.00 – 09.30</b> : Malang – Tumpang Homestay <b>(Makan 1)</b> <br>
                                 <b>09.30 – 11.00</b> : Perjalanan Menuju Ranupane <br>
                                 <b>11.00 – 14.00</b> : ISHOMA, Persiapan Pendakian <br>
                                 <b>14.00 – 18.00</b> : Ranupane – Ranukumbolo <b>(Camp 1)</b> <br>
-                                <b>18.00 – XX.XX</b> : ISHOMA, Acara Bebas <b>(Dinner)</b>
+                                <b>18.00 – XX.XX</b> : ISHOMA, Acara Bebas <b>(Dinner)</b> -->
+                                <?php foreach ($detail as $d ) {
+                                    echo $d->day1;
+                                } ?>
                             </td>
                             </tr>
                             <tr>
                             <th scope="row" style="font-size: 13pt">DAY 2</th>
                             <td>
-                                <b>04.00 – 07.00</b> : Bangun Pagi, Sarapan, Enjoy Sunrise Ranukumbolo <b>(Breakfast)</b> <br>
+                                <!-- <b>04.00 – 07.00</b> : Bangun Pagi, Sarapan, Enjoy Sunrise Ranukumbolo <b>(Breakfast)</b> <br>
                                 <b>07.00 – 08.00</b> : Packing <br>
                                 <b>08.00 – 14.00</b> : Ranukumbolo – Kalimati <b>(Camp 2)(Lunch/Dinner)</b> <br>
-                                <b>04.00 – 00.00</b> : Acara Bebas, ISHOMA <br>
+                                <b>04.00 – 00.00</b> : Acara Bebas, ISHOMA <br> -->
+                                <?php foreach ($detail as $d ) {
+                                    echo $d->day2;
+                                } ?>
                             </td>
                             </tr>
                             <tr>
                             <th scope="row" style="font-size: 13pt">DAY 3</th>
                             <td>
-                                <b>00:00 – 00.30</b> : Bangun, Sarapan dan Prepare Summit Attack <b>(Sarapan Summit)</b> <br>
+                                <!-- <b>00:00 – 00.30</b> : Bangun, Sarapan dan Prepare Summit Attack <b>(Sarapan Summit)</b> <br>
                                 <b>00:30 – 05.30</b> : Kalimati - Puncak <br>
                                 <b>05:30 – 07.00</b> : Enjoy Puncak Semeru <br>
                                 <b>07:00 – 10.00</b> : Puncak - Kalimati <br>
                                 <b>10:00 – 14.00</b> : ISHOMA, Packing Turun <b>(Lunch)</b> <br>
                                 <b>14:00 – 16.00</b> : Kalimati – Ranukumbolo <b>(Camp 3)</b> <br>
-                                <b>16:00 – XX.XX</b> : ISHOMA, Acara Bebas <b>(Dinner)</b> <br>
+                                <b>16:00 – XX.XX</b> : ISHOMA, Acara Bebas <b>(Dinner)</b> <br> -->
+                                <?php foreach ($detail as $d ) {
+                                    echo $d->day3;
+                                } ?>
                             </td>
                             </tr>
                             <tr>
                             <th scope="row" style="font-size: 13pt">DAY 4</th>
                             <td>
-                                <b>05:00 – 08:00</b> : Bangun, Sarapan, Persiapan Packing Turun <b>(Breakfast)</b> <br>
+                                <!-- <b>05:00 – 08:00</b> : Bangun, Sarapan, Persiapan Packing Turun <b>(Breakfast)</b> <br>
                                 <b>08:00 – 12.00</b> : Ranukumbolo - Ranupane <br>
                                 <b>12:00 – 13.00</b> : Makan, Bersih Bersih <br>
                                 <b>13:00 – 14.30</b> : Perjalanan Ranupane – Tumpang Homestay <b>(Makan 2)</b> <br>
                                 <b>14:30 – 15.30</b> : Packing Pulang <br>
                                 <b>15:30 – 16.30</b> : Perjalanan Tumpang – Stasiun Malang <br>
-                                <b>16:30</b> : Trip Selesai <br>
+                                <b>16:30</b> : Trip Selesai <br> -->
+                                <?php foreach ($detail as $d ) {
+                                    echo $d->day4;
+                                } ?>
                             </td>
                             </tr>
                         </tbody>
@@ -310,96 +322,112 @@
                 <div class="container">
                     <div class="row justify-content-center">
                     <div class="col-md-10">
-                        <table class="table table-bordered">
-                        <thead>
-                            <tr class="text-center">
-                            <th scope="col">INCLUDE</th>
-                            <th scope="col">EXCLUDE</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                            <td>Transportasi PP dari Stasiun Asal - Stasiun Tujuan</td>
-                            <td>Transportasi dari Kota Asal</td>
-                            </tr>
-                            <tr>
-                            <td>Transportasi Stasiun Tujuan - Stasiun Asal</td>
-                            <td>Makan Selama Perjalanan</td>
-                            </tr>
-                            <tr>
-                            <td>Simaksi Pendakian</td>
-                            <td>Porter Pribadi</td>
-                            </tr>
-                            <tr>
-                            <td>Guide Berlisensi APGI</td>
-                            <td>Surat Kesehatan</td>
-                            </tr>
-                            <tr>
-                            <td>Porter Team</td>
-                            <td>Perlengkapan Pribadi</td>
-                            </tr>
-                            <tr>
-                            <td>Makan Selama Pendakian (Breakfast, Dinner, Summit), Lunch pakai cemilan pribadi</td>
-                            <td>Cemilan dan Air Mineral</td>
-                            </tr>
-                            <tr>
-                            <td>Makan Sebelum Sesudah 2x</td>
-                            <td></td>
-                            </tr>
-                            <tr>
-                            <td>Perlengkapan Makan dan Minum</td>
-                            <td></td>
-                            </tr>
-                            <tr>
-                            <td>T-Shirt Pendakian</td>
-                            <td></td>
-                            </tr>
-                            <tr>
-                            <td>Tenda Kapasitas 4-5 diisi Max 4 Orang</td>
-                            <td></td>
-                            </tr>
-                            <tr>
-                            <td>Alat Masak (Kompor, Nesting, Bahan Bakar)</td>
-                            <td></td>
-                            </tr>
-                            <tr>
-                            <td>Rumah Singgah (Free Wifi)</td>
-                            <td></td>
-                            </tr>
-                            <tr>
-                            <td>Kebersihan Rumah Singgah</td>
-                            <td></td>
-                            </tr>
-                            <tr>
-                            <td>Welcome Drink dan Sop Buah</td>
-                            <td></td>
-                            </tr>
-                            <tr>
-                            <td>Snack Gunung (Pisang Greentea)</td>
-                            <td></td>
-                            </tr>
-                            <tr>
-                            <td>Asuransi TNBTS</td>
-                            <td></td>
-                            </tr>
-                            <tr>
-                            <td>Logistik Team</td>
-                            <td></td>
-                            </tr>
-                            <tr>
-                            <td>First Aid Kid</td>
-                            <td></td>
-                            </tr>
-                            <tr>
-                            <td>Dokumentasi Kegiatan (Jasa Foto Video Minimal 30 Peserta)</td>
-                            <td></td>
-                            </tr>
-                            <tr>
-                            <td>Sertifikat Pendakian (Format Pdf)</td>
-                            <td></td>
-                            </tr>
-                        </tbody>
-                        </table>
+                        <!-- <table class="table table-bordered">
+                            <thead>
+                                <tr class="text-center">
+                                <th scope="col">INCLUDE</th>
+                                <th scope="col">EXCLUDE</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>Transportasi PP dari Stasiun Asal - Stasiun Tujuan</td>
+                                <td>Transportasi dari Kota Asal</td>
+                                </tr>
+                                <tr>
+                                <td>Transportasi Stasiun Tujuan - Stasiun Asal</td>
+                                <td>Makan Selama Perjalanan</td>
+                                </tr>
+                                <tr>
+                                <td>Simaksi Pendakian</td>
+                                <td>Porter Pribadi</td>
+                                </tr>
+                                <tr>
+                                <td>Guide Berlisensi APGI</td>
+                                <td>Surat Kesehatan</td>
+                                </tr>
+                                <tr>
+                                <td>Porter Team</td>
+                                <td>Perlengkapan Pribadi</td>
+                                </tr>
+                                <tr>
+                                <td>Makan Selama Pendakian (Breakfast, Dinner, Summit), Lunch pakai cemilan pribadi</td>
+                                <td>Cemilan dan Air Mineral</td>
+                                </tr>
+                                <tr>
+                                <td>Makan Sebelum Sesudah 2x</td>
+                                <td></td>
+                                </tr>
+                                <tr>
+                                <td>Perlengkapan Makan dan Minum</td>
+                                <td></td>
+                                </tr>
+                                <tr>
+                                <td>T-Shirt Pendakian</td>
+                                <td></td>
+                                </tr>
+                                <tr>
+                                <td>Tenda Kapasitas 4-5 diisi Max 4 Orang</td>
+                                <td></td>
+                                </tr>
+                                <tr>
+                                <td>Alat Masak (Kompor, Nesting, Bahan Bakar)</td>
+                                <td></td>
+                                </tr>
+                                <tr>
+                                <td>Rumah Singgah (Free Wifi)</td>
+                                <td></td>
+                                </tr>
+                                <tr>
+                                <td>Kebersihan Rumah Singgah</td>
+                                <td></td>
+                                </tr>
+                                <tr>
+                                <td>Welcome Drink dan Sop Buah</td>
+                                <td></td>
+                                </tr>
+                                <tr>
+                                <td>Snack Gunung (Pisang Greentea)</td>
+                                <td></td>
+                                </tr>
+                                <tr>
+                                <td>Asuransi TNBTS</td>
+                                <td></td>
+                                </tr>
+                                <tr>
+                                <td>Logistik Team</td>
+                                <td></td>
+                                </tr>
+                                <tr>
+                                <td>First Aid Kid</td>
+                                <td></td>
+                                </tr>
+                                <tr>
+                                <td>Dokumentasi Kegiatan (Jasa Foto Video Minimal 30 Peserta)</td>
+                                <td></td>
+                                </tr>
+                                <tr>
+                                <td>Sertifikat Pendakian (Format Pdf)</td>
+                                <td></td>
+                                </tr>
+                            </tbody>
+                        </table> -->
+                        <p>
+                            <span class="font-weight-bold" style="font-size:20px;">Include : </span>
+                            <span class="pl-2" style="font-size: 18px;">
+                                <?php foreach ($detail as $d ) {
+                                    echo $d->include;
+                                } ?>
+                            </span>
+                        </p>
+                        <p>
+                            <span class="font-weight-bold" style="font-size:20px;">Exclude : </span>
+                            <span class="pl-2" style="font-size: 18px;">
+                                <?php foreach ($detail as $d ) {
+                                    echo $d->exclude;
+                                } ?>
+                            </span>
+                        </p>
                     </div>
                     </div>
                 </div>
