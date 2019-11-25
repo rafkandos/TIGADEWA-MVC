@@ -365,7 +365,8 @@
                                         <textarea rows="5" class="form-control form-control-line" name="d4"></textarea>
                                         <br><br> -->
                                         <label class="font-weight-bold">Itinerary</label>
-                                        <input type="text" name="itt" id="itt" placeholder="Day"><a class="btn btn-secondary" onclick="itenerary()">Choose</a> 
+                                        <input class="form-control form-control-line" type="text" name="itt" id="itt" placeholder="Day">
+                                        <a class="btn btn-info text-white mt-2" style="width:100%" onclick="itenerary()">Choose</a> 
                                         <br><br>
                                         <div id="haha">
                                         </div>
@@ -721,7 +722,7 @@
                     // txt += "<p>" + res[a].nama + "<p><br>";
                     // tes += res.semuaprovinsi[a]
                     // tes += '<option value="'+res.semuaprovinsi[a].id+res.semuaprovinsi[a].nama+'">'+res.semuaprovinsi[a].nama+'</option>';
-                    tes += '<label class="font-weight-bold">Day '+a+'</label> <input type="text" class="form-control name="day'+a+'" id="itt"> <br><br>';
+                    tes += '<label class="font-weight-bold">Day '+a+'</label> <input type="text" class="form-control name="day'+a+'"> <br><br>';
                     // tes + = '<label class="font-weight-bold">Day '+a+'</label> <input type="text" class="form-control form-control-line" name="day"> <br><br>';
                 }
                 // console.log(tes);
