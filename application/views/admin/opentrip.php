@@ -352,7 +352,7 @@
                                         <label class="font-weight-bold">Overview</label>
                                         <textarea rows="5" class="form-control form-control-line" name="ov"></textarea>
                                         <br><br>
-                                        <label class="font-weight-bold">Itinerary - Day 1</label>
+                                        <!-- <label class="font-weight-bold">Itinerary - Day 1</label>
                                         <textarea rows="5" class="form-control form-control-line" name="d1"></textarea>
                                         <br><br>
                                         <label class="font-weight-bold">Itinerary - Day 2</label>
@@ -363,7 +363,12 @@
                                         <br><br>
                                         <label class="font-weight-bold">Itinerary Day 4</label>
                                         <textarea rows="5" class="form-control form-control-line" name="d4"></textarea>
+                                        <br><br> -->
+                                        <label class="font-weight-bold">Itinerary</label>
+                                        <input type="text" name="itt" id="itt" placeholder="Day"><a class="btn btn-secondary" onclick="itenerary()">Choose</a> 
                                         <br><br>
+                                        <div id="haha">
+                                        </div>
                                         <label class="font-weight-bold">Preparation</label>
                                         <textarea rows="5" class="form-control form-control-line" name="pre"></textarea>
                                         <br><br>
@@ -706,6 +711,21 @@
                 $('#sdsch').val(data.scheduleDate);
                 $('#slsch').val(data.slot);
             });
+        }
+
+        function itenerary() {
+            var vl = $('#itt').val();
+            console.log(vl);
+            var tes = "";
+            for(var a = 1; a <= vl; a++){
+                    // txt += "<p>" + res[a].nama + "<p><br>";
+                    // tes += res.semuaprovinsi[a]
+                    // tes += '<option value="'+res.semuaprovinsi[a].id+res.semuaprovinsi[a].nama+'">'+res.semuaprovinsi[a].nama+'</option>';
+                    tes += '<label class="font-weight-bold">Day '+a+'</label> <input type="text" class="form-control name="day'+a+'" id="itt"> <br><br>';
+                    // tes + = '<label class="font-weight-bold">Day '+a+'</label> <input type="text" class="form-control form-control-line" name="day"> <br><br>';
+                }
+                // console.log(tes);
+                $('#haha').html(tes);
         }
 
     </script>
