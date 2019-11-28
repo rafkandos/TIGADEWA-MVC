@@ -261,50 +261,248 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                            <th scope="row" style="font-size: 13pt">DAY 1</th>
-                            <td>
-                                <B>08.00 – 09.00</B> : Meeting Point Stasiun Malang <br>
-                                <b>09.00 – 09.30</b> : Malang – Tumpang Homestay <b>(Makan 1)</b> <br>
-                                <b>09.30 – 11.00</b> : Perjalanan Menuju Ranupane <br>
-                                <b>11.00 – 14.00</b> : ISHOMA, Persiapan Pendakian <br>
-                                <b>14.00 – 18.00</b> : Ranupane – Ranukumbolo <b>(Camp 1)</b> <br>
-                                <b>18.00 – XX.XX</b> : ISHOMA, Acara Bebas <b>(Dinner)</b>
-                            </td>
-                            </tr>
-                            <tr>
-                            <th scope="row" style="font-size: 13pt">DAY 2</th>
-                            <td>
-                                <b>04.00 – 07.00</b> : Bangun Pagi, Sarapan, Enjoy Sunrise Ranukumbolo <b>(Breakfast)</b> <br>
-                                <b>07.00 – 08.00</b> : Packing <br>
-                                <b>08.00 – 14.00</b> : Ranukumbolo – Kalimati <b>(Camp 2)(Lunch/Dinner)</b> <br>
-                                <b>04.00 – 00.00</b> : Acara Bebas, ISHOMA <br>
-                            </td>
-                            </tr>
-                            <tr>
-                            <th scope="row" style="font-size: 13pt">DAY 3</th>
-                            <td>
-                                <b>00:00 – 00.30</b> : Bangun, Sarapan dan Prepare Summit Attack <b>(Sarapan Summit)</b> <br>
-                                <b>00:30 – 05.30</b> : Kalimati - Puncak <br>
-                                <b>05:30 – 07.00</b> : Enjoy Puncak Semeru <br>
-                                <b>07:00 – 10.00</b> : Puncak - Kalimati <br>
-                                <b>10:00 – 14.00</b> : ISHOMA, Packing Turun <b>(Lunch)</b> <br>
-                                <b>14:00 – 16.00</b> : Kalimati – Ranukumbolo <b>(Camp 3)</b> <br>
-                                <b>16:00 – XX.XX</b> : ISHOMA, Acara Bebas <b>(Dinner)</b> <br>
-                            </td>
-                            </tr>
-                            <tr>
-                            <th scope="row" style="font-size: 13pt">DAY 4</th>
-                            <td>
-                                <b>05:00 – 08:00</b> : Bangun, Sarapan, Persiapan Packing Turun <b>(Breakfast)</b> <br>
-                                <b>08:00 – 12.00</b> : Ranukumbolo - Ranupane <br>
-                                <b>12:00 – 13.00</b> : Makan, Bersih Bersih <br>
-                                <b>13:00 – 14.30</b> : Perjalanan Ranupane – Tumpang Homestay <b>(Makan 2)</b> <br>
-                                <b>14:30 – 15.30</b> : Packing Pulang <br>
-                                <b>15:30 – 16.30</b> : Perjalanan Tumpang – Stasiun Malang <br>
-                                <b>16:30</b> : Trip Selesai <br>
-                            </td>
-                            </tr>
+                            <?php foreach ($detail as $d) { ?>
+                                <?php if ($d->day1 != null && $d->day1 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 1</th>
+                                            <td>'.$d->day1.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day2 != null && $d->day2 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 2</th>
+                                            <td>'.$d->day2.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day3 != null && $d->day3 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 3</th>
+                                            <td>'.$d->day3.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day4 != null && $d->day4 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 4</th>
+                                            <td>'.$d->day4.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day5 != null && $d->day5 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 5</th>
+                                            <td>'.$d->day5.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day6 != null && $d->day6 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 6</th>
+                                            <td>'.$d->day6.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day7 != null && $d->day7 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 7</th>
+                                            <td>'.$d->day7.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day8 != null && $d->day8 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 8</th>
+                                            <td>'.$d->day8.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day9 != null && $d->day9 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 9</th>
+                                            <td>'.$d->day9.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day10 != null && $d->day10 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 10</th>
+                                            <td>'.$d->day10.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day11 != null && $d->day11 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 11</th>
+                                            <td>'.$d->day11.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day12 != null && $d->day12 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 12</th>
+                                            <td>'.$d->day12.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day13 != null && $d->day13 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 13</th>
+                                            <td>'.$d->day13.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day14 != null && $d->day14 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 14</th>
+                                            <td>'.$d->day14.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day15 != null && $d->day15 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 15</th>
+                                            <td>'.$d->day15.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day16 != null && $d->day16 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 16</th>
+                                            <td>'.$d->day16.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day17 != null && $d->day17 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 17</th>
+                                            <td>'.$d->day17.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day18 != null && $d->day18 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 18</th>
+                                            <td>'.$d->day18.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day19 != null && $d->day19 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 19</th>
+                                            <td>'.$d->day19.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day20 != null && $d->day20 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 20</th>
+                                            <td>'.$d->day20.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day21 != null && $d->day21 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 21</th>
+                                            <td>'.$d->day21.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day22 != null && $d->day22 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 22</th>
+                                            <td>'.$d->day22.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day23 != null && $d->day23 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 23</th>
+                                            <td>'.$d->day23.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day24 != null && $d->day24 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 24</th>
+                                            <td>'.$d->day24.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day25 != null && $d->day25 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 25</th>
+                                            <td>'.$d->day25.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day26 != null && $d->day26 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 26</th>
+                                            <td>'.$d->day26.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day27 != null && $d->day27 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 27</th>
+                                            <td>'.$d->day27.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day28 != null && $d->day28 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 28</th>
+                                            <td>'.$d->day28.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day29 != null && $d->day29 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 29</th>
+                                            <td>'.$d->day29.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                                <?php if ($d->day30 != null && $d->day30 != "") {
+                                    echo '
+                                        <tr>
+                                            <th scope="row" style="font-size: 13pt">DAY 30</th>
+                                            <td>'.$d->day30.'</td>
+                                        </tr>
+                                    ';
+                                }?>
+                            <?php }?>
                         </tbody>
                         </table>
                     </div>

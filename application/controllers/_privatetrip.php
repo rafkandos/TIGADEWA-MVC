@@ -19,6 +19,43 @@ class _privatetrip extends CI_Controller {
 		$this->load->view('admin/privatetrip', $data);	
 	}
 
+    public function itinerary($id_privatetrip)
+    {
+        $data['itinerary'] = $this->ptm->getITE($id_privatetrip);
+        $this->load->view('admin/i_privatetrip', $data);
+
+        $data = array(
+            'idit' => $id_privatetrip
+        );
+        $this->session->set_userdata( $data );
+        
+    }
+
+    public function addit()
+    {
+        if ($this->input->post('add')) {
+            // $this->form_validation->set_rules('tn', 'Trip Name', 'trim|required');
+            // $this->form_validation->set_rules('ov', 'Overview', 'trim|required');
+            // $this->form_validation->set_rules('pre', 'Prepararation', 'trim|required');
+            // if ($this->form_validation->run() == true) {
+                if ($this->ptm->updateit() == true) {
+                    $this->session->set_flashdata('notif_sukses', 'Add Itinerary Success');
+                    redirect('_privatetrip');
+                } else {
+                    $this->session->set_flashdata('notif_gagal', 'Add Itinerary Failure');
+                    redirect('_privatetrip');
+                    
+                }
+            // } else {
+            //     $this->session->set_flashdata('notif_gagal', validation_errors());
+            //     redirect('https://www.google.com/','refresh');   
+            // }
+        } else {
+            $this->session->set_flashdata('notif_gagal', validation_errors());
+            redirect('_privatetrip','refresh');
+        }
+    }
+
 	//privatetrip
 	public function add()
 	{

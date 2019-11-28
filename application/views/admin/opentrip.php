@@ -145,6 +145,7 @@
                             }
                         ?>
 
+                <!-- OPENTRIP -->
                 <div class="row">
                     <!-- column -->
                     <div class="col-lg-12">
@@ -158,6 +159,7 @@
                                         <a href="#" data-toggle="modal" data-target="#add" class="btn waves-effect waves-light btn-warning pull-right">
                                             <i class="mdi mdi-library-plus"></i> Add Trip
                                         </a>
+                                        
                                     </div>
                                 </div>
                                 <div class="table-responsive">
@@ -168,6 +170,8 @@
                                                 <th>Trip Name</th>
                                                 <th>Overview</th>
                                                 <th>Preparation</th>
+                                                <th>Include</th>
+                                                <th>Exclude</th>
                                                 <th>Banner</th>
                                                 <th>Action</th>
                                             </tr>
@@ -182,6 +186,8 @@
                                                             <td>'.$o->OtripName.'</td>
                                                             <td>'.$o->overview.'</td>
                                                             <td>'.$o->preparation.'</td>
+                                                            <td>'.$o->include.'</td>
+                                                            <td>'.$o->exclude.'</td>
                                                             <td align="center"><img src="'.base_url('assets/uploads/'.$o->tripImages).'" style="width: 70px;" alt="img"></td>
                                                             
                                                             <td align="center">
@@ -199,6 +205,10 @@
                                                                     class="m-t-5 waves-effect waves-dark btn btn-success">
                                                                     <i class="mdi mdi-upload"></i> Upload Banner
                                                                 </a>
+                                                                <a href="'.base_url('index.php/_opentrip/itinerary/'.$o->id_opentrip).'" 
+                                                                    class="m-t-5 waves-effect waves-dark btn btn-info">
+                                                                    <i class="mdi mdi-eye"></i> Itinerary
+                                                                </a>
                                                             </td>
                                                         </tr>
                                                     ';
@@ -212,6 +222,7 @@
                     </div>
                 </div>
 
+                <!-- MEETING POINT -->
                 <div class="row">
                     <!-- column -->
                     <div class="col-lg-6">
@@ -331,6 +342,51 @@
         </div>
     </div>
 
+    <div class="modal fade" id="itinerary" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Trip</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="<?php base_url()?>_opentrip/add" method="post">
+                    <div class="modal-body">
+                        <div class="tab-pane" id="settings" role="tabpanel">
+                            <div class="card-block">
+                                    <div class="form-horizontal form-material form-group">
+                                        <input type="hidden" name="id_opentrip">
+                                        <label class="font-weight-bold">TripName</label>
+                                        <input type="text" class="form-control form-control-line" name="tn">
+                                        <br><br>
+                                        <label class="font-weight-bold">Overview</label>
+                                        <textarea rows="5" class="form-control form-control-line" name="ov"></textarea>
+                                        <br><br>
+                                        <!-- 
+                                        <div id="haha">
+                                        </div> -->
+                                        <label class="font-weight-bold">Preparation</label>
+                                        <textarea rows="5" class="form-control form-control-line" name="pre"></textarea>
+                                        <br><br>
+                                        <label class="font-weight-bold">Include</label>
+                                        <textarea rows="5" class="form-control form-control-line" name="ic"></textarea>
+                                        <br><br>
+                                        <label class="font-weight-bold">Exclude</label>
+                                        <textarea rows="5" class="form-control form-control-line" name="ec"></textarea>
+                                        <br><br>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" name="add" class="btn btn-success font-weight-bold" value="SUBMIT">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -352,24 +408,9 @@
                                         <label class="font-weight-bold">Overview</label>
                                         <textarea rows="5" class="form-control form-control-line" name="ov"></textarea>
                                         <br><br>
-                                        <!-- <label class="font-weight-bold">Itinerary - Day 1</label>
-                                        <textarea rows="5" class="form-control form-control-line" name="d1"></textarea>
-                                        <br><br>
-                                        <label class="font-weight-bold">Itinerary - Day 2</label>
-                                        <textarea rows="5" class="form-control form-control-line" name="d2"></textarea>
-                                        <br><br>
-                                        <label class="font-weight-bold">Itinerary - Day 3</label>
-                                        <textarea rows="5" class="form-control form-control-line" name="d3"></textarea>
-                                        <br><br>
-                                        <label class="font-weight-bold">Itinerary Day 4</label>
-                                        <textarea rows="5" class="form-control form-control-line" name="d4"></textarea>
-                                        <br><br> -->
-                                        <label class="font-weight-bold">Itinerary</label>
-                                        <input class="form-control form-control-line" type="text" name="itt" id="itt" placeholder="Day">
-                                        <a class="btn btn-info text-white mt-2" style="width:100%" onclick="itenerary()">Choose</a> 
-                                        <br><br>
-                                        <div id="haha">
-                                        </div>
+                                        
+                                        <!-- <div id="haha">
+                                        </div> -->
                                         <label class="font-weight-bold">Preparation</label>
                                         <textarea rows="5" class="form-control form-control-line" name="pre"></textarea>
                                         <br><br>
@@ -503,7 +544,13 @@
                                         <br><br>
                                         <label class="font-weight-bold">Preparation</label>
                                         <textarea rows="5" class="form-control form-control-line" name="pre" id="pre"></textarea>
-                                        <!-- <input type="text" class="form-control form-control-line" name="pre" id="pre"> -->
+                                        <br><br>
+                                        <label class="font-weight-bold">Include</label>
+                                        <textarea rows="5" class="form-control form-control-line" name="ic" id="ic"></textarea>
+                                        <br><br>
+                                        <label class="font-weight-bold">Exclude</label>
+                                        <textarea rows="5" class="form-control form-control-line" name="ec" id="ec"></textarea>
+                                        <br><br>
                                     </div>
                             </div>
                         </div>
@@ -637,6 +684,8 @@
     
     
     
+    
+    
     <script src="<?=base_url()?>assets_admin/plugins/jquery/jquery.min.js"></script>
     
     <script src="<?=base_url()?>assets_admin/plugins/bootstrap/js/tether.min.js"></script>
@@ -675,12 +724,16 @@
             $('#ov').val();
             $('#pre').val();
             $('#tn').val();
+            $('#ic').val();
+            $('#ec').val();
 
             $.getJSON("<?php echo base_url('index.php/_opentrip/get_id_ot/') ?>"+ id, function(data){
                 $('#id_opentrip').val(data.id_opentrip);
                 $('#ov').val(data.overview);
                 $('#pre').val(data.preparation);
                 $('#tn').val(data.OtripName);
+                $('#ic').val(data.include);
+                $('#ec').val(data.exclude);
             });
         }
 
@@ -718,13 +771,17 @@
             var vl = $('#itt').val();
             console.log(vl);
             var tes = "";
-            for(var a = 1; a <= vl; a++){
+            if (vl > 30) {
+                alert("Batasan Hanya 30")
+            } else{
+                for(var a = 1; a <= vl; a++){
                     // txt += "<p>" + res[a].nama + "<p><br>";
                     // tes += res.semuaprovinsi[a]
                     // tes += '<option value="'+res.semuaprovinsi[a].id+res.semuaprovinsi[a].nama+'">'+res.semuaprovinsi[a].nama+'</option>';
                     tes += '<label class="font-weight-bold">Day '+a+'</label> <input type="text" class="form-control name="day'+a+'"> <br><br>';
                     // tes + = '<label class="font-weight-bold">Day '+a+'</label> <input type="text" class="form-control form-control-line" name="day"> <br><br>';
                 }
+            }
                 // console.log(tes);
                 $('#haha').html(tes);
         }

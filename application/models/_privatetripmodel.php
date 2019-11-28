@@ -37,8 +37,15 @@ class _privatetripmodel extends CI_Model {
   public function getprivatetrip()
   {
     return $this->db->where('id_privatetrip !=', 11111)
+                    ->where('id_privatetrip !=', 22222)
                     ->get('privatetrip')->result();
     
+  }
+
+  public function getITE($id_privatetrip)
+  {
+    return $this->db->where('id_privatetrip', $id_privatetrip)
+                    ->get('privatetrip')->result();
   }
 
   public function getMP()
@@ -61,7 +68,9 @@ class _privatetripmodel extends CI_Model {
     $data = array(
       'PtripName'       => $this->input->post('tn'), 
       'overview'        => $this->input->post('ov'),
-      'preparation'     => $this->input->post('pre')
+      'preparation'     => $this->input->post('pre'),
+      'include'         => $this->input->post('ic'),
+      'exclude'         => $this->input->post('ec')
     );
 
     return $this->db->insert('privatetrip', $data);
@@ -116,7 +125,9 @@ class _privatetripmodel extends CI_Model {
       'id_privatetrip'     => $this->input->post('id_privatetrip'),
       'PtripName'       => $this->input->post('tn'), 
       'overview'        => $this->input->post('ov'),
-      'preparation'     => $this->input->post('pre')
+      'preparation'     => $this->input->post('pre'),
+      'include'         => $this->input->post('ic'),
+      'exclude'         => $this->input->post('ec')
     );
 
     return $this->db->where('id_privatetrip', $this->input->post('id_privatetrip'))
@@ -161,6 +172,52 @@ class _privatetripmodel extends CI_Model {
 
     return $this->db->where('id_schedule', $this->input->post('id_schedule'))
                     ->update('schedule', $data);
+    
+
+    if ($this->db->affected_rows() > 0) {
+            return true;
+        } else {
+            return false;
+        } 
+  }
+
+  public function updateit()
+  {
+    $data = array(
+      'day1'            => $this->input->post('day1'),
+      'day2'            => $this->input->post('day2'),
+      'day3'            => $this->input->post('day3'),
+      'day4'            => $this->input->post('day4'),
+      'day5'            => $this->input->post('day5'),
+      'day6'            => $this->input->post('day6'),
+      'day7'            => $this->input->post('day7'),
+      'day8'            => $this->input->post('day8'),
+      'day9'            => $this->input->post('day9'),
+      'day10'            => $this->input->post('day10'),
+      'day11'            => $this->input->post('day11'),
+      'day12'            => $this->input->post('day12'),
+      'day13'            => $this->input->post('day13'),
+      'day14'            => $this->input->post('day14'),
+      'day15'            => $this->input->post('day15'),
+      'day16'            => $this->input->post('day16'),
+      'day17'            => $this->input->post('day17'),
+      'day18'            => $this->input->post('day18'),
+      'day19'            => $this->input->post('day19'),
+      'day20'            => $this->input->post('day20'),
+      'day21'            => $this->input->post('day21'),
+      'day22'            => $this->input->post('day22'),
+      'day23'            => $this->input->post('day23'),
+      'day24'            => $this->input->post('day24'),
+      'day25'            => $this->input->post('day25'),
+      'day26'            => $this->input->post('day26'),
+      'day27'            => $this->input->post('day27'),
+      'day28'            => $this->input->post('day28'),
+      'day29'            => $this->input->post('day29'),
+      'day30'            => $this->input->post('day30')
+    );
+
+    return $this->db->where('id_privatetrip', $this->session->userdata('idit'))
+                    ->update('privatetrip', $data);
     
 
     if ($this->db->affected_rows() > 0) {

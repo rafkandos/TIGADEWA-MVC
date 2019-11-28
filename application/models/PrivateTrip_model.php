@@ -6,6 +6,7 @@ class PrivateTrip_model extends CI_Model {
   public function get_privatetrip()
   {
     return $this->db->where('id_privatetrip != ', 11111)
+                    ->where('id_privatetrip !=', 22222)
                     ->get('privatetrip')->result();
   }
 

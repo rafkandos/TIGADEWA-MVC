@@ -19,6 +19,43 @@ class _internationaltrip extends CI_Controller {
 		$this->load->view('admin/internationaltrip', $data);	
 	}
 
+    public function itinerary($id_internationaltrip)
+    {
+        $data['itinerary'] = $this->itm->getITE($id_internationaltrip);
+        $this->load->view('admin/i_internationaltrip', $data);
+
+        $data = array(
+            'idot' => $id_internationaltrip
+        );
+        $this->session->set_userdata( $data );
+        
+    }
+
+    public function addit()
+    {
+        if ($this->input->post('add')) {
+            // $this->form_validation->set_rules('tn', 'Trip Name', 'trim|required');
+            // $this->form_validation->set_rules('ov', 'Overview', 'trim|required');
+            // $this->form_validation->set_rules('pre', 'Prepararation', 'trim|required');
+            // if ($this->form_validation->run() == true) {
+                if ($this->itm->updateit() == true) {
+                    $this->session->set_flashdata('notif_sukses', 'Add Itinerary Success');
+                    redirect('_internationaltrip');
+                } else {
+                    $this->session->set_flashdata('notif_gagal', 'Add Itinerary Failure');
+                    redirect('_internationaltrip');
+                    
+                }
+            // } else {
+            //     $this->session->set_flashdata('notif_gagal', validation_errors());
+            //     redirect('https://www.google.com/','refresh');   
+            // }
+        } else {
+            $this->session->set_flashdata('notif_gagal', validation_errors());
+            redirect('_internationaltrip','refresh');
+        }
+    }
+
 	//internationaltrip
 	public function add()
 	{

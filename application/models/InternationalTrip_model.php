@@ -6,6 +6,7 @@ class InternationalTrip_model extends CI_Model {
   public function get_internationaltrip()
   {
     return $this->db->where('id_internationaltrip !=', 11111)
+                    ->where('id_internationaltrip !=', 22222)
                     ->get('internationaltrip')->result();
   }
 

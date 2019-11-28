@@ -20,7 +20,44 @@ class _opentrip extends CI_Controller {
 		$data['sch'] = $this->otm->getSCH();
 		$data['opentrip'] = $this->otm->getOpenTrip();
 		$this->load->view('admin/opentrip', $data);	
-	}
+    }
+    
+    public function itinerary($id_opentrip)
+    {
+        $data['itinerary'] = $this->otm->getITE($id_opentrip);
+        $this->load->view('admin/i_opentrip', $data);
+
+        $data = array(
+            'idot' => $id_opentrip
+        );
+        $this->session->set_userdata( $data );
+        
+    }
+
+    public function addit()
+    {
+        if ($this->input->post('add')) {
+            // $this->form_validation->set_rules('tn', 'Trip Name', 'trim|required');
+            // $this->form_validation->set_rules('ov', 'Overview', 'trim|required');
+            // $this->form_validation->set_rules('pre', 'Prepararation', 'trim|required');
+            // if ($this->form_validation->run() == true) {
+                if ($this->otm->updateit() == true) {
+                    $this->session->set_flashdata('notif_sukses', 'Add Itinerary Success');
+                    redirect('_opentrip');
+                } else {
+                    $this->session->set_flashdata('notif_gagal', 'Add Itinerary Failure');
+                    redirect('_opentrip');
+                    
+                }
+            // } else {
+            //     $this->session->set_flashdata('notif_gagal', validation_errors());
+            //     redirect('https://www.google.com/','refresh');   
+            // }
+        } else {
+            $this->session->set_flashdata('notif_gagal', validation_errors());
+            redirect('_opentrip','refresh');
+        }
+    }
 
 	//opentrip
 	public function add()

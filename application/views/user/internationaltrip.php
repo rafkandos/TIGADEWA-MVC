@@ -130,7 +130,7 @@
                             <div class="col-md-6 col-lg-4 mb-3 mb-lg-5">
                                 <div class="team-2one">
                                     <a href="'.base_url('index.php/InternationalTrip/Detail/'.$o->id_internationaltrip).'">
-                                        <img src="'.base_url('assets/images/semerumlg.jpg').'" alt="Image" class="img-fluid">
+                                        <img src="'.base_url('assets/uploads/'.$o->tripImages).'" alt="Image" class="img-fluid">
                                     </a>
                                 </div>
                             </div>

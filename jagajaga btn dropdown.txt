@@ -1,0 +1,19 @@
+<div class="dropdown">
+                                                                    <button class="btn btn-primary dropdown-toggle font-weight-bold" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                        ACTION
+                                                                    </button>
+                                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                        <a class="dropdown-item" onclick="edit('.$o->id_opentrip.')" href="#" 
+                                                                            data-toggle="modal" data-target="#update">
+                                                                            <i class="mdi mdi-grease-pencil"></i> Edit
+                                                                        </a>
+                                                                        <a class="dropdown-item" href="'.base_url('index.php/_opentrip/delete/'.$o->id_opentrip).'">
+                                                                            <i class="mdi mdi-delete"></i> Delete
+                                                                        </a>
+                                                                        <a class="dropdown-item" onclick="upload('.$o->id_opentrip.')" href="#" 
+                                                                            data-toggle="modal" data-target="#upload">
+                                                                            <i class="mdi mdi-upload"></i> Upload Banner
+                                                                        </a>
+                                                                        <a class="dropdown-item" href="#">Something else here</a>
+                                                                    </div>
+                                                                </div>

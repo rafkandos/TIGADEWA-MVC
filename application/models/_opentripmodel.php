@@ -37,14 +37,21 @@ class _opentripmodel extends CI_Model {
   public function getOpenTrip()
   {
     return $this->db->where('id_opentrip !=', 11111)
+                    ->where('id_opentrip !=', 22222)
                     ->get('opentrip')->result();
-    
+  }
+
+  public function getITE($id_opentrip)
+  {
+    return $this->db->where('id_opentrip', $id_opentrip)
+                    ->get('opentrip')->result();
   }
 
   public function getMP()
   {
     return $this->db->join('opentrip', 'opentrip.id_opentrip = pricing.id_ot')
                     ->where('pricing.id_ot !=', null, false)
+                    ->where('pricing.id_ot !=', 22222)
                     ->get('pricing')->result();
   }
 
@@ -52,20 +59,18 @@ class _opentripmodel extends CI_Model {
   {
     return $this->db->join('opentrip', 'opentrip.id_opentrip = schedule.ot_id')
                     ->where('schedule.ot_id !=', null, false)
+                    ->where('schedule.ot_id !=', 22222)
                     ->get('schedule')->result();
   }
 
   //opentrip
   public function add()
   {
+
     $data = array(
       'OtripName'       => $this->input->post('tn'), 
       'overview'        => $this->input->post('ov'),
       'preparation'     => $this->input->post('pre'),
-      'day1'            => $this->input->post('d1'),
-      'day2'            => $this->input->post('d2'),
-      'day3'            => $this->input->post('d3'),
-      'day4'            => $this->input->post('d4'),
       'include'         => $this->input->post('ic'),
       'exclude'         => $this->input->post('ec')
     );
@@ -122,7 +127,9 @@ class _opentripmodel extends CI_Model {
       'id_opentrip'     => $this->input->post('id_opentrip'),
       'OtripName'       => $this->input->post('tn'), 
       'overview'        => $this->input->post('ov'),
-      'preparation'     => $this->input->post('pre')
+      'preparation'     => $this->input->post('pre'),
+      'include'         => $this->input->post('ic'),
+      'exclude'         => $this->input->post('ec')
     );
 
     return $this->db->where('id_opentrip', $this->input->post('id_opentrip'))
@@ -167,6 +174,52 @@ class _opentripmodel extends CI_Model {
 
     return $this->db->where('id_schedule', $this->input->post('id_schedule'))
                     ->update('schedule', $data);
+    
+
+    if ($this->db->affected_rows() > 0) {
+            return true;
+        } else {
+            return false;
+        } 
+  }
+
+  public function updateit()
+  {
+    $data = array(
+      'day1'            => $this->input->post('day1'),
+      'day2'            => $this->input->post('day2'),
+      'day3'            => $this->input->post('day3'),
+      'day4'            => $this->input->post('day4'),
+      'day5'            => $this->input->post('day5'),
+      'day6'            => $this->input->post('day6'),
+      'day7'            => $this->input->post('day7'),
+      'day8'            => $this->input->post('day8'),
+      'day9'            => $this->input->post('day9'),
+      'day10'            => $this->input->post('day10'),
+      'day11'            => $this->input->post('day11'),
+      'day12'            => $this->input->post('day12'),
+      'day13'            => $this->input->post('day13'),
+      'day14'            => $this->input->post('day14'),
+      'day15'            => $this->input->post('day15'),
+      'day16'            => $this->input->post('day16'),
+      'day17'            => $this->input->post('day17'),
+      'day18'            => $this->input->post('day18'),
+      'day19'            => $this->input->post('day19'),
+      'day20'            => $this->input->post('day20'),
+      'day21'            => $this->input->post('day21'),
+      'day22'            => $this->input->post('day22'),
+      'day23'            => $this->input->post('day23'),
+      'day24'            => $this->input->post('day24'),
+      'day25'            => $this->input->post('day25'),
+      'day26'            => $this->input->post('day26'),
+      'day27'            => $this->input->post('day27'),
+      'day28'            => $this->input->post('day28'),
+      'day29'            => $this->input->post('day29'),
+      'day30'            => $this->input->post('day30')
+    );
+
+    return $this->db->where('id_opentrip', $this->session->userdata('idot'))
+                    ->update('opentrip', $data);
     
 
     if ($this->db->affected_rows() > 0) {

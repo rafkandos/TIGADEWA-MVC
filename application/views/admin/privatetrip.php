@@ -169,6 +169,8 @@
                                                 <th>Trip Name</th>
                                                 <th>Overview</th>
                                                 <th>Preparation</th>
+                                                <th>Include</th>
+                                                <th>Exclude</th>
                                                 <th>Banner</th>
                                                 <th>Action</th>
                                             </tr>
@@ -183,6 +185,8 @@
                                                             <td>'.$o->PtripName.'</td>
                                                             <td>'.$o->overview.'</td>
                                                             <td>'.$o->preparation.'</td>
+                                                            <td>'.$o->include.'</td>
+                                                            <td>'.$o->exclude.'</td>
                                                             <td align="center"><img src="'.base_url('assets/uploads/'.$o->tripImages).'" style="width: 70px;" alt="img"></td>
                                                             
                                                             <td align="center">
@@ -199,6 +203,10 @@
                                                                     data-toggle="modal" data-target="#upload" 
                                                                     class="m-t-5 waves-effect waves-dark btn btn-success">
                                                                     <i class="mdi mdi-upload"></i> Upload Banner
+                                                                </a>
+                                                                <a href="'.base_url('index.php/_privatetrip/itinerary/'.$o->id_privatetrip).'" 
+                                                                    class="m-t-5 waves-effect waves-dark btn btn-info">
+                                                                    <i class="mdi mdi-eye"></i> Itinerary
                                                                 </a>
                                                             </td>
                                                         </tr>
@@ -355,6 +363,12 @@
                                         <br><br>
                                         <label class="font-weight-bold">Preparation</label>
                                         <textarea rows="5" class="form-control form-control-line" name="pre"></textarea>
+                                        <br><br>
+                                        <label class="font-weight-bold">Include</label>
+                                        <textarea rows="5" class="form-control form-control-line" name="ic"></textarea>
+                                        <br><br>
+                                        <label class="font-weight-bold">Exclude</label>
+                                        <textarea rows="5" class="form-control form-control-line" name="ec"></textarea>
                                     </div>
                             </div>
                         </div>
@@ -479,7 +493,12 @@
                                         <br><br>
                                         <label class="font-weight-bold">Preparation</label>
                                         <textarea rows="5" class="form-control form-control-line" name="pre" id="pre"></textarea>
-                                        <!-- <input type="text" class="form-control form-control-line" name="pre" id="pre"> -->
+                                        <br><br>
+                                        <label class="font-weight-bold">Include</label>
+                                        <textarea rows="5" class="form-control form-control-line" name="ic" id="ic"></textarea>
+                                        <br><br>
+                                        <label class="font-weight-bold">Exclude</label>
+                                        <textarea rows="5" class="form-control form-control-line" name="ec" id="ec"></textarea>
                                     </div>
                             </div>
                         </div>
@@ -651,12 +670,16 @@
             $('#ov').val();
             $('#pre').val();
             $('#tn').val();
+            $('#ic').val();
+            $('#ec').val();
 
             $.getJSON("<?php echo base_url('index.php/_privatetrip/get_id_pt/') ?>"+ id, function(data){
                 $('#id_privatetrip').val(data.id_privatetrip);
                 $('#ov').val(data.overview);
                 $('#pre').val(data.preparation);
                 $('#tn').val(data.PtripName);
+                $('#ic').val(data.include);
+                $('#ec').val(data.exclude);
             });
         }
 

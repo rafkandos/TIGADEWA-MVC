@@ -38,6 +38,7 @@ class OpenTrip_model extends CI_Model {
   public function get_opentrip()
   {
     return $this->db->where('id_opentrip !=', 11111)
+                    ->where('id_opentrip !=', 22222)
                     ->get('opentrip')->result();
   }
 
