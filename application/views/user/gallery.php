@@ -110,13 +110,15 @@
         </div>
         <div class="row justify-content-center">
 
-          <?php foreach ($get_a as $a) { ?>
+          <?php foreach ($get_c as $c) { ?>
             <div class="col-md-6 col-lg-4 mb-3">
               <a href="trip1.html" class="unit-9">
-                <div class="image" style="background-image: url('<?=base_url()?>assets/images/hiking5.jpg');"></div>
+                <div class="image" 
+                  style="background-image: url('<?=base_url()?>assets/uploads/<?php echo $c->picture; ?>');">
+                </div>
                 <div class="unit-9-content">
-                  <h2>Papandayan Mountain</h2>
-                  <span><?php echo $a->tripDate; ?></span>
+                  <h2><?php echo $c->tripName; ?></h2>
+                  <span><?php echo $c->tripDate; ?></span>
                 </div>
               </a>
             </div>
@@ -128,19 +130,19 @@
         <div class="row">
           <div class="site-section-heading text-center w-border col-md-6 mx-auto">
             <h2 class="mb-5">2018</h2>
-            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, fugit nam obcaecati fuga itaque deserunt
-              officia, error reiciendis ab quod?</p> -->
           </div>
         </div>
         <div class="row justify-content-center">
 
-          <?php foreach ($get_b as $a) { ?>
+          <?php foreach ($get_b as $b) { ?>
             <div class="col-md-6 col-lg-4 mb-3">
               <a href="trip1.html" class="unit-9">
-                <div class="image" style="background-image: url('<?=base_url()?>assets/images/hiking4.jpg');"></div>
+                <div class="image" 
+                  style="background-image: url('<?=base_url()?>assets/uploads/<?php echo $b->picture; ?>');">
+                </div>
                 <div class="unit-9-content">
-                  <h2>Papandayan Mountain</h2>
-                  <span><?php echo $a->tripDate; ?></span>
+                  <h2><?php echo $b->tripName; ?></h2>
+                  <span><?php echo $b->tripDate; ?></span>
                 </div>
               </a>
             </div>
@@ -152,18 +154,18 @@
         <div class="row">
           <div class="site-section-heading text-center w-border col-md-6 mx-auto">
             <h2 class="mb-5">2017</h2>
-            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, fugit nam obcaecati fuga itaque deserunt
-              officia, error reiciendis ab quod?</p> -->
           </div>
         </div>
         <div class="row justify-content-center">
 
-          <?php foreach ($get_c as $a) { ?>
+          <?php foreach ($get_a as $a) { ?>
             <div class="col-md-6 col-lg-4 mb-3">
               <a href="trip1.html" class="unit-9">
-                <div class="image" style="background-image: url('<?=base_url()?>assets/images/hiking7.jpg');"></div>
+                <div class="image" 
+                  style="background-image: url('<?=base_url()?>assets/uploads/<?php echo $a->picture; ?>');">
+                </div>
                 <div class="unit-9-content">
-                  <h2>Papandayan Mountain</h2>
+                  <h2><?php echo $a->tripName; ?></h2>
                   <span><?php echo $a->tripDate; ?></span>
                 </div>
               </a>

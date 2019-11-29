@@ -65,7 +65,7 @@ class _opentrip extends CI_Controller {
 		if ($this->input->post('add')) {
             $this->form_validation->set_rules('tn', 'Trip Name', 'trim|required');
             $this->form_validation->set_rules('ov', 'Overview', 'trim|required');
-            $this->form_validation->set_rules('pre', 'Prepararation', 'trim|required');
+            $this->form_validation->set_rules('pre', 'Prepararation', 'trim|required|min_length[4]|max_length[5]');
             
             if ($this->form_validation->run() == true) {
                 if ($this->otm->add() == true) {

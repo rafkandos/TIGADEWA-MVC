@@ -102,6 +102,12 @@
                                 <span class="hide-menu">International Trip</span>
                             </a>
                         </li>
+                        <li> 
+                            <a class="waves-effect waves-dark" href="<?=base_url()?>index.php/_gallery" aria-expanded="false">    
+                                <i class="mdi mdi-file-image"></i>
+                                <span class="hide-menu">Gallery</span>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>
