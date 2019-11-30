@@ -1078,29 +1078,6 @@
         $(document).ready(function(){
             APIprovince();
             APIcity();
-            // $('#province').change(function(){ 
-            //     var hai = $(this).val();
-            //     var id = hai.substring(0, 2);
-            //     $.ajax({
-            //         url : "<?php echo base_url('index.php/OpenTrip/get_regencies');?>",
-            //         method : "POST",
-            //         data : {id: id},
-            //         async : true,
-            //         contentType: "application/json",
-            //         dataType : 'json',
-            //         success: function(data){
-                         
-            //             var html = '';
-            //             var i;
-            //             for(i=0; i<data.length; i++){
-            //                 html += '<option value='+data[i].id+'>'+data[i].name+'</option>';
-            //             }
-            //             $('#cities').html(html);
-            //             console.log(html);
-            //         }
-            //     });
-            //     return false;
-            // }); 
         });
 
         function overview(){
