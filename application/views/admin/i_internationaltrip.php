@@ -140,67 +140,67 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <label class="font-weight-bold mt-2">Day 1</label>
-                                                    <input value="<?php echo $d->day1?>" class="form-control form-control-line" type="text" name="day1" id="day1" required>
+                                                    <input value="<?php echo $d->day1?>" class="form-control form-control-line" type="text" onchange="d1()" name="day1" id="day1" required>
                                                     <label class="font-weight-bold mt-2">Day 2</label>
-                                                    <input value="<?php echo $d->day2?>" class="form-control form-control-line" type="text" name="day2" id="day2" required>
+                                                    <input value="<?php echo $d->day2?>" class="form-control form-control-line" type="text" onchange="d2()" name="day2" id="day2" required>
                                                     <label class="font-weight-bold mt-2">Day 3</label>
-                                                    <input value="<?php echo $d->day3?>" class="form-control form-control-line" type="text" name="day3" id="day3" required>
+                                                    <input value="<?php echo $d->day3?>" class="form-control form-control-line" type="text" onchange="d3()" name="day3" id="day3" required>
                                                     <label class="font-weight-bold mt-2">Day 4</label>
-                                                    <input value="<?php echo $d->day4?>" class="form-control form-control-line" type="text" name="day4" id="day4">
+                                                    <input value="<?php echo $d->day4?>" class="form-control form-control-line" type="text" onchange="d4()" name="day4" id="day4">
                                                     <label class="font-weight-bold mt-2">Day 5</label>
-                                                    <input value="<?php echo $d->day5?>" class="form-control form-control-line" type="text" name="day5" id="day5">
+                                                    <input value="<?php echo $d->day5?>" class="form-control form-control-line" type="text" onchange="d5()" name="day5" id="day5">
                                                     <label class="font-weight-bold mt-2">Day 6</label>
-                                                    <input value="<?php echo $d->day6?>" class="form-control form-control-line" type="text" name="day6" id="day6">
+                                                    <input value="<?php echo $d->day6?>" class="form-control form-control-line" type="text" onchange="d6()" name="day6" id="day6">
                                                     <label class="font-weight-bold mt-2">Day 7</label>
-                                                    <input value="<?php echo $d->day7?>" class="form-control form-control-line" type="text" name="day7" id="day7">
+                                                    <input value="<?php echo $d->day7?>" class="form-control form-control-line" type="text" onchange="d7()" name="day7" id="day7">
                                                     <label class="font-weight-bold mt-2">Day 8</label>
-                                                    <input value="<?php echo $d->day8?>" class="form-control form-control-line" type="text" name="day8" id="day8">
+                                                    <input value="<?php echo $d->day8?>" class="form-control form-control-line" type="text" onchange="d8()" name="day8" id="day8">
                                                     <label class="font-weight-bold mt-2">Day 9</label>
-                                                    <input value="<?php echo $d->day9?>" class="form-control form-control-line" type="text" name="day9" id="day9">
+                                                    <input value="<?php echo $d->day9?>" class="form-control form-control-line" type="text" onchange="d9()" name="day9" id="day9">
                                                     <label class="font-weight-bold mt-2">Day 10</label>
-                                                    <input value="<?php echo $d->day10?>" class="form-control form-control-line" type="text" name="day10" id="day10">
+                                                    <input value="<?php echo $d->day10?>" class="form-control form-control-line" type="text" onchange="d10()" name="day10" id="day10">
                                                     <label class="font-weight-bold mt-2">Day 11</label>
-                                                    <input value="<?php echo $d->day11?>" class="form-control form-control-line" type="text" name="day11" id="day11">
+                                                    <input value="<?php echo $d->day11?>" class="form-control form-control-line" type="text" onchange="d11()" name="day11" id="day11">
                                                     <label class="font-weight-bold mt-2">Day 12</label>
-                                                    <input value="<?php echo $d->day12?>" class="form-control form-control-line" type="text" name="day12" id="day12">
+                                                    <input value="<?php echo $d->day12?>" class="form-control form-control-line" type="text" onchange="d12()" name="day12" id="day12">
                                                     <label class="font-weight-bold mt-2">Day 13</label>
-                                                    <input value="<?php echo $d->day13?>" class="form-control form-control-line" type="text" name="day13" id="day13">
+                                                    <input value="<?php echo $d->day13?>" class="form-control form-control-line" type="text" onchange="d13()" name="day13" id="day13">
                                                     <label class="font-weight-bold mt-2">Day 14</label>
-                                                    <input value="<?php echo $d->day14?>" class="form-control form-control-line" type="text" name="day14" id="day14">
+                                                    <input value="<?php echo $d->day14?>" class="form-control form-control-line" type="text" onchange="d14()" name="day14" id="day14">
                                                     <label class="font-weight-bold mt-2">Day 15</label>
-                                                    <input value="<?php echo $d->day15?>" class="form-control form-control-line" type="text" name="day15" id="day15">
+                                                    <input value="<?php echo $d->day15?>" class="form-control form-control-line" type="text" onchange="d15()" name="day15" id="day15">
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label class="font-weight-bold mt-2">Day 16</label>
-                                                    <input value="<?php echo $d->day16?>" class="form-control form-control-line" type="text" name="day16" id="day16">
+                                                    <input value="<?php echo $d->day16?>" class="form-control form-control-line" type="text" onchange="d16()" name="day16" id="day16">
                                                     <label class="font-weight-bold mt-2">Day 17</label>
-                                                    <input value="<?php echo $d->day17?>" class="form-control form-control-line" type="text" name="day17" id="day17">
+                                                    <input value="<?php echo $d->day17?>" class="form-control form-control-line" type="text" onchange="d17()" name="day17" id="day17">
                                                     <label class="font-weight-bold mt-2">Day 18</label>
-                                                    <input value="<?php echo $d->day18?>" class="form-control form-control-line" type="text" name="day18" id="day18">
+                                                    <input value="<?php echo $d->day18?>" class="form-control form-control-line" type="text" onchange="d18()" name="day18" id="day18">
                                                     <label class="font-weight-bold mt-2">Day 19</label>
-                                                    <input value="<?php echo $d->day19?>" class="form-control form-control-line" type="text" name="day19" id="day19">
+                                                    <input value="<?php echo $d->day19?>" class="form-control form-control-line" type="text" onchange="d19()" name="day19" id="day19">
                                                     <label class="font-weight-bold mt-2">Day 20</label>
-                                                    <input value="<?php echo $d->day20?>" class="form-control form-control-line" type="text" name="day20" id="day20">
+                                                    <input value="<?php echo $d->day20?>" class="form-control form-control-line" type="text" onchange="d20()" name="day20" id="day20">
                                                     <label class="font-weight-bold mt-2">Day 21</label>
-                                                    <input value="<?php echo $d->day21?>" class="form-control form-control-line" type="text" name="day21" id="day21">
+                                                    <input value="<?php echo $d->day21?>" class="form-control form-control-line" type="text" onchange="d21()" name="day21" id="day21">
                                                     <label class="font-weight-bold mt-2">Day 22</label>
-                                                    <input value="<?php echo $d->day22?>" class="form-control form-control-line" type="text" name="day22" id="day22">
+                                                    <input value="<?php echo $d->day22?>" class="form-control form-control-line" type="text" onchange="d22()" name="day22" id="day22">
                                                     <label class="font-weight-bold mt-2">Day 23</label>
-                                                    <input value="<?php echo $d->day23?>" class="form-control form-control-line" type="text" name="day23" id="day23">
+                                                    <input value="<?php echo $d->day23?>" class="form-control form-control-line" type="text" onchange="d23()" name="day23" id="day23">
                                                     <label class="font-weight-bold mt-2">Day 24</label>
-                                                    <input value="<?php echo $d->day24?>" class="form-control form-control-line" type="text" name="day24" id="day24">
+                                                    <input value="<?php echo $d->day24?>" class="form-control form-control-line" type="text" onchange="d24()" name="day24" id="day24">
                                                     <label class="font-weight-bold mt-2">Day 25</label>
-                                                    <input value="<?php echo $d->day25?>" class="form-control form-control-line" type="text" name="day25" id="day25">
+                                                    <input value="<?php echo $d->day25?>" class="form-control form-control-line" type="text" onchange="d25()" name="day25" id="day25">
                                                     <label class="font-weight-bold mt-2">Day 26</label>
-                                                    <input value="<?php echo $d->day26?>" class="form-control form-control-line" type="text" name="day26" id="day26">
+                                                    <input value="<?php echo $d->day26?>" class="form-control form-control-line" type="text" onchange="d26()" name="day26" id="day26">
                                                     <label class="font-weight-bold mt-2">Day 27</label>
-                                                    <input value="<?php echo $d->day27?>" class="form-control form-control-line" type="text" name="day27" id="day27">
+                                                    <input value="<?php echo $d->day27?>" class="form-control form-control-line" type="text" onchange="d27()" name="day27" id="day27">
                                                     <label class="font-weight-bold mt-2">Day 28</label>
-                                                    <input value="<?php echo $d->day28?>" class="form-control form-control-line" type="text" name="day28" id="day28">
+                                                    <input value="<?php echo $d->day28?>" class="form-control form-control-line" type="text" onchange="d28()" name="day28" id="day28">
                                                     <label class="font-weight-bold mt-2">Day 29</label>
-                                                    <input value="<?php echo $d->day29?>" class="form-control form-control-line" type="text" name="day29" id="day29">
+                                                    <input value="<?php echo $d->day29?>" class="form-control form-control-line" type="text" onchange="d29()" name="day29" id="day29">
                                                     <label class="font-weight-bold mt-2">Day 30</label>
-                                                    <input value="<?php echo $d->day30?>" class="form-control form-control-line" type="text" name="day30" id="day30">
+                                                    <input value="<?php echo $d->day30?>" class="form-control form-control-line" type="text" onchange="d30()" name="day30" id="day30">
                                                 </div>
                                             </div>
                                         <?php }?>
@@ -263,6 +263,1068 @@
                 // console.log(tes);
                 $('#haha').html(tes);
         }
+
+        function d1() {
+            if ($('#day1').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = true;
+                document.getElementById("day4").readOnly = true;
+                document.getElementById("day5").readOnly = true;
+                document.getElementById("day6").readOnly = true;
+                document.getElementById("day7").readOnly = true;
+                document.getElementById("day8").readOnly = true;
+                document.getElementById("day9").readOnly = true;
+                document.getElementById("day10").readOnly = true;
+                document.getElementById("day11").readOnly = true;
+                document.getElementById("day12").readOnly = true;
+                document.getElementById("day13").readOnly = true;
+                document.getElementById("day14").readOnly = true;
+                document.getElementById("day15").readOnly = true;
+                document.getElementById("day16").readOnly = true;
+                document.getElementById("day17").readOnly = true;
+                document.getElementById("day18").readOnly = true;
+                document.getElementById("day19").readOnly = true;
+                document.getElementById("day20").readOnly = true;
+                document.getElementById("day21").readOnly = true;
+                document.getElementById("day22").readOnly = true;
+                document.getElementById("day23").readOnly = true;
+                document.getElementById("day24").readOnly = true;
+                document.getElementById("day25").readOnly = true;
+                document.getElementById("day26").readOnly = true;
+                document.getElementById("day27").readOnly = true;
+                document.getElementById("day28").readOnly = true;
+                document.getElementById("day29").readOnly = true;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d2() {
+            if ($('#day2').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = true;
+                document.getElementById("day5").readOnly = true;
+                document.getElementById("day6").readOnly = true;
+                document.getElementById("day7").readOnly = true;
+                document.getElementById("day8").readOnly = true;
+                document.getElementById("day9").readOnly = true;
+                document.getElementById("day10").readOnly = true;
+                document.getElementById("day11").readOnly = true;
+                document.getElementById("day12").readOnly = true;
+                document.getElementById("day13").readOnly = true;
+                document.getElementById("day14").readOnly = true;
+                document.getElementById("day15").readOnly = true;
+                document.getElementById("day16").readOnly = true;
+                document.getElementById("day17").readOnly = true;
+                document.getElementById("day18").readOnly = true;
+                document.getElementById("day19").readOnly = true;
+                document.getElementById("day20").readOnly = true;
+                document.getElementById("day21").readOnly = true;
+                document.getElementById("day22").readOnly = true;
+                document.getElementById("day23").readOnly = true;
+                document.getElementById("day24").readOnly = true;
+                document.getElementById("day25").readOnly = true;
+                document.getElementById("day26").readOnly = true;
+                document.getElementById("day27").readOnly = true;
+                document.getElementById("day28").readOnly = true;
+                document.getElementById("day29").readOnly = true;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d3() {
+            if ($('#day3').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = true;
+                document.getElementById("day6").readOnly = true;
+                document.getElementById("day7").readOnly = true;
+                document.getElementById("day8").readOnly = true;
+                document.getElementById("day9").readOnly = true;
+                document.getElementById("day10").readOnly = true;
+                document.getElementById("day11").readOnly = true;
+                document.getElementById("day12").readOnly = true;
+                document.getElementById("day13").readOnly = true;
+                document.getElementById("day14").readOnly = true;
+                document.getElementById("day15").readOnly = true;
+                document.getElementById("day16").readOnly = true;
+                document.getElementById("day17").readOnly = true;
+                document.getElementById("day18").readOnly = true;
+                document.getElementById("day19").readOnly = true;
+                document.getElementById("day20").readOnly = true;
+                document.getElementById("day21").readOnly = true;
+                document.getElementById("day22").readOnly = true;
+                document.getElementById("day23").readOnly = true;
+                document.getElementById("day24").readOnly = true;
+                document.getElementById("day25").readOnly = true;
+                document.getElementById("day26").readOnly = true;
+                document.getElementById("day27").readOnly = true;
+                document.getElementById("day28").readOnly = true;
+                document.getElementById("day29").readOnly = true;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d4() {
+            if ($('#day4').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = false;
+                document.getElementById("day6").readOnly = true;
+                document.getElementById("day7").readOnly = true;
+                document.getElementById("day8").readOnly = true;
+                document.getElementById("day9").readOnly = true;
+                document.getElementById("day10").readOnly = true;
+                document.getElementById("day11").readOnly = true;
+                document.getElementById("day12").readOnly = true;
+                document.getElementById("day13").readOnly = true;
+                document.getElementById("day14").readOnly = true;
+                document.getElementById("day15").readOnly = true;
+                document.getElementById("day16").readOnly = true;
+                document.getElementById("day17").readOnly = true;
+                document.getElementById("day18").readOnly = true;
+                document.getElementById("day19").readOnly = true;
+                document.getElementById("day20").readOnly = true;
+                document.getElementById("day21").readOnly = true;
+                document.getElementById("day22").readOnly = true;
+                document.getElementById("day23").readOnly = true;
+                document.getElementById("day24").readOnly = true;
+                document.getElementById("day25").readOnly = true;
+                document.getElementById("day26").readOnly = true;
+                document.getElementById("day27").readOnly = true;
+                document.getElementById("day28").readOnly = true;
+                document.getElementById("day29").readOnly = true;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d5() {
+            if ($('#day5').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = false;
+                document.getElementById("day6").readOnly = false;
+                document.getElementById("day7").readOnly = true;
+                document.getElementById("day8").readOnly = true;
+                document.getElementById("day9").readOnly = true;
+                document.getElementById("day10").readOnly = true;
+                document.getElementById("day11").readOnly = true;
+                document.getElementById("day12").readOnly = true;
+                document.getElementById("day13").readOnly = true;
+                document.getElementById("day14").readOnly = true;
+                document.getElementById("day15").readOnly = true;
+                document.getElementById("day16").readOnly = true;
+                document.getElementById("day17").readOnly = true;
+                document.getElementById("day18").readOnly = true;
+                document.getElementById("day19").readOnly = true;
+                document.getElementById("day20").readOnly = true;
+                document.getElementById("day21").readOnly = true;
+                document.getElementById("day22").readOnly = true;
+                document.getElementById("day23").readOnly = true;
+                document.getElementById("day24").readOnly = true;
+                document.getElementById("day25").readOnly = true;
+                document.getElementById("day26").readOnly = true;
+                document.getElementById("day27").readOnly = true;
+                document.getElementById("day28").readOnly = true;
+                document.getElementById("day29").readOnly = true;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d6() {
+            if ($('#day6').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = false;
+                document.getElementById("day6").readOnly = false;
+                document.getElementById("day7").readOnly = false;
+                document.getElementById("day8").readOnly = true;
+                document.getElementById("day9").readOnly = true;
+                document.getElementById("day10").readOnly = true;
+                document.getElementById("day11").readOnly = true;
+                document.getElementById("day12").readOnly = true;
+                document.getElementById("day13").readOnly = true;
+                document.getElementById("day14").readOnly = true;
+                document.getElementById("day15").readOnly = true;
+                document.getElementById("day16").readOnly = true;
+                document.getElementById("day17").readOnly = true;
+                document.getElementById("day18").readOnly = true;
+                document.getElementById("day19").readOnly = true;
+                document.getElementById("day20").readOnly = true;
+                document.getElementById("day21").readOnly = true;
+                document.getElementById("day22").readOnly = true;
+                document.getElementById("day23").readOnly = true;
+                document.getElementById("day24").readOnly = true;
+                document.getElementById("day25").readOnly = true;
+                document.getElementById("day26").readOnly = true;
+                document.getElementById("day27").readOnly = true;
+                document.getElementById("day28").readOnly = true;
+                document.getElementById("day29").readOnly = true;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d7() {
+            if ($('#day7').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = false;
+                document.getElementById("day6").readOnly = false;
+                document.getElementById("day7").readOnly = false;
+                document.getElementById("day8").readOnly = false;
+                document.getElementById("day9").readOnly = true;
+                document.getElementById("day10").readOnly = true;
+                document.getElementById("day11").readOnly = true;
+                document.getElementById("day12").readOnly = true;
+                document.getElementById("day13").readOnly = true;
+                document.getElementById("day14").readOnly = true;
+                document.getElementById("day15").readOnly = true;
+                document.getElementById("day16").readOnly = true;
+                document.getElementById("day17").readOnly = true;
+                document.getElementById("day18").readOnly = true;
+                document.getElementById("day19").readOnly = true;
+                document.getElementById("day20").readOnly = true;
+                document.getElementById("day21").readOnly = true;
+                document.getElementById("day22").readOnly = true;
+                document.getElementById("day23").readOnly = true;
+                document.getElementById("day24").readOnly = true;
+                document.getElementById("day25").readOnly = true;
+                document.getElementById("day26").readOnly = true;
+                document.getElementById("day27").readOnly = true;
+                document.getElementById("day28").readOnly = true;
+                document.getElementById("day29").readOnly = true;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d8() {
+            if ($('#day8').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = false;
+                document.getElementById("day6").readOnly = false;
+                document.getElementById("day7").readOnly = false;
+                document.getElementById("day8").readOnly = false;
+                document.getElementById("day9").readOnly = false;
+                document.getElementById("day10").readOnly = true;
+                document.getElementById("day11").readOnly = true;
+                document.getElementById("day12").readOnly = true;
+                document.getElementById("day13").readOnly = true;
+                document.getElementById("day14").readOnly = true;
+                document.getElementById("day15").readOnly = true;
+                document.getElementById("day16").readOnly = true;
+                document.getElementById("day17").readOnly = true;
+                document.getElementById("day18").readOnly = true;
+                document.getElementById("day19").readOnly = true;
+                document.getElementById("day20").readOnly = true;
+                document.getElementById("day21").readOnly = true;
+                document.getElementById("day22").readOnly = true;
+                document.getElementById("day23").readOnly = true;
+                document.getElementById("day24").readOnly = true;
+                document.getElementById("day25").readOnly = true;
+                document.getElementById("day26").readOnly = true;
+                document.getElementById("day27").readOnly = true;
+                document.getElementById("day28").readOnly = true;
+                document.getElementById("day29").readOnly = true;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d9() {
+            if ($('#day9').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = false;
+                document.getElementById("day6").readOnly = false;
+                document.getElementById("day7").readOnly = false;
+                document.getElementById("day8").readOnly = false;
+                document.getElementById("day9").readOnly = false;
+                document.getElementById("day10").readOnly = false;
+                document.getElementById("day11").readOnly = true;
+                document.getElementById("day12").readOnly = true;
+                document.getElementById("day13").readOnly = true;
+                document.getElementById("day14").readOnly = true;
+                document.getElementById("day15").readOnly = true;
+                document.getElementById("day16").readOnly = true;
+                document.getElementById("day17").readOnly = true;
+                document.getElementById("day18").readOnly = true;
+                document.getElementById("day19").readOnly = true;
+                document.getElementById("day20").readOnly = true;
+                document.getElementById("day21").readOnly = true;
+                document.getElementById("day22").readOnly = true;
+                document.getElementById("day23").readOnly = true;
+                document.getElementById("day24").readOnly = true;
+                document.getElementById("day25").readOnly = true;
+                document.getElementById("day26").readOnly = true;
+                document.getElementById("day27").readOnly = true;
+                document.getElementById("day28").readOnly = true;
+                document.getElementById("day29").readOnly = true;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d10() {
+            if ($('#day10').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = false;
+                document.getElementById("day6").readOnly = false;
+                document.getElementById("day7").readOnly = false;
+                document.getElementById("day8").readOnly = false;
+                document.getElementById("day9").readOnly = false;
+                document.getElementById("day10").readOnly = false;
+                document.getElementById("day11").readOnly = false;
+                document.getElementById("day12").readOnly = true;
+                document.getElementById("day13").readOnly = true;
+                document.getElementById("day14").readOnly = true;
+                document.getElementById("day15").readOnly = true;
+                document.getElementById("day16").readOnly = true;
+                document.getElementById("day17").readOnly = true;
+                document.getElementById("day18").readOnly = true;
+                document.getElementById("day19").readOnly = true;
+                document.getElementById("day20").readOnly = true;
+                document.getElementById("day21").readOnly = true;
+                document.getElementById("day22").readOnly = true;
+                document.getElementById("day23").readOnly = true;
+                document.getElementById("day24").readOnly = true;
+                document.getElementById("day25").readOnly = true;
+                document.getElementById("day26").readOnly = true;
+                document.getElementById("day27").readOnly = true;
+                document.getElementById("day28").readOnly = true;
+                document.getElementById("day29").readOnly = true;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d11() {
+            if ($('#day11').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = false;
+                document.getElementById("day6").readOnly = false;
+                document.getElementById("day7").readOnly = false;
+                document.getElementById("day8").readOnly = false;
+                document.getElementById("day9").readOnly = false;
+                document.getElementById("day10").readOnly = false;
+                document.getElementById("day11").readOnly = false;
+                document.getElementById("day12").readOnly = false;
+                document.getElementById("day13").readOnly = true;
+                document.getElementById("day14").readOnly = true;
+                document.getElementById("day15").readOnly = true;
+                document.getElementById("day16").readOnly = true;
+                document.getElementById("day17").readOnly = true;
+                document.getElementById("day18").readOnly = true;
+                document.getElementById("day19").readOnly = true;
+                document.getElementById("day20").readOnly = true;
+                document.getElementById("day21").readOnly = true;
+                document.getElementById("day22").readOnly = true;
+                document.getElementById("day23").readOnly = true;
+                document.getElementById("day24").readOnly = true;
+                document.getElementById("day25").readOnly = true;
+                document.getElementById("day26").readOnly = true;
+                document.getElementById("day27").readOnly = true;
+                document.getElementById("day28").readOnly = true;
+                document.getElementById("day29").readOnly = true;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d12() {
+            if ($('#day12').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = false;
+                document.getElementById("day6").readOnly = false;
+                document.getElementById("day7").readOnly = false;
+                document.getElementById("day8").readOnly = false;
+                document.getElementById("day9").readOnly = false;
+                document.getElementById("day10").readOnly = false;
+                document.getElementById("day11").readOnly = false;
+                document.getElementById("day12").readOnly = false;
+                document.getElementById("day13").readOnly = false;
+                document.getElementById("day14").readOnly = true;
+                document.getElementById("day15").readOnly = true;
+                document.getElementById("day16").readOnly = true;
+                document.getElementById("day17").readOnly = true;
+                document.getElementById("day18").readOnly = true;
+                document.getElementById("day19").readOnly = true;
+                document.getElementById("day20").readOnly = true;
+                document.getElementById("day21").readOnly = true;
+                document.getElementById("day22").readOnly = true;
+                document.getElementById("day23").readOnly = true;
+                document.getElementById("day24").readOnly = true;
+                document.getElementById("day25").readOnly = true;
+                document.getElementById("day26").readOnly = true;
+                document.getElementById("day27").readOnly = true;
+                document.getElementById("day28").readOnly = true;
+                document.getElementById("day29").readOnly = true;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d13() {
+            if ($('#day13').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = false;
+                document.getElementById("day6").readOnly = false;
+                document.getElementById("day7").readOnly = false;
+                document.getElementById("day8").readOnly = false;
+                document.getElementById("day9").readOnly = false;
+                document.getElementById("day10").readOnly = false;
+                document.getElementById("day11").readOnly = false;
+                document.getElementById("day12").readOnly = false;
+                document.getElementById("day13").readOnly = false;
+                document.getElementById("day14").readOnly = false;
+                document.getElementById("day15").readOnly = true;
+                document.getElementById("day16").readOnly = true;
+                document.getElementById("day17").readOnly = true;
+                document.getElementById("day18").readOnly = true;
+                document.getElementById("day19").readOnly = true;
+                document.getElementById("day20").readOnly = true;
+                document.getElementById("day21").readOnly = true;
+                document.getElementById("day22").readOnly = true;
+                document.getElementById("day23").readOnly = true;
+                document.getElementById("day24").readOnly = true;
+                document.getElementById("day25").readOnly = true;
+                document.getElementById("day26").readOnly = true;
+                document.getElementById("day27").readOnly = true;
+                document.getElementById("day28").readOnly = true;
+                document.getElementById("day29").readOnly = true;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d14() {
+            if ($('#day14').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = false;
+                document.getElementById("day6").readOnly = false;
+                document.getElementById("day7").readOnly = false;
+                document.getElementById("day8").readOnly = false;
+                document.getElementById("day9").readOnly = false;
+                document.getElementById("day10").readOnly = false;
+                document.getElementById("day11").readOnly = false;
+                document.getElementById("day12").readOnly = false;
+                document.getElementById("day13").readOnly = false;
+                document.getElementById("day14").readOnly = false;
+                document.getElementById("day15").readOnly = false;
+                document.getElementById("day16").readOnly = true;
+                document.getElementById("day17").readOnly = true;
+                document.getElementById("day18").readOnly = true;
+                document.getElementById("day19").readOnly = true;
+                document.getElementById("day20").readOnly = true;
+                document.getElementById("day21").readOnly = true;
+                document.getElementById("day22").readOnly = true;
+                document.getElementById("day23").readOnly = true;
+                document.getElementById("day24").readOnly = true;
+                document.getElementById("day25").readOnly = true;
+                document.getElementById("day26").readOnly = true;
+                document.getElementById("day27").readOnly = true;
+                document.getElementById("day28").readOnly = true;
+                document.getElementById("day29").readOnly = true;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d15() {
+            if ($('#day15').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = false;
+                document.getElementById("day6").readOnly = false;
+                document.getElementById("day7").readOnly = false;
+                document.getElementById("day8").readOnly = false;
+                document.getElementById("day9").readOnly = false;
+                document.getElementById("day10").readOnly = false;
+                document.getElementById("day11").readOnly = false;
+                document.getElementById("day12").readOnly = false;
+                document.getElementById("day13").readOnly = false;
+                document.getElementById("day14").readOnly = false;
+                document.getElementById("day15").readOnly = false;
+                document.getElementById("day16").readOnly = false;
+                document.getElementById("day17").readOnly = true;
+                document.getElementById("day18").readOnly = true;
+                document.getElementById("day19").readOnly = true;
+                document.getElementById("day20").readOnly = true;
+                document.getElementById("day21").readOnly = true;
+                document.getElementById("day22").readOnly = true;
+                document.getElementById("day23").readOnly = true;
+                document.getElementById("day24").readOnly = true;
+                document.getElementById("day25").readOnly = true;
+                document.getElementById("day26").readOnly = true;
+                document.getElementById("day27").readOnly = true;
+                document.getElementById("day28").readOnly = true;
+                document.getElementById("day29").readOnly = true;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d16() {
+            if ($('#day16').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = false;
+                document.getElementById("day6").readOnly = false;
+                document.getElementById("day7").readOnly = false;
+                document.getElementById("day8").readOnly = false;
+                document.getElementById("day9").readOnly = false;
+                document.getElementById("day10").readOnly = false;
+                document.getElementById("day11").readOnly = false;
+                document.getElementById("day12").readOnly = false;
+                document.getElementById("day13").readOnly = false;
+                document.getElementById("day14").readOnly = false;
+                document.getElementById("day15").readOnly = false;
+                document.getElementById("day16").readOnly = false;
+                document.getElementById("day17").readOnly = false;
+                document.getElementById("day18").readOnly = true;
+                document.getElementById("day19").readOnly = true;
+                document.getElementById("day20").readOnly = true;
+                document.getElementById("day21").readOnly = true;
+                document.getElementById("day22").readOnly = true;
+                document.getElementById("day23").readOnly = true;
+                document.getElementById("day24").readOnly = true;
+                document.getElementById("day25").readOnly = true;
+                document.getElementById("day26").readOnly = true;
+                document.getElementById("day27").readOnly = true;
+                document.getElementById("day28").readOnly = true;
+                document.getElementById("day29").readOnly = true;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d17() {
+            if ($('#day17').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = false;
+                document.getElementById("day6").readOnly = false;
+                document.getElementById("day7").readOnly = false;
+                document.getElementById("day8").readOnly = false;
+                document.getElementById("day9").readOnly = false;
+                document.getElementById("day10").readOnly = false;
+                document.getElementById("day11").readOnly = false;
+                document.getElementById("day12").readOnly = false;
+                document.getElementById("day13").readOnly = false;
+                document.getElementById("day14").readOnly = false;
+                document.getElementById("day15").readOnly = false;
+                document.getElementById("day16").readOnly = false;
+                document.getElementById("day17").readOnly = false;
+                document.getElementById("day18").readOnly = false;
+                document.getElementById("day19").readOnly = true;
+                document.getElementById("day20").readOnly = true;
+                document.getElementById("day21").readOnly = true;
+                document.getElementById("day22").readOnly = true;
+                document.getElementById("day23").readOnly = true;
+                document.getElementById("day24").readOnly = true;
+                document.getElementById("day25").readOnly = true;
+                document.getElementById("day26").readOnly = true;
+                document.getElementById("day27").readOnly = true;
+                document.getElementById("day28").readOnly = true;
+                document.getElementById("day29").readOnly = true;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d18() {
+            if ($('#day18').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = false;
+                document.getElementById("day6").readOnly = false;
+                document.getElementById("day7").readOnly = false;
+                document.getElementById("day8").readOnly = false;
+                document.getElementById("day9").readOnly = false;
+                document.getElementById("day10").readOnly = false;
+                document.getElementById("day11").readOnly = false;
+                document.getElementById("day12").readOnly = false;
+                document.getElementById("day13").readOnly = false;
+                document.getElementById("day14").readOnly = false;
+                document.getElementById("day15").readOnly = false;
+                document.getElementById("day16").readOnly = false;
+                document.getElementById("day17").readOnly = false;
+                document.getElementById("day18").readOnly = false;
+                document.getElementById("day19").readOnly = false;
+                document.getElementById("day20").readOnly = true;
+                document.getElementById("day21").readOnly = true;
+                document.getElementById("day22").readOnly = true;
+                document.getElementById("day23").readOnly = true;
+                document.getElementById("day24").readOnly = true;
+                document.getElementById("day25").readOnly = true;
+                document.getElementById("day26").readOnly = true;
+                document.getElementById("day27").readOnly = true;
+                document.getElementById("day28").readOnly = true;
+                document.getElementById("day29").readOnly = true;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d19() {
+            if ($('#day19').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = false;
+                document.getElementById("day6").readOnly = false;
+                document.getElementById("day7").readOnly = false;
+                document.getElementById("day8").readOnly = false;
+                document.getElementById("day9").readOnly = false;
+                document.getElementById("day10").readOnly = false;
+                document.getElementById("day11").readOnly = false;
+                document.getElementById("day12").readOnly = false;
+                document.getElementById("day13").readOnly = false;
+                document.getElementById("day14").readOnly = false;
+                document.getElementById("day15").readOnly = false;
+                document.getElementById("day16").readOnly = false;
+                document.getElementById("day17").readOnly = false;
+                document.getElementById("day18").readOnly = false;
+                document.getElementById("day19").readOnly = false;
+                document.getElementById("day20").readOnly = false;
+                document.getElementById("day21").readOnly = true;
+                document.getElementById("day22").readOnly = true;
+                document.getElementById("day23").readOnly = true;
+                document.getElementById("day24").readOnly = true;
+                document.getElementById("day25").readOnly = true;
+                document.getElementById("day26").readOnly = true;
+                document.getElementById("day27").readOnly = true;
+                document.getElementById("day28").readOnly = true;
+                document.getElementById("day29").readOnly = true;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d20() {
+            if ($('#day20').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = false;
+                document.getElementById("day6").readOnly = false;
+                document.getElementById("day7").readOnly = false;
+                document.getElementById("day8").readOnly = false;
+                document.getElementById("day9").readOnly = false;
+                document.getElementById("day10").readOnly = false;
+                document.getElementById("day11").readOnly = false;
+                document.getElementById("day12").readOnly = false;
+                document.getElementById("day13").readOnly = false;
+                document.getElementById("day14").readOnly = false;
+                document.getElementById("day15").readOnly = false;
+                document.getElementById("day16").readOnly = false;
+                document.getElementById("day17").readOnly = false;
+                document.getElementById("day18").readOnly = false;
+                document.getElementById("day19").readOnly = false;
+                document.getElementById("day20").readOnly = false;
+                document.getElementById("day21").readOnly = false;
+                document.getElementById("day22").readOnly = true;
+                document.getElementById("day23").readOnly = true;
+                document.getElementById("day24").readOnly = true;
+                document.getElementById("day25").readOnly = true;
+                document.getElementById("day26").readOnly = true;
+                document.getElementById("day27").readOnly = true;
+                document.getElementById("day28").readOnly = true;
+                document.getElementById("day29").readOnly = true;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d21() {
+            if ($('#day21').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = false;
+                document.getElementById("day6").readOnly = false;
+                document.getElementById("day7").readOnly = false;
+                document.getElementById("day8").readOnly = false;
+                document.getElementById("day9").readOnly = false;
+                document.getElementById("day10").readOnly = false;
+                document.getElementById("day11").readOnly = false;
+                document.getElementById("day12").readOnly = false;
+                document.getElementById("day13").readOnly = false;
+                document.getElementById("day14").readOnly = false;
+                document.getElementById("day15").readOnly = false;
+                document.getElementById("day16").readOnly = false;
+                document.getElementById("day17").readOnly = false;
+                document.getElementById("day18").readOnly = false;
+                document.getElementById("day19").readOnly = false;
+                document.getElementById("day20").readOnly = false;
+                document.getElementById("day21").readOnly = false;
+                document.getElementById("day22").readOnly = false;
+                document.getElementById("day23").readOnly = true;
+                document.getElementById("day24").readOnly = true;
+                document.getElementById("day25").readOnly = true;
+                document.getElementById("day26").readOnly = true;
+                document.getElementById("day27").readOnly = true;
+                document.getElementById("day28").readOnly = true;
+                document.getElementById("day29").readOnly = true;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d22() {
+            if ($('#day22').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = false;
+                document.getElementById("day6").readOnly = false;
+                document.getElementById("day7").readOnly = false;
+                document.getElementById("day8").readOnly = false;
+                document.getElementById("day9").readOnly = false;
+                document.getElementById("day10").readOnly = false;
+                document.getElementById("day11").readOnly = false;
+                document.getElementById("day12").readOnly = false;
+                document.getElementById("day13").readOnly = false;
+                document.getElementById("day14").readOnly = false;
+                document.getElementById("day15").readOnly = false;
+                document.getElementById("day16").readOnly = false;
+                document.getElementById("day17").readOnly = false;
+                document.getElementById("day18").readOnly = false;
+                document.getElementById("day19").readOnly = false;
+                document.getElementById("day20").readOnly = false;
+                document.getElementById("day21").readOnly = false;
+                document.getElementById("day22").readOnly = false;
+                document.getElementById("day23").readOnly = false;
+                document.getElementById("day24").readOnly = true;
+                document.getElementById("day25").readOnly = true;
+                document.getElementById("day26").readOnly = true;
+                document.getElementById("day27").readOnly = true;
+                document.getElementById("day28").readOnly = true;
+                document.getElementById("day29").readOnly = true;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d23() {
+            if ($('#day23').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = false;
+                document.getElementById("day6").readOnly = false;
+                document.getElementById("day7").readOnly = false;
+                document.getElementById("day8").readOnly = false;
+                document.getElementById("day9").readOnly = false;
+                document.getElementById("day10").readOnly = false;
+                document.getElementById("day11").readOnly = false;
+                document.getElementById("day12").readOnly = false;
+                document.getElementById("day13").readOnly = false;
+                document.getElementById("day14").readOnly = false;
+                document.getElementById("day15").readOnly = false;
+                document.getElementById("day16").readOnly = false;
+                document.getElementById("day17").readOnly = false;
+                document.getElementById("day18").readOnly = false;
+                document.getElementById("day19").readOnly = false;
+                document.getElementById("day20").readOnly = false;
+                document.getElementById("day21").readOnly = false;
+                document.getElementById("day22").readOnly = false;
+                document.getElementById("day23").readOnly = false;
+                document.getElementById("day24").readOnly = false;
+                document.getElementById("day25").readOnly = true;
+                document.getElementById("day26").readOnly = true;
+                document.getElementById("day27").readOnly = true;
+                document.getElementById("day28").readOnly = true;
+                document.getElementById("day29").readOnly = true;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d24() {
+            if ($('#day24').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = false;
+                document.getElementById("day6").readOnly = false;
+                document.getElementById("day7").readOnly = false;
+                document.getElementById("day8").readOnly = false;
+                document.getElementById("day9").readOnly = false;
+                document.getElementById("day10").readOnly = false;
+                document.getElementById("day11").readOnly = false;
+                document.getElementById("day12").readOnly = false;
+                document.getElementById("day13").readOnly = false;
+                document.getElementById("day14").readOnly = false;
+                document.getElementById("day15").readOnly = false;
+                document.getElementById("day16").readOnly = false;
+                document.getElementById("day17").readOnly = false;
+                document.getElementById("day18").readOnly = false;
+                document.getElementById("day19").readOnly = false;
+                document.getElementById("day20").readOnly = false;
+                document.getElementById("day21").readOnly = false;
+                document.getElementById("day22").readOnly = false;
+                document.getElementById("day23").readOnly = false;
+                document.getElementById("day24").readOnly = false;
+                document.getElementById("day25").readOnly = false;
+                document.getElementById("day26").readOnly = true;
+                document.getElementById("day27").readOnly = true;
+                document.getElementById("day28").readOnly = true;
+                document.getElementById("day29").readOnly = true;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d25() {
+            if ($('#day25').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = false;
+                document.getElementById("day6").readOnly = false;
+                document.getElementById("day7").readOnly = false;
+                document.getElementById("day8").readOnly = false;
+                document.getElementById("day9").readOnly = false;
+                document.getElementById("day10").readOnly = false;
+                document.getElementById("day11").readOnly = false;
+                document.getElementById("day12").readOnly = false;
+                document.getElementById("day13").readOnly = false;
+                document.getElementById("day14").readOnly = false;
+                document.getElementById("day15").readOnly = false;
+                document.getElementById("day16").readOnly = false;
+                document.getElementById("day17").readOnly = false;
+                document.getElementById("day18").readOnly = false;
+                document.getElementById("day19").readOnly = false;
+                document.getElementById("day20").readOnly = false;
+                document.getElementById("day21").readOnly = false;
+                document.getElementById("day22").readOnly = false;
+                document.getElementById("day23").readOnly = false;
+                document.getElementById("day24").readOnly = false;
+                document.getElementById("day25").readOnly = false;
+                document.getElementById("day26").readOnly = false;
+                document.getElementById("day27").readOnly = true;
+                document.getElementById("day28").readOnly = true;
+                document.getElementById("day29").readOnly = true;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d26() {
+            if ($('#day26').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = false;
+                document.getElementById("day6").readOnly = false;
+                document.getElementById("day7").readOnly = false;
+                document.getElementById("day8").readOnly = false;
+                document.getElementById("day9").readOnly = false;
+                document.getElementById("day10").readOnly = false;
+                document.getElementById("day11").readOnly = false;
+                document.getElementById("day12").readOnly = false;
+                document.getElementById("day13").readOnly = false;
+                document.getElementById("day14").readOnly = false;
+                document.getElementById("day15").readOnly = false;
+                document.getElementById("day16").readOnly = false;
+                document.getElementById("day17").readOnly = false;
+                document.getElementById("day18").readOnly = false;
+                document.getElementById("day19").readOnly = false;
+                document.getElementById("day20").readOnly = false;
+                document.getElementById("day21").readOnly = false;
+                document.getElementById("day22").readOnly = false;
+                document.getElementById("day23").readOnly = false;
+                document.getElementById("day24").readOnly = false;
+                document.getElementById("day25").readOnly = false;
+                document.getElementById("day26").readOnly = false;
+                document.getElementById("day27").readOnly = false;
+                document.getElementById("day28").readOnly = true;
+                document.getElementById("day29").readOnly = true;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d27() {
+            if ($('#day27').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = false;
+                document.getElementById("day6").readOnly = false;
+                document.getElementById("day7").readOnly = false;
+                document.getElementById("day8").readOnly = false;
+                document.getElementById("day9").readOnly = false;
+                document.getElementById("day10").readOnly = false;
+                document.getElementById("day11").readOnly = false;
+                document.getElementById("day12").readOnly = false;
+                document.getElementById("day13").readOnly = false;
+                document.getElementById("day14").readOnly = false;
+                document.getElementById("day15").readOnly = false;
+                document.getElementById("day16").readOnly = false;
+                document.getElementById("day17").readOnly = false;
+                document.getElementById("day18").readOnly = false;
+                document.getElementById("day19").readOnly = false;
+                document.getElementById("day20").readOnly = false;
+                document.getElementById("day21").readOnly = false;
+                document.getElementById("day22").readOnly = false;
+                document.getElementById("day23").readOnly = false;
+                document.getElementById("day24").readOnly = false;
+                document.getElementById("day25").readOnly = false;
+                document.getElementById("day26").readOnly = false;
+                document.getElementById("day27").readOnly = false;
+                document.getElementById("day28").readOnly = false;
+                document.getElementById("day29").readOnly = true;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d28() {
+            if ($('#day28').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = false;
+                document.getElementById("day6").readOnly = false;
+                document.getElementById("day7").readOnly = false;
+                document.getElementById("day8").readOnly = false;
+                document.getElementById("day9").readOnly = false;
+                document.getElementById("day10").readOnly = false;
+                document.getElementById("day11").readOnly = false;
+                document.getElementById("day12").readOnly = false;
+                document.getElementById("day13").readOnly = false;
+                document.getElementById("day14").readOnly = false;
+                document.getElementById("day15").readOnly = false;
+                document.getElementById("day16").readOnly = false;
+                document.getElementById("day17").readOnly = false;
+                document.getElementById("day18").readOnly = false;
+                document.getElementById("day19").readOnly = false;
+                document.getElementById("day20").readOnly = false;
+                document.getElementById("day21").readOnly = false;
+                document.getElementById("day22").readOnly = false;
+                document.getElementById("day23").readOnly = false;
+                document.getElementById("day24").readOnly = false;
+                document.getElementById("day25").readOnly = false;
+                document.getElementById("day26").readOnly = false;
+                document.getElementById("day27").readOnly = false;
+                document.getElementById("day28").readOnly = false;
+                document.getElementById("day29").readOnly = false;
+                document.getElementById("day30").readOnly = true;
+            }
+        }
+
+        function d29() {
+            if ($('#day29').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = false;
+                document.getElementById("day6").readOnly = false;
+                document.getElementById("day7").readOnly = false;
+                document.getElementById("day8").readOnly = false;
+                document.getElementById("day9").readOnly = false;
+                document.getElementById("day10").readOnly = false;
+                document.getElementById("day11").readOnly = false;
+                document.getElementById("day12").readOnly = false;
+                document.getElementById("day13").readOnly = false;
+                document.getElementById("day14").readOnly = false;
+                document.getElementById("day15").readOnly = false;
+                document.getElementById("day16").readOnly = false;
+                document.getElementById("day17").readOnly = false;
+                document.getElementById("day18").readOnly = false;
+                document.getElementById("day19").readOnly = false;
+                document.getElementById("day20").readOnly = false;
+                document.getElementById("day21").readOnly = false;
+                document.getElementById("day22").readOnly = false;
+                document.getElementById("day23").readOnly = false;
+                document.getElementById("day24").readOnly = false;
+                document.getElementById("day25").readOnly = false;
+                document.getElementById("day26").readOnly = false;
+                document.getElementById("day27").readOnly = false;
+                document.getElementById("day28").readOnly = false;
+                document.getElementById("day29").readOnly = false;
+                document.getElementById("day30").readOnly = false;
+            }
+        }
+
+        function d30() {
+            if ($('#day30').val() != "") {
+                document.getElementById("day1").readOnly = false;
+                document.getElementById("day2").readOnly = false;
+                document.getElementById("day3").readOnly = false;
+                document.getElementById("day4").readOnly = false;
+                document.getElementById("day5").readOnly = false;
+                document.getElementById("day6").readOnly = false;
+                document.getElementById("day7").readOnly = false;
+                document.getElementById("day8").readOnly = false;
+                document.getElementById("day9").readOnly = false;
+                document.getElementById("day10").readOnly = false;
+                document.getElementById("day11").readOnly = false;
+                document.getElementById("day12").readOnly = false;
+                document.getElementById("day13").readOnly = false;
+                document.getElementById("day14").readOnly = false;
+                document.getElementById("day15").readOnly = false;
+                document.getElementById("day16").readOnly = false;
+                document.getElementById("day17").readOnly = false;
+                document.getElementById("day18").readOnly = false;
+                document.getElementById("day19").readOnly = false;
+                document.getElementById("day20").readOnly = false;
+                document.getElementById("day21").readOnly = false;
+                document.getElementById("day22").readOnly = false;
+                document.getElementById("day23").readOnly = false;
+                document.getElementById("day24").readOnly = false;
+                document.getElementById("day25").readOnly = false;
+                document.getElementById("day26").readOnly = false;
+                document.getElementById("day27").readOnly = false;
+                document.getElementById("day28").readOnly = false;
+                document.getElementById("day29").readOnly = false;
+                document.getElementById("day30").readOnly = false;
+            }
+        }
+
+
+
+        $(document).ready( function () {
+            for(var i = 2; i < 31; i++){
+                if ( $('#day'+i).val() == "" ) {
+                    document.getElementById("day" + i).readOnly = true;
+                }
+            }
+            // $('#dtTables').DataTable();
+        } );
+        
     </script>
 
 </body>
