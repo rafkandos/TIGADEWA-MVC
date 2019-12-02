@@ -68,17 +68,16 @@
                     </li>
                     <li><a href="<?=base_url()?>index.php/Gallery">Gallery</a></li>
                     <li class="has-children">
-                        <a href="#">About</a>
-                        <ul class="dropdown arrow-top">
-                      <ul class="dropdown arrow-top">
-                          <li><a href="<?=base_url()?>index.php/About/aboutus">About us</a></li>
-                          <li><a href="<?=base_url()?>index.php/About/ourguides">Our guides</a></li>
-                          <li><a href="<?=base_url()?>index.php/About/contactus">Contact us</a></li>
-                          <li><a href="<?=base_url()?>index.php/About/partners">Partners</a></li>
-                          <li><a href="<?=base_url()?>index.php/About/testimonials">Testimonials</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="<?=base_url()?>index.php/Merchantdise">Merchantdise</a></li>
+                    <a href="#">About</a>
+                    <ul class="dropdown arrow-top">
+                      <li><a href="<?=base_url()?>index.php/About/aboutus">About us</a></li>
+                      <li><a href="<?=base_url()?>index.php/About/ourguides">Our guides</a></li>
+                      <li><a href="<?=base_url()?>index.php/About/contactus">Contact us</a></li>
+                      <li><a href="<?=base_url()?>index.php/About/partners">Partners</a></li>
+                      <li><a href="<?=base_url()?>index.php/About/testimonials">Testimonials</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="<?=base_url()?>index.php/Merchantdise">Merchantdise</a></li>
                     </ul>
                 </nav>
                 </div>

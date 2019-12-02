@@ -100,32 +100,31 @@
     </div>
 
   <div class="site-section">
+
+      <!-- 2019 -->
       <div class="container">
         <div class="row">
           <div class="site-section-heading text-center w-border col-md-6 mx-auto">
             <h2 class="mb-5">2019</h2>
-            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, fugit nam obcaecati fuga itaque deserunt
-              officia, error reiciendis ab quod?</p> -->
           </div>
         </div>
         <div class="row justify-content-center">
-
           <?php foreach ($get_c as $c) { ?>
             <div class="col-md-6 col-lg-4 mb-3">
-              <a href="trip1.html" class="unit-9">
+              <a href="<?=base_url()?>index.php/Gallery/detail/<?php echo $c->id_gallery; ?>" class="unit-9">
                 <div class="image" 
                   style="background-image: url('<?=base_url()?>assets/uploads/<?php echo $c->picture; ?>');">
                 </div>
                 <div class="unit-9-content">
                   <h2><?php echo $c->tripName; ?></h2>
-                  <span><?php echo $c->tripDate; ?></span>
+                    <span><?php echo $c->tripDate; ?></span>
                 </div>
               </a>
             </div>
           <?php }?>
-
         </div>
       </div>
+
       <div class="container" style="margin-top: 120px;">
         <div class="row">
           <div class="site-section-heading text-center w-border col-md-6 mx-auto">
@@ -150,6 +149,8 @@
 
         </div>
       </div>
+
+      <!-- 2017 -->
       <div class="container" style="margin-top: 120px;">
         <div class="row">
           <div class="site-section-heading text-center w-border col-md-6 mx-auto">
@@ -174,6 +175,241 @@
 
         </div>
       </div>
+
+      <!-- 2016 -->
+      <div class="container" style="margin-top: 120px;">
+        <div class="row">
+          <div class="site-section-heading text-center w-border col-md-6 mx-auto">
+            <h2 class="mb-5">2016</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+
+          <?php foreach ($get_d as $d) { ?>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <a href="trip1.html" class="unit-9">
+                <div class="image" 
+                  style="background-image: url('<?=base_url()?>assets/uploads/<?php echo $d->picture; ?>');">
+                </div>
+                <div class="unit-9-content">
+                  <h2><?php echo $d->tripName; ?></h2>
+                  <span><?php echo $d->tripDate; ?></span>
+                </div>
+              </a>
+            </div>
+          <?php }?>
+
+        </div>
+      </div>
+
+      <!-- 2015 -->
+      <div class="container" style="margin-top: 120px;">
+        <div class="row">
+          <div class="site-section-heading text-center w-border col-md-6 mx-auto">
+            <h2 class="mb-5">2015</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+
+          <?php foreach ($get_e as $e) { ?>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <a href="trip1.html" class="unit-9">
+                <div class="image" 
+                  style="background-image: url('<?=base_url()?>assets/uploads/<?php echo $e->picture; ?>');">
+                </div>
+                <div class="unit-9-content">
+                  <h2><?php echo $e->tripName; ?></h2>
+                  <span><?php echo $e->tripDate; ?></span>
+                </div>
+              </a>
+            </div>
+          <?php }?>
+
+        </div>
+      </div>
+
+      <!-- 2014 -->
+      <div class="container" style="margin-top: 120px;">
+        <div class="row">
+          <div class="site-section-heading text-center w-border col-md-6 mx-auto">
+            <h2 class="mb-5">2014</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+
+          <?php foreach ($get_f as $f) { ?>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <a href="trip1.html" class="unit-9">
+                <div class="image" 
+                  style="background-image: url('<?=base_url()?>assets/uploads/<?php echo $f->picture; ?>');">
+                </div>
+                <div class="unit-9-content">
+                  <h2><?php echo $f->tripName; ?></h2>
+                  <span><?php echo $f->tripDate; ?></span>
+                </div>
+              </a>
+            </div>
+          <?php }?>
+
+        </div>
+      </div>
+
+      <!-- 2013 -->
+      <div class="container" style="margin-top: 120px;">
+        <div class="row">
+          <div class="site-section-heading text-center w-border col-md-6 mx-auto">
+            <h2 class="mb-5">2013</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+
+          <?php foreach ($get_g as $g) { ?>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <a href="trip1.html" class="unit-9">
+                <div class="image" 
+                  style="background-image: url('<?=base_url()?>assets/uploads/<?php echo $g->picture; ?>');">
+                </div>
+                <div class="unit-9-content">
+                  <h2><?php echo $g->tripName; ?></h2>
+                  <span><?php echo $g->tripDate; ?></span>
+                </div>
+              </a>
+            </div>
+          <?php }?>
+
+        </div>
+      </div>
+
+      <!-- 2012 -->
+      <div class="container" style="margin-top: 120px;">
+        <div class="row">
+          <div class="site-section-heading text-center w-border col-md-6 mx-auto">
+            <h2 class="mb-5">2012</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+
+          <?php foreach ($get_h as $h) { ?>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <a href="trip1.html" class="unit-9">
+                <div class="image" 
+                  style="background-image: url('<?=base_url()?>assets/uploads/<?php echo $h->picture; ?>');">
+                </div>
+                <div class="unit-9-content">
+                  <h2><?php echo $h->tripName; ?></h2>
+                  <span><?php echo $h->tripDate; ?></span>
+                </div>
+              </a>
+            </div>
+          <?php }?>
+
+        </div>
+      </div>
+
+      <!-- 2011 -->
+      <div class="container" style="margin-top: 120px;">
+        <div class="row">
+          <div class="site-section-heading text-center w-border col-md-6 mx-auto">
+            <h2 class="mb-5">2011</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+
+          <?php foreach ($get_i as $i) { ?>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <a href="trip1.html" class="unit-9">
+                <div class="image" 
+                  style="background-image: url('<?=base_url()?>assets/uploads/<?php echo $i->picture; ?>');">
+                </div>
+                <div class="unit-9-content">
+                  <h2><?php echo $i->tripName; ?></h2>
+                  <span><?php echo $i->tripDate; ?></span>
+                </div>
+              </a>
+            </div>
+          <?php }?>
+
+        </div>
+      </div>
+
+      <!-- 2010 -->
+      <div class="container" style="margin-top: 120px;">
+        <div class="row">
+          <div class="site-section-heading text-center w-border col-md-6 mx-auto">
+            <h2 class="mb-5">2010</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+
+          <?php foreach ($get_j as $j) { ?>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <a href="trip1.html" class="unit-9">
+                <div class="image" 
+                  style="background-image: url('<?=base_url()?>assets/uploads/<?php echo $j->picture; ?>');">
+                </div>
+                <div class="unit-9-content">
+                  <h2><?php echo $j->tripName; ?></h2>
+                  <span><?php echo $j->tripDate; ?></span>
+                </div>
+              </a>
+            </div>
+          <?php }?>
+
+        </div>
+      </div>
+
+      <!-- 2009 -->
+      <div class="container" style="margin-top: 120px;">
+        <div class="row">
+          <div class="site-section-heading text-center w-border col-md-6 mx-auto">
+            <h2 class="mb-5">2009</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+
+          <?php foreach ($get_k as $k) { ?>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <a href="trip1.html" class="unit-9">
+                <div class="image" 
+                  style="background-image: url('<?=base_url()?>assets/uploads/<?php echo $k->picture; ?>');">
+                </div>
+                <div class="unit-9-content">
+                  <h2><?php echo $k->tripName; ?></h2>
+                  <span><?php echo $k->tripDate; ?></span>
+                </div>
+              </a>
+            </div>
+          <?php }?>
+
+        </div>
+      </div>
+
+      <!-- 2008 -->
+      <div class="container" style="margin-top: 120px;">
+        <div class="row">
+          <div class="site-section-heading text-center w-border col-md-6 mx-auto">
+            <h2 class="mb-5">2008</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+
+          <?php foreach ($get_l as $l) { ?>
+            <div class="col-md-6 col-lg-4 mb-3">
+              <a href="trip1.html" class="unit-9">
+                <div class="image" 
+                  style="background-image: url('<?=base_url()?>assets/uploads/<?php echo $l->picture; ?>');">
+                </div>
+                <div class="unit-9-content">
+                  <h2><?php echo $l->tripName; ?></h2>
+                  <span><?php echo $l->tripDate; ?></span>
+                </div>
+              </a>
+            </div>
+          <?php }?>
+
+        </div>
+      </div>
+
     </div>
 
   <div class="bg-prm" style="margin-top: 100px;">
