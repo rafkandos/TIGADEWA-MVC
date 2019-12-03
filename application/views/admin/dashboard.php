@@ -180,7 +180,7 @@
                             <div class="card-block">
                                 <div class="row mb-2">
                                     <div class="col-md-6">
-                                        <h4 class="card-title text-uppercase">Dashboard</h4>
+                                        <h4 class="card-title text-uppercase">Edit About</h4>
                                     </div>
                                     <!-- <div class="col-md-6">
                                         <a href="#" data-toggle="modal" data-target="#add" class="btn waves-effect waves-light btn-warning pull-right">
