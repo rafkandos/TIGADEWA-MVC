@@ -150,10 +150,126 @@
                         </ol>
                     </div>
                 </div>
+
+                <?php
+                            $notifikasi = $this->session->flashdata('notif_gagal');
+                            if ($notifikasi != null) {
+                                echo '
+                                    <div class="alert alert-danger">
+                                        '.$notifikasi.'
+                                    </div>
+                                ';
+                            }
+                        ?>
+                    <?php
+                            $notifikasi_sukses = $this->session->flashdata('notif_sukses');
+                            if ($notifikasi_sukses != null) {
+                                echo '
+                                    <div class="alert alert-success">
+                                        '.$notifikasi_sukses.'
+                                    </div>
+                                ';
+                            }
+                        ?>
+
+                <!-- OPENTRIP -->
+                <div class="row">
+                    <!-- column -->
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-block">
+                                <div class="row mb-2">
+                                    <div class="col-md-6">
+                                        <h4 class="card-title text-uppercase">Dashboard</h4>
+                                    </div>
+                                    <!-- <div class="col-md-6">
+                                        <a href="#" data-toggle="modal" data-target="#add" class="btn waves-effect waves-light btn-warning pull-right">
+                                            <i class="mdi mdi-library-plus"></i> Add Gallery
+                                        </a>
+                                        
+                                    </div> -->
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered" id="dtTables">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Visi</th>
+                                                <th>Misi</th>
+                                                <th>Layanan</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        
+                                        <tbody>
+                                            <?php
+                                                foreach ($about as $o ) {
+                                                    echo '
+                                                        <tr>
+                                                            <td>'.$o->id_about.'</td>
+                                                            <td>'.$o->visi.'</td>
+                                                            <td>'.$o->misi.'</td>
+                                                            <td>'.$o->layanan.'</td>
+                                                            <td align="center">
+                                                                <a onclick="edit('.$o->id_about.')" href="#" 
+                                                                    data-toggle="modal" data-target="#update" 
+                                                                    class="m-t-5 waves-effect waves-dark btn btn-primary">
+                                                                    <i class="mdi mdi-grease-pencil"></i> Edit
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    ';
+                                                }
+                                            ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <footer class="footer"> ©2019 </footer>
         </div>
+
     </div>
+
+    <div class="modal fade" id="update" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit About</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="<?php base_url()?>Admin/update" method="post">
+                    <div class="modal-body">
+                        <div class="tab-pane" id="settings" role="tabpanel">
+                            <div class="card-block">
+                                    <div class="form-horizontal form-material form-group">
+                                        <input type="hidden" name="id_about" id="id_about">
+                                        <label class="font-weight-bold">Visi</label>
+                                        <textarea rows="5" class="form-control form-control-line" id="visi" name="visi"></textarea>
+                                        <br><br>
+                                        <label class="font-weight-bold">Misi</label>
+                                        <textarea rows="5" class="form-control form-control-line" id="misi" name="misi"></textarea>
+                                        <br><br>
+                                        <label class="font-weight-bold">Layanan</label>
+                                        <textarea rows="5" class="form-control form-control-line" id="layanan" name="layanan"></textarea>
+                                        <br><br>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" name="update" class="btn btn-success font-weight-bold" value="SUBMIT">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <script src="<?=base_url()?>assets_admin/plugins/jquery/jquery.min.js"></script>
     
     <script src="<?=base_url()?>assets_admin/plugins/bootstrap/js/tether.min.js"></script>
@@ -174,6 +290,22 @@
     <script src="<?=base_url()?>assets_admin/plugins/c3-master/c3.min.js"></script>
     
     <script src="<?=base_url()?>assets_admin/js/dashboard1.js"></script>
+    <script>
+        function edit(id) {
+            $('#id_about').val();
+            $('#visi').val();
+            $('#misi').val();
+            $('#layanan').val();
+
+            $.getJSON("<?php echo base_url('index.php/Admin/get_id_ot/') ?>"+ id, function(data){
+                $('#id_about').val(data.id_about);
+                $('#visi').val(data.visi);
+                $('#misi').val(data.misi);
+                $('#layanan').val(data.layanan);
+            });
+        }
+    </script>
+
 </body>
 
 </html>

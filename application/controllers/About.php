@@ -8,6 +8,8 @@ class About extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('About_model', 'am');
+		$this->load->model('Admin_model', 'adm');
+		
 	}
 	
 
@@ -18,7 +20,8 @@ class About extends CI_Controller {
 
 	public function aboutus()
 	{
-		$this->load->view('user/aboutus');
+		$data['about'] = $this->adm->getAbout();
+		$this->load->view('user/aboutus', $data);
 	}
 
 	public function ourguides()

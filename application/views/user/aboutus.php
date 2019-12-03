@@ -105,29 +105,18 @@
           <div class="col-md-12 col-lg-6">
             <img src="<?=base_url()?>assets/images/mount5.jpg" class="image img-fluid">
           </div>
-          <div class="col-md-12 col-lg-6">
-            <h2 style="color: #fe6700">Our Vision</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <h2 style="color: #fe6700">Our Mission</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <h2 style="color: #fe6700">Personalized Services</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
+          <?php foreach ($about as $a ) {
+            echo '
+              <div class="col-md-12 col-lg-6">
+              <h2 style="color: #fe6700">Our Vision</h2>
+              <p>'.$a->visi.'</p>
+              <h2 style="color: #fe6700">Our Mission</h2>
+              <p>'.$a->misi.'</p>
+              <h2 style="color: #fe6700">Personalized Services</h2>
+              <p>'.$a->layanan.'</p>
+            </div>
+            ';
+          }?>
         </div>
     </div>
 

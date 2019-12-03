@@ -242,6 +242,7 @@
             </div>
             <footer class="footer"> ©2019 </footer>
         </div>
+        
     </div>
 
     <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
