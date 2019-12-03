@@ -119,6 +119,12 @@
                                 <span class="hide-menu">Partnership</span>
                             </a>
                         </li>
+                        <li> 
+                            <a class="waves-effect waves-dark" href="<?=base_url()?>index.php/_merchantdise" aria-expanded="false">    
+                                <i class="mdi mdi-shopping"></i>
+                                <span class="hide-menu">Merchantdise</span>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>
