@@ -3,6 +3,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class About extends CI_Controller {
 
+	
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('About_model', 'am');
+	}
+	
+
 	public function index()
 	{
 		
@@ -15,7 +23,8 @@ class About extends CI_Controller {
 
 	public function ourguides()
 	{
-		$this->load->view('user/ourguides');
+		$data['guides'] = $this->am->getGuides();
+		$this->load->view('user/ourguides', $data);
 	}
 
 	public function contactus()
@@ -25,7 +34,8 @@ class About extends CI_Controller {
 
 	public function partners()
 	{
-		$this->load->view('user/partners');
+		$data['partner'] = $this->am->getPartner();
+		$this->load->view('user/partners', $data);
 	}
 
 	public function testimonials()

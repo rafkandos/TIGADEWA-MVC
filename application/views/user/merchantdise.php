@@ -92,7 +92,7 @@
         <div class="row align-items-center justify-content-center">
           <div class="col-md-10 text-center" data-aos="fade-up" data-aos-delay="200">
             <h1 class="mb-4" style="color: #fe6700; font-size: 30pt;font-weight: bold;">OUR MERCHANTDISE</h1>
-            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <!-- <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
           </div>
         </div>
       </div>
@@ -103,19 +103,21 @@
         <div class="row">
           <div class="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
             <h2 class="mb-5">Our Products</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, fugit nam obcaecati fuga itaque deserunt officia, error reiciendis ab quod?</p>
+            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, fugit nam obcaecati fuga itaque deserunt officia, error reiciendis ab quod?</p> -->
           </div>
         </div>
         
-        <div class="row">
+        <div class="row justify-content-center">
 
-          <div class="col-md-6 col-lg-4 mb-3 mb-lg-5">
-            <div class="team-2one">
-              <img src="<?=base_url()?>assets/images/bluetees.jpg" alt="Image" class="img-fluid">
+          <?php foreach ($merchant as $m) { ?>
+            <div class="col-md-6 col-lg-4 mb-3 mb-lg-5">
+              <div class="team-2one">
+                <img src="<?=base_url()?>assets/uploads/<?php echo $m->photo?>" alt="Image" class="img-fluid">
+              </div>
             </div>
-          </div>
+          <?php }?>
     
-          <div class="col-md-6 col-lg-4 mb-3 mb-lg-5">
+          <!-- <div class="col-md-6 col-lg-4 mb-3 mb-lg-5">
             <div class="team-2one">
               <img src="<?=base_url()?>assets/images/blacktees.jpg" alt="Image" class="img-fluid">
             </div>
@@ -126,7 +128,7 @@
               <img src="<?=base_url()?>assets/images/maroontees.jpg" alt="Image" class="img-fluid">
               
             </div>
-          </div>
+          </div> -->
 
       </div>
     </div>

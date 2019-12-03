@@ -72,7 +72,6 @@
                 </ul>
               </nav>
             </div>
-           
 
           </div>
         </div>
@@ -93,7 +92,7 @@
         <div class="row align-items-center justify-content-center">
           <div class="col-md-8 text-center" data-aos="fade-up" data-aos-delay="200">
             <h1 class="mb-4" style="color: #fe6700; font-weight: bold;">OUR PARTNERS</h1>
-            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <!-- <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
           </div>
         </div>
       </div>
@@ -104,15 +103,18 @@
         <div class="row">
           <div class="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
             <h2 class="mb-5">Partnership</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, fugit nam obcaecati fuga itaque deserunt officia, error reiciendis ab quod?</p>
+            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, fugit nam obcaecati fuga itaque deserunt officia, error reiciendis ab quod?</p> -->
           </div>
         </div>
         
         <div class="row">
-          <div class="col-md-6 col-lg-4 mt-3">
-            <img src="<?=base_url()?>assets/images/tnf.png" class="images img-fluid">
-          </div>
-          <div class="col-md-6 col-lg-4 mt-3">
+          <?php foreach ($partner as $p ) { ?>
+            <div class="col-md-6 col-lg-4 mt-3">
+              <img src="<?=base_url()?>assets/uploads/<?php echo $p->photo?>" style="width:1000px;" class="images img-fluid">
+            </div>
+          <?php }?>
+          
+          <!-- <div class="col-md-6 col-lg-4 mt-3">
             <img src="<?=base_url()?>assets/images/marmot.jpg" class="images img-fluid">
           </div>
           <div class="col-md-6 col-lg-4 mt-3">
@@ -126,7 +128,7 @@
           </div>
           <div class="col-md-6 col-lg-4 mt-3">
             <img src="<?=base_url()?>assets/images/lowealpine.jpg" class="images img-fluid">
-          </div>
+          </div> -->
         </div>
     </div>
 

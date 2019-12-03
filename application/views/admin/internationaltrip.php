@@ -108,6 +108,18 @@
                                 <span class="hide-menu">Gallery</span>
                             </a>
                         </li>
+                        <li> 
+                            <a class="waves-effect waves-dark" href="<?=base_url()?>index.php/_guides" aria-expanded="false">    
+                                <i class="mdi mdi-account-multiple-plus"></i>
+                                <span class="hide-menu">Guides</span>
+                            </a>
+                        </li>
+                        <li> 
+                            <a class="waves-effect waves-dark" href="<?=base_url()?>index.php/_partner" aria-expanded="false">    
+                                <i class="mdi mdi-pi-box"></i>
+                                <span class="hide-menu">Partnership</span>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>

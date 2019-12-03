@@ -103,13 +103,13 @@
                             </a>
                         </li>
                         <li> 
-                            <a class="waves-effect waves-dark active" href="#" aria-expanded="false">    
+                            <a class="waves-effect waves-dark" href="<?=base_url()?>index.php/_gallery" aria-expanded="false">    
                                 <i class="mdi mdi-file-image"></i>
                                 <span class="hide-menu">Gallery</span>
                             </a>
                         </li>
                         <li> 
-                            <a class="waves-effect waves-dark" href="<?=base_url()?>index.php/_guides" aria-expanded="false">    
+                            <a class="waves-effect waves-dark active" href="#" aria-expanded="false">    
                                 <i class="mdi mdi-account-multiple-plus"></i>
                                 <span class="hide-menu">Guides</span>
                             </a>
@@ -136,10 +136,10 @@
 
                 <div class="row page-titles">
                     <div class="col-md-5 col-8 align-self-center">
-                        <h3 class="text-themecolor">Gallery</h3>
+                        <h3 class="text-themecolor">Guides</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript:void(0)" style="color: #fe6700">TDA Indonesia</a></li>
-                            <li class="breadcrumb-item active">Gallery</li>
+                            <li class="breadcrumb-item active">Guides</li>
                         </ol>
                     </div>
                 </div>
@@ -173,11 +173,11 @@
                             <div class="card-block">
                                 <div class="row mb-2">
                                     <div class="col-md-6">
-                                        <h4 class="card-title text-uppercase">Gallery</h4>
+                                        <h4 class="card-title text-uppercase">Guides</h4>
                                     </div>
                                     <div class="col-md-6">
                                         <a href="#" data-toggle="modal" data-target="#add" class="btn waves-effect waves-light btn-warning pull-right">
-                                            <i class="mdi mdi-library-plus"></i> Add Gallery
+                                            <i class="mdi mdi-library-plus"></i> Add Guides
                                         </a>
                                         
                                     </div>
@@ -187,39 +187,39 @@
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Trip Name</th>
-                                                <th>Trip Date</th>
-                                                <th>Detail</th>
-                                                <th>Banner</th>
+                                                <th>Guides Name</th>
+                                                <th>Jabatan</th>
+                                                <th>Caption</th>
+                                                <th>Photo</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         
                                         <tbody>
                                             <?php
-                                                foreach ($gallery as $o ) {
+                                                foreach ($guides as $o ) {
                                                     echo '
                                                         <tr>
-                                                            <td>'.$o->id_gallery.'</td>
-                                                            <td>'.$o->tripName.'</td>
-                                                            <td>'.$o->tripDate.' '.$o->year.'</td>
-                                                            <td>'.$o->detail.'</td>
-                                                            <td align="center"><img src="'.base_url('assets/uploads/'.$o->picture).'" style="width: 70px;" alt="img"></td>
+                                                            <td>'.$o->id_guides.'</td>
+                                                            <td>'.$o->name.'</td>
+                                                            <td>'.$o->jabatan.'</td>
+                                                            <td>'.$o->caption.'</td>
+                                                            <td align="center"><img src="'.base_url('assets/uploads/'.$o->photo).'" style="width: 70px;" alt="img"></td>
                                                             
                                                             <td align="center">
-                                                                <a onclick="edit('.$o->id_gallery.')" href="#" 
+                                                                <a onclick="edit('.$o->id_guides.')" href="#" 
                                                                     data-toggle="modal" data-target="#update" 
                                                                     class="m-t-5 waves-effect waves-dark btn btn-primary">
                                                                     <i class="mdi mdi-grease-pencil"></i> Edit
                                                                 </a>
-                                                                <a href="'.base_url('index.php/_gallery/delete/'.$o->id_gallery).'" 
+                                                                <a href="'.base_url('index.php/_guides/delete/'.$o->id_guides).'" 
                                                                     class="m-t-5 waves-effect waves-light btn btn-danger">
                                                                     <i class="mdi mdi-delete"></i> Delete
                                                                 </a>
-                                                                <a onclick="upload('.$o->id_gallery.')" href="#" 
+                                                                <a onclick="upload('.$o->id_guides.')" href="#" 
                                                                     data-toggle="modal" data-target="#upload" 
                                                                     class="m-t-5 waves-effect waves-dark btn btn-success">
-                                                                    <i class="mdi mdi-upload"></i> Upload Banner
+                                                                    <i class="mdi mdi-upload"></i> Upload Photo
                                                                 </a>
                                                             </td>
                                                         </tr>
@@ -242,31 +242,25 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title font-weight-bold" id="exampleModalLabel">Add Gallery</h5>
+                    <h5 class="modal-title font-weight-bold" id="exampleModalLabel">Add Guides</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="<?php base_url()?>_gallery/add" method="post">
+                <form action="<?php base_url()?>_guides/add" method="post">
                     <div class="modal-body">
                         <div class="tab-pane" id="settings" role="tabpanel">
                             <div class="card-block">
                                     <div class="form-horizontal form-material form-group">
                                         <!-- <input type="hidden" name="id_opentrip"> -->
-                                        <label class="font-weight-bold">Trip Name</label>
-                                        <input type="text" class="form-control form-control-line" name="tn">
+                                        <label class="font-weight-bold">Guides Name</label>
+                                        <input type="text" class="form-control form-control-line" name="gn">
                                         <br><br>
-                                        <label class="font-weight-bold">Trip Date</label>
-                                        <input type="text" class="form-control form-control-line" name="td">
+                                        <label class="font-weight-bold">Jabatan</label>
+                                        <input type="text" class="form-control form-control-line" name="jb">
                                         <br><br>
-                                        
-                                        <!-- <div id="haha">
-                                        </div> -->
-                                        <label class="font-weight-bold">Year</label>
-                                        <input type="number" class="form-control form-control-line" name="ye">
-                                        <br><br>
-                                        <label class="font-weight-bold">Detail</label>
-                                        <textarea rows="5" class="form-control form-control-line" name="dt"></textarea>
+                                        <label class="font-weight-bold">Caption</label>
+                                        <textarea rows="5" class="form-control form-control-line" name="cp"></textarea>
                                         <br><br>
                                     </div>
                             </div>
@@ -284,31 +278,25 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Edit Trip</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Guides</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="<?php base_url()?>_gallery/update" method="post">
+                <form action="<?php base_url()?>_guides/update" method="post">
                     <div class="modal-body">
                         <div class="tab-pane" id="settings" role="tabpanel">
                             <div class="card-block">
                                     <div class="form-horizontal form-material form-group">
-                                        <input type="hidden" name="id_gallery" id="id_gallery">
-                                        <label class="font-weight-bold">Trip Name</label>
-                                        <input type="text" class="form-control form-control-line" name="tn" id="tn">
+                                        <input type="hidden" name="id_guides" id="id_guides">
+                                        <label class="font-weight-bold">Guides Name</label>
+                                        <input type="text" class="form-control form-control-line" name="gn" id="gn">
                                         <br><br>
-                                        <label class="font-weight-bold">Trip Date</label>
-                                        <input type="text" class="form-control form-control-line" id="td" name="td">
+                                        <label class="font-weight-bold">Jabatan</label>
+                                        <input type="text" class="form-control form-control-line" name="jb" id="jb">
                                         <br><br>
-                                        
-                                        <!-- <div id="haha">
-                                        </div> -->
-                                        <label class="font-weight-bold">Year</label>
-                                        <input type="number" class="form-control form-control-line" id="ye" name="ye">
-                                        <br><br>
-                                        <label class="font-weight-bold">Detail</label>
-                                        <textarea rows="5" class="form-control form-control-line" id="dt" name="dt"></textarea>
+                                        <label class="font-weight-bold">Caption</label>
+                                        <textarea rows="5" class="form-control form-control-line" name="cp" id="cp"></textarea>
                                         <br><br>
                                     </div>
                             </div>
@@ -326,12 +314,12 @@
 	        <div class="modal-dialog" role="document">
 	            <div class="modal-content">
 	                <div class="modal-header">
-	                	<h4>Upload Banner</h4>
+	                	<h4>Upload Photo</h4>
 	                    <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
 	                    <span aria-hidden="true">&times;</span>
 	                    </button>
 	                </div>
-	                <form action="<?php base_url()?>_gallery/upload" method="post" enctype="multipart/form-data">
+	                <form action="<?php base_url()?>_guides/upload" method="post" enctype="multipart/form-data">
 	                    <div class="modal-body">
 	                        <div class="tab-pane" id="settings" role="tabpanel">
 	                            <div class="card-block">
@@ -380,24 +368,22 @@
             $('#dtTables').DataTable();
         } );
 
-        function upload(id_gallery){
-            $("#id_reg").val(id_gallery);
+        function upload(id_guides){
+            $("#id_reg").val(id_guides);
         }
 
         //opentrip
         function edit(id) {
-            $('#id_gallery').val();
-            $('#tn').val();
-            $('#td').val();
-            $('#ye').val();
-            $('#dt').val();
+            $('#id_guides').val();
+            $('#gn').val();
+            $('#jb').val();
+            $('#cp').val();
 
-            $.getJSON("<?php echo base_url('index.php/_gallery/get_id_ot/') ?>"+ id, function(data){
-                $('#id_gallery').val(data.id_gallery);
-                $('#tn').val(data.tripName);
-                $('#td').val(data.tripDate);
-                $('#ye').val(data.year);
-                $('#dt').val(data.detail);
+            $.getJSON("<?php echo base_url('index.php/_guides/get_id_ot/') ?>"+ id, function(data){
+                $('#id_guides').val(data.id_guides);
+                $('#gn').val(data.name);
+                $('#jb').val(data.jabatan);
+                $('#cp').val(data.caption);
             });
         }
 
