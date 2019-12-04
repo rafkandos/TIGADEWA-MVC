@@ -109,65 +109,17 @@
         </div>
         <div class="nonloop-block-13 owl-carousel">
           
-          <div class="text-center p-3 p-md-5 bg-white">
-            <div class="mb-4">            
-              <img src="<?=base_url()?>assets/images/ronaldo.jpg" alt="Image" class="w-50 mx-auto img-fluid rounded-circle">
+          <?php foreach ($testi as $t) { ?>
+            <div class="text-center p-3 p-md-5 bg-white">
+              <div class="mb-4">            
+                <img src="<?=base_url()?>assets/uploads/<?php echo $t->photo?>" alt="Image" class="w-50 mx-auto img-fluid rounded-circle">
+              </div>
+              <div class="text-black">
+                <h3 class="font-weight-bld h5"><?php echo $t->name?></h3>
+                <p class="font-italic">&ldquo;<?php echo $t->caption?>&rdquo;</p>
+              </div>
             </div>
-            <div class="text-black">
-              <h3 class="font-weight-bld h5">Cristiano Ronaldo</h3>
-              <p class="font-italic">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, iusto. Aliquam illo, cum sed ea? Ducimus quos, ea?&rdquo;</p>
-            </div>
-          </div>
-
-          <div class="text-center p-3 p-md-5 bg-white">
-            <div class="mb-4">            
-              <img src="<?=base_url()?>assets/images/ronaldo.jpg" alt="Image" class="w-50 mx-auto img-fluid rounded-circle">
-            </div>
-            <div class="text-black">
-              <h3 class="font-weight-bld h5">Cristiano Ronaldo</h3>
-              <p class="font-italic">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, iusto. Aliquam illo, cum sed ea? Ducimus quos, ea?&rdquo;</p>
-            </div>
-          </div>
-
-          <div class="text-center p-3 p-md-5 bg-white">
-            <div class="mb-4">            
-              <img src="<?=base_url()?>assets/images/ronaldo.jpg" alt="Image" class="w-50 mx-auto img-fluid rounded-circle">
-            </div>
-            <div class="text-black">
-              <h3 class="font-weight-bld h5">Cristiano Ronaldo</h3>
-              <p class="font-italic">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, iusto. Aliquam illo, cum sed ea? Ducimus quos, ea?&rdquo;</p>
-            </div>
-          </div>
-
-          <div class="text-center p-3 p-md-5 bg-white">
-            <div class="mb-4">            
-              <img src="<?=base_url()?>assets/images/ronaldo.jpg" alt="Image" class="w-50 mx-auto img-fluid rounded-circle">
-            </div>
-            <div class="text-black">
-              <h3 class="font-weight-bld h5">Cristiano Ronaldo</h3>
-              <p class="font-italic">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, iusto. Aliquam illo, cum sed ea? Ducimus quos, ea?&rdquo;</p>
-            </div>
-          </div>
-
-          <div class="text-center p-3 p-md-5 bg-white">
-            <div class="mb-4">            
-              <img src="<?=base_url()?>assets/images/ronaldo.jpg" alt="Image" class="w-50 mx-auto img-fluid rounded-circle">
-            </div>
-            <div class="text-black">
-              <h3 class="font-weight-bld h5">Cristiano Ronaldo</h3>
-              <p class="font-italic">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, iusto. Aliquam illo, cum sed ea? Ducimus quos, ea?&rdquo;</p>
-            </div>
-          </div>
-
-          <div class="text-center p-3 p-md-5 bg-white">
-            <div class="mb-4">            
-              <img src="<?=base_url()?>assets/images/ronaldo.jpg" alt="Image" class="w-50 mx-auto img-fluid rounded-circle">
-            </div>
-            <div class="text-black">
-              <h3 class="font-weight-bld h5">Cristiano Ronaldo</h3>
-              <p class="font-italic">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, iusto. Aliquam illo, cum sed ea? Ducimus quos, ea?&rdquo;</p>
-            </div>
-          </div>
+          <?php }?>
 
         </div>
       </div>

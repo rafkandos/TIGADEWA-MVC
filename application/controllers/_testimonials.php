@@ -4,7 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 /**
  *
- * Controller _merchantdise
+ * Controller _testimonials
  *
  * This controller for ...
  *
@@ -18,7 +18,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
  *
  */
 
-class _merchantdise extends CI_Controller
+class _testimonials extends CI_Controller
 {
     
   public function __construct()
@@ -26,38 +26,39 @@ class _merchantdise extends CI_Controller
     parent::__construct();
     if ($this->session->userdata('logged_in') != true) {
 			redirect('Login','refresh');
-		}
-    $this->load->model('_merchantdisemodel', 'mm');
+    }
+    $this->load->model('_testimonialsmodel', 'tm');
+    
   }
 
   public function index()
   {
-    $data['merchant'] = $this->mm->getMerchantdise();
-    $this->load->view('admin/merchantdise', $data);
-    
+    $data['testi'] = $this->tm->getTesti();
+    $this->load->view('admin/testimonials', $data);
   }
 
-    public function add()
+  public function add()
 	{
 		if ($this->input->post('add')) {
-            $this->form_validation->set_rules('mn', 'Merchantdise Name', 'trim|required');
+            $this->form_validation->set_rules('cn', 'Customer Name', 'trim|required');
+            $this->form_validation->set_rules('cp', 'Caption', 'trim|required');
             
             if ($this->form_validation->run() == true) {
-                if ($this->mm->add() == true) {
-                    $this->session->set_flashdata('notif_sukses', 'Add Merchantdise Success');
-                    redirect('_merchantdise');
+                if ($this->tm->add() == true) {
+                    $this->session->set_flashdata('notif_sukses', 'Add Testimonials Success');
+                    redirect('_testimonials');
                 } else {
-                    $this->session->set_flashdata('notif_gagal', 'Add Merchantdise Failure');
-                    redirect('_merchantdise');
+                    $this->session->set_flashdata('notif_gagal', 'Add Testimonials Failure');
+                    redirect('_testimonials');
                     
                 }
             } else {
                 $this->session->set_flashdata('notif_gagal', validation_errors());
-                redirect('_merchantdise','refresh');   
+                redirect('_testimonials','refresh');   
             }
         } else {
             $this->session->set_flashdata('notif_gagal', validation_errors());
-            redirect('_merchantdise','refresh');
+            redirect('_testimonials','refresh');
         }
     }
   
@@ -77,65 +78,66 @@ class _merchantdise extends CI_Controller
             
             if ( !$this->upload->do_upload('banner')){
                 $this->session->set_flashdata('notif_gagal', $this->upload->display_errors());
-                redirect('_merchantdise');
+                redirect('_testimonials');
             }
             else{
-                $update = $this->mm->upload();
+                $update = $this->tm->upload();
                 if($update == true){
                     $this->session->set_flashdata('notif_sukses', 'Upload Photo Success');
-                    redirect('_merchantdise');
+                    redirect('_testimonials');
                 } else {
                     $this->session->set_flashdata('notif_gagal', 'Upload Photo Failure');
-                    redirect('_merchantdise');
+                    redirect('_testimonials');
                 }
-                redirect('_merchantdise');
+                redirect('_testimonials');
             }      
   }
   
   public function update()
 	{
 		if ($this->input->post('update')) {
-            $this->form_validation->set_rules('mn', 'Merchantdise Name', 'trim|required');
+            $this->form_validation->set_rules('cn', 'Customer Name', 'trim|required');
+            $this->form_validation->set_rules('cp', 'Caption', 'trim|required');
             
             if ($this->form_validation->run() == true) {
-                if ($this->mm->update() == true) {
-                    $this->session->set_flashdata('notif_sukses', 'Edit Partnership Success');
-                    redirect('_merchantdise');
+                if ($this->tm->update() == true) {
+                    $this->session->set_flashdata('notif_sukses', 'Edit Testimonials Success');
+                    redirect('_testimonials');
                 } else {
-                    $this->session->set_flashdata('notif_gagal', 'Edit Partnership Failure');
-                    redirect('_merchantdise');
+                    $this->session->set_flashdata('notif_gagal', 'Edit Testimonials Failure');
+                    redirect('_testimonials');
                     
                 }
             } else {
                 $this->session->set_flashdata('notif_gagal', validation_errors());
-                redirect('_merchantdise','refresh');   
+                redirect('_testimonials','refresh');   
             }
         } else {
             $this->session->set_flashdata('notif_gagal', validation_errors());
-            redirect('_merchantdise','refresh');
+            redirect('_testimonials','refresh');
         }
 	}
 
-	public function get_id_ot($id_merchantdise)
+	public function get_id_ot($id_testimonials)
     {
-        $dt = $this->mm->get_id_ot($id_merchantdise);
+        $dt = $this->tm->get_id_ot($id_testimonials);
         echo json_encode($dt);
   }
   
-  public function delete($id_merchantdise)
+  public function delete($id_testimonials)
 	{
-		if ($this->mm->delete($id_merchantdise) == true) {
+		if ($this->tm->delete($id_testimonials) == true) {
 			$this->session->set_flashdata('notif_sukses', 'Deleted Successfull');
-        	redirect('_merchantdise', 'refresh');
+        	redirect('_testimonials', 'refresh');
             // redirect('regist/detail/'.$this->session->userdata('id_regist') , 'refresh');
         } else {
         	$this->session->set_flashdata('notif_gagal', 'Delete Unsuccessfull');
-        	redirect('_merchantdise', 'refresh');
+        	redirect('_testimonials', 'refresh');
         }
 	}
 
 }
 
 
-/* End of file _merchantdise.php */
-/* Location: ./application/controllers/_merchantdise.php */
+/* End of file _testimonials.php */
+/* Location: ./application/controllers/_testimonials.php */

@@ -125,6 +125,12 @@
                                 <span class="hide-menu">Merchantdise</span>
                             </a>
                         </li>
+                        <li> 
+                            <a class="waves-effect waves-dark" href="<?=base_url()?>index.php/_testimonials" aria-expanded="false">    
+                                <i class="mdi mdi-message-bulleted"></i>
+                                <span class="hide-menu">Testimonials</span>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>

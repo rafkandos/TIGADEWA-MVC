@@ -115,7 +115,7 @@
                             </a>
                         </li>
                         <li> 
-                            <a class="waves-effect waves-dark active" href="#" aria-expanded="false">    
+                            <a class="waves-effect waves-dark" href="<?=base_url()?>index.php/_partner" aria-expanded="false">    
                                 <i class="mdi mdi-pi-box"></i>
                                 <span class="hide-menu">Partnership</span>
                             </a>
@@ -127,7 +127,7 @@
                             </a>
                         </li>
                         <li> 
-                            <a class="waves-effect waves-dark" href="<?=base_url()?>index.php/_testimonials" aria-expanded="false">    
+                            <a class="waves-effect waves-dark active" href="#" aria-expanded="false">    
                                 <i class="mdi mdi-message-bulleted"></i>
                                 <span class="hide-menu">Testimonials</span>
                             </a>
@@ -148,10 +148,10 @@
 
                 <div class="row page-titles">
                     <div class="col-md-5 col-8 align-self-center">
-                        <h3 class="text-themecolor">Partnership</h3>
+                        <h3 class="text-themecolor">Testimonials</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript:void(0)" style="color: #fe6700">TDA Indonesia</a></li>
-                            <li class="breadcrumb-item active">Partnership</li>
+                            <li class="breadcrumb-item active">Testimonials</li>
                         </ol>
                     </div>
                 </div>
@@ -185,11 +185,11 @@
                             <div class="card-block">
                                 <div class="row mb-2">
                                     <div class="col-md-6">
-                                        <h4 class="card-title text-uppercase">Partnership</h4>
+                                        <h4 class="card-title text-uppercase">Testimonials</h4>
                                     </div>
                                     <div class="col-md-6">
                                         <a href="#" data-toggle="modal" data-target="#add" class="btn waves-effect waves-light btn-warning pull-right">
-                                            <i class="mdi mdi-library-plus"></i> Add Partner
+                                            <i class="mdi mdi-library-plus"></i> Add Testimonials
                                         </a>
                                         
                                     </div>
@@ -199,7 +199,8 @@
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Partner Name</th>
+                                                <th>Customer Name</th>
+                                                <th>Caption</th>
                                                 <th>Photo</th>
                                                 <th>Action</th>
                                             </tr>
@@ -207,24 +208,25 @@
                                         
                                         <tbody>
                                             <?php
-                                                foreach ($partner as $o ) {
+                                                foreach ($testi as $o ) {
                                                     echo '
                                                         <tr>
-                                                            <td>'.$o->id_partner.'</td>
+                                                            <td>'.$o->id_testimonials.'</td>
                                                             <td>'.$o->name.'</td>
+                                                            <td>'.$o->caption.'</td>
                                                             <td align="center"><img src="'.base_url('assets/uploads/'.$o->photo).'" style="width: 70px;" alt="img"></td>
                                                             
                                                             <td align="center">
-                                                                <a onclick="edit('.$o->id_partner.')" href="#" 
+                                                                <a onclick="edit('.$o->id_testimonials.')" href="#" 
                                                                     data-toggle="modal" data-target="#update" 
                                                                     class="m-t-5 waves-effect waves-dark btn btn-primary">
                                                                     <i class="mdi mdi-grease-pencil"></i> Edit
                                                                 </a>
-                                                                <a href="'.base_url('index.php/_partner/delete/'.$o->id_partner).'" 
+                                                                <a href="'.base_url('index.php/_testimonials/delete/'.$o->id_testimonials).'" 
                                                                     class="m-t-5 waves-effect waves-light btn btn-danger">
                                                                     <i class="mdi mdi-delete"></i> Delete
                                                                 </a>
-                                                                <a onclick="upload('.$o->id_partner.')" href="#" 
+                                                                <a onclick="upload('.$o->id_testimonials.')" href="#" 
                                                                     data-toggle="modal" data-target="#upload" 
                                                                     class="m-t-5 waves-effect waves-dark btn btn-success">
                                                                     <i class="mdi mdi-upload"></i> Upload Photo
@@ -250,19 +252,22 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title font-weight-bold" id="exampleModalLabel">Add Partnership</h5>
+                    <h5 class="modal-title font-weight-bold" id="exampleModalLabel">Add Testimonials</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="<?php base_url()?>_partner/add" method="post">
+                <form action="<?php base_url()?>_testimonials/add" method="post">
                     <div class="modal-body">
                         <div class="tab-pane" id="settings" role="tabpanel">
                             <div class="card-block">
                                     <div class="form-horizontal form-material form-group">
                                         <!-- <input type="hidden" name="id_opentrip"> -->
-                                        <label class="font-weight-bold">Partner Name</label>
-                                        <input type="text" class="form-control form-control-line" name="pn">
+                                        <label class="font-weight-bold">Customer Name</label>
+                                        <input type="text" class="form-control form-control-line" name="cn">
+                                        <br><br>
+                                        <label class="font-weight-bold">Caption</label>
+                                        <input type="text" class="form-control form-control-line" name="cp">
                                         <br><br>
                                     </div>
                             </div>
@@ -280,19 +285,22 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Edit Partnership</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Testimonials</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="<?php base_url()?>_partner/update" method="post">
+                <form action="<?php base_url()?>_testimonials/update" method="post">
                     <div class="modal-body">
                         <div class="tab-pane" id="settings" role="tabpanel">
                             <div class="card-block">
                                     <div class="form-horizontal form-material form-group">
-                                        <input type="hidden" name="id_partner" id="id_partner">
-                                        <label class="font-weight-bold">Partner Name</label>
-                                        <input type="text" class="form-control form-control-line" name="pn" id="pn">
+                                        <input type="hidden" name="id_testimonials" id="id_testimonials">
+                                        <label class="font-weight-bold">Customer Name</label>
+                                        <input type="text" class="form-control form-control-line" name="cn" id="cn">
+                                        <br><br>
+                                        <label class="font-weight-bold">Caption</label>
+                                        <input type="text" class="form-control form-control-line" name="cp" id="cp">
                                         <br><br>
                                     </div>
                             </div>
@@ -315,7 +323,7 @@
 	                    <span aria-hidden="true">&times;</span>
 	                    </button>
 	                </div>
-	                <form action="<?php base_url()?>_partner/upload" method="post" enctype="multipart/form-data">
+	                <form action="<?php base_url()?>_testimonials/upload" method="post" enctype="multipart/form-data">
 	                    <div class="modal-body">
 	                        <div class="tab-pane" id="settings" role="tabpanel">
 	                            <div class="card-block">
@@ -364,18 +372,20 @@
             $('#dtTables').DataTable();
         } );
 
-        function upload(id_partner){
-            $("#id_reg").val(id_partner);
+        function upload(id_testimonials){
+            $("#id_reg").val(id_testimonials);
         }
 
         //opentrip
         function edit(id) {
-            $('#id_partner').val();
-            $('#pn').val();
+            $('#id_testimonials').val();
+            $('#cn').val();
+            $('#cp').val();
 
-            $.getJSON("<?php echo base_url('index.php/_partner/get_id_ot/') ?>"+ id, function(data){
-                $('#id_partner').val(data.id_partner);
-                $('#pn').val(data.name);
+            $.getJSON("<?php echo base_url('index.php/_testimonials/get_id_ot/') ?>"+ id, function(data){
+                $('#id_testimonials').val(data.id_testimonials);
+                $('#cn').val(data.name);
+                $('#cp').val(data.caption);
             });
         }
 

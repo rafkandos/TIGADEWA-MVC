@@ -9,6 +9,7 @@ class About extends CI_Controller {
 		parent::__construct();
 		$this->load->model('About_model', 'am');
 		$this->load->model('Admin_model', 'adm');
+		$this->load->model('_testimonialsmodel', 'tm');
 		
 	}
 	
@@ -43,7 +44,8 @@ class About extends CI_Controller {
 
 	public function testimonials()
 	{
-		$this->load->view('user/testimonials');
+		$data['testi'] = $this->tm->getTesti();
+		$this->load->view('user/testimonials', $data);
 	}
 
 }

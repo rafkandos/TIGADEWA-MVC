@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 03 Des 2019 pada 11.26
+-- Generation Time: 04 Des 2019 pada 12.56
 -- Versi Server: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -415,6 +415,29 @@ INSERT INTO `schedule` (`id_schedule`, `scheduleDate`, `ot_id`, `pt_id`, `it_id`
 (13, '10 - 13 Okt 2019', NULL, 22222, NULL, 26),
 (14, '26 - 29 Okt 2019', NULL, 22222, NULL, 0);
 
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `testimonials`
+--
+
+CREATE TABLE `testimonials` (
+  `id_testimonials` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `caption` text NOT NULL,
+  `photo` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `testimonials`
+--
+
+INSERT INTO `testimonials` (`id_testimonials`, `name`, `caption`, `photo`) VALUES
+(2, 'Cristiano', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'pGcJqakCYUrIzbVm.jpg'),
+(3, 'Ronaldo', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'ZVh5HO4QABGd3bqv.jpg'),
+(4, 'Cristiano', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'dsaDnc72JMtBulWZ.jpg'),
+(5, 'Ronaldo', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'YtXDcZNdw1r8pVkg.jpg');
+
 --
 -- Indexes for dumped tables
 --
@@ -503,6 +526,12 @@ ALTER TABLE `schedule`
   ADD KEY `id_internationaltrip` (`it_id`);
 
 --
+-- Indexes for table `testimonials`
+--
+ALTER TABLE `testimonials`
+  ADD PRIMARY KEY (`id_testimonials`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -528,7 +557,7 @@ ALTER TABLE `gallery`
 -- AUTO_INCREMENT for table `guides`
 --
 ALTER TABLE `guides`
-  MODIFY `id_guides` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_guides` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `internationaltrip`
@@ -577,6 +606,12 @@ ALTER TABLE `register`
 --
 ALTER TABLE `schedule`
   MODIFY `id_schedule` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT for table `testimonials`
+--
+ALTER TABLE `testimonials`
+  MODIFY `id_testimonials` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
