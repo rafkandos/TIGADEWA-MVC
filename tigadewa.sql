@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 04 Des 2019 pada 12.56
+-- Generation Time: 04 Des 2019 pada 18.30
 -- Versi Server: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -238,11 +238,9 @@ CREATE TABLE `opentrip` (
 
 INSERT INTO `opentrip` (`id_opentrip`, `OtripName`, `overview`, `preparation`, `tripImages`, `include`, `exclude`, `day1`, `day2`, `day3`, `day4`, `day5`, `day6`, `day7`, `day8`, `day9`, `day10`, `day11`, `day12`, `day13`, `day14`, `day15`, `day16`, `day17`, `day18`, `day19`, `day20`, `day21`, `day22`, `day23`, `day24`, `day25`, `day26`, `day27`, `day28`, `day29`, `day30`) VALUES
 (11111, 'biarkan kosong', 'kosong', 'kosong', '', '0', '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(11115, 'asdajh', 'ashdkajh', 'sahdka', 'Y7iG25WmAJ4Cpewr.jpg', 'haitayooo', 'akusingkong', 'askdaj', 'jaskdjsahd', 'khkjsahkjdha', 'hjskadhjsah', 'hkjfhskajhc', 'asjkhkjahs', 'sakdashd', 'asndnandkjas', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-(11116, 'asndjkah', 'askjhdkjah', 'akshdkjh', 'QEdWSM07Glui2hVA.jpg', 'asjkhdkjh', 'askjdhkh', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (22222, 'Trip to Bromo', 'Taman nasional Bromo Tengger Semeru mencakup 2 Gunung yang sangat popular di Indonesia maupun di dunia yakni, Gunung Semeru (tertinggi di Pulau Jawa pada ketinggian 3,676 M dan Gunung Bromo (yang paling populer). <br> <br>\r\n\r\nGunung Semeru juga terkenal dengan sebutan Mahameru (Puncak Gunung Semeru). Merupakan salah satu gunung berapi paling aktif di Indonesia. Apa yang paling menonjol tentang gunung ini adalah fakta bahwa gunung ini meletus secara berkala setiap 20 menit atau lebih, gunung berapi ini mengeluarkan awan besar uap dan asap, kadang-kadang diselingi dengan abu dan batu. Pendakian Gunung Semeru dapat dikategorikan level mudah dan menengah.<br> <br>\r\n\r\nSelain Gunung Semeru, kami dapat menawarkan Anda kunjungan ke Gunung Bromo sebagai tambahan. Gunung Bromo (2.329 m) mudah dikenali karena seluruh puncaknya telah hancur dan kawah di dalamnya terus-menerus menyemburkan asap belerang putih.', 'Pada saat summit attack perjalanan akan sangat melelahkan dan trek sudah mulai sulit dan di dominasi oleh tanjakan, bebatuan , pasir. Di harapkan sebelum mendaki untuk persiapan olahraga dua hingga tiga kali seminggu selama 45 menit sampai satu jam per sesi. Berlari pada rute yang memiliki ketinggian akan jauh lebih baik, atau menggunakan treadmill jika tidak ada medan seperti itu di kota asal Anda. Anda dapat mengubah salah satu sesi lari Anda dalam seminggu dengan bersepeda atau berenang dan terutama yang perlu Anda lakukan juga memanjat tangga. Selain itu, latihan otot sangat disarankan. Perkuat otot tubuh bagian atas dan bawah Anda, juga otot inti. Anda dapat melakukannya di gym atau melakukan push-up, sit-up, pull-up, papan, dll. Anda perlu berlatih 3 bulan sebelum mendaki. Ini akan meningkatkan tingkat keberhasilan dan Keselamatan.', 'FBUQtTJeaMKYwXdV.jpg', 'bantal, guling, perlengkapan mandi, sabun, deterjen', 'ayam goreng, sambal, lalapan, nasi uduk, nasi kuning, kertas minyak', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(22223, 'dasjndkja', 'sajkndkjan', 'skjdnakjn', '3Ye0ENyoFthbgnOc.jpg', 'asndkjan', 'asndkjand', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(22224, 'sadnan', 'nksajndkan', 'jkasndkajsn', '', 'jkasndkjan', 'jskandkjasnd', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(22225, 'asjkdahkdj', 'jksadhakjdh', 'jksahjdah', 'eagXHM2crvDkFAN0.jpg', 'askjdhkajdh', 'ajskdhkjahdad', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(22226, 'asjdashd', 'hkjsahkdh', 'kjsahdkjahd', '', 'ksjahdkjah', 'kjsahkjhd', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -290,7 +288,8 @@ INSERT INTO `pricing` (`id_pricing`, `id_ot`, `id_it`, `id_pt`, `meetingPoint`, 
 (7, NULL, 2, NULL, 'Stasiun Jember', '1.099.000'),
 (8, NULL, NULL, 22222, 'Stasiun Jombang', '1.399.000'),
 (9, NULL, NULL, 22222, 'Stasiun Balikpapan', '1.899.000'),
-(10, 22222, NULL, NULL, 'Stasiun Tangerang', '20.000');
+(10, 22222, NULL, NULL, 'Stasiun Tangerang', '20.000'),
+(11, 22225, NULL, NULL, 'jkashdjh', 'jksahdkhasd');
 
 -- --------------------------------------------------------
 
@@ -381,10 +380,7 @@ CREATE TABLE `register` (
 --
 
 INSERT INTO `register` (`id_register`, `name`, `identityNumber`, `gender`, `region`, `province`, `city`, `fullAddress`, `email`, `teesSize`, `phoneNumber`, `emergencyContact`, `id_schedule`, `id_pricing`, `bookingCode`, `status`, `id_opentrip`, `id_privatetrip`, `id_internationaltrip`) VALUES
-(41, 'mas roni', 'aksdnakj', 'men', 'International', 'prancis', 'paris', 'mt haryono', 'rr@gm.com', 's', '210381', '120381', 7, 3, 'A4VKBCWE37', 'Belum Dibayar', 1, 11111, 11111),
-(61, 'mas anton', '109238', 'men', 'Indonesia', 'Dki Jakarta', 'Kota Jakarta Timur', 'jsaidaiuh', 'w@g.com', 'xxl', '1823918', '12391', 13, 9, 'O1U9VN0FC5', 'Sudah Dibayar', 11111, 1, 11111),
-(63, 'man', '2103891', 'women', 'International', 'Jamaika', 'kelapadua', 'jsaidaiuh', 'w@g.com', 's', '1823918', '213131', 8, 10, 'O538LNDQVZ', 'Belum Dibayar', 1, 11111, 11111),
-(64, 'man', '32131', 'men', 'International', 'Jamaika', 'kelapadua', 'jsaidaiuh', 'w@g.com', 's', '1823918', '31231', 13, 9, 'TOYKDB1CMN', 'Belum Dibayar', 11111, 1, 11111);
+(65, 'asdkhashd', 'ahkdhad', 'men', 'Indonesia', 'Jawa Tengah', 'Kab. Blora', 'sadhahsdk', 'askjhdkajhsd@g.com', 's', '21378', '812363713', 15, 11, 'OC5UNKGMSB', 'Belum Dibayar', 22225, 11111, 11111);
 
 -- --------------------------------------------------------
 
@@ -413,7 +409,8 @@ INSERT INTO `schedule` (`id_schedule`, `scheduleDate`, `ot_id`, `pt_id`, `it_id`
 (11, '10 - 13 Okt 2019', NULL, NULL, 2, 59),
 (12, '26 - 29 Okt 2019', NULL, NULL, 2, 0),
 (13, '10 - 13 Okt 2019', NULL, 22222, NULL, 26),
-(14, '26 - 29 Okt 2019', NULL, 22222, NULL, 0);
+(14, '26 - 29 Okt 2019', NULL, 22222, NULL, 0),
+(15, 'sajdasjkdh', 22225, NULL, NULL, 122);
 
 -- --------------------------------------------------------
 
@@ -575,7 +572,7 @@ ALTER TABLE `merchantdise`
 -- AUTO_INCREMENT for table `opentrip`
 --
 ALTER TABLE `opentrip`
-  MODIFY `id_opentrip` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22225;
+  MODIFY `id_opentrip` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22227;
 
 --
 -- AUTO_INCREMENT for table `partner`
@@ -587,7 +584,7 @@ ALTER TABLE `partner`
 -- AUTO_INCREMENT for table `pricing`
 --
 ALTER TABLE `pricing`
-  MODIFY `id_pricing` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_pricing` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `privatetrip`
@@ -599,13 +596,13 @@ ALTER TABLE `privatetrip`
 -- AUTO_INCREMENT for table `register`
 --
 ALTER TABLE `register`
-  MODIFY `id_register` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `id_register` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
 -- AUTO_INCREMENT for table `schedule`
 --
 ALTER TABLE `schedule`
-  MODIFY `id_schedule` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_schedule` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `testimonials`

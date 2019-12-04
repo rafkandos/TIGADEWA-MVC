@@ -176,11 +176,13 @@
                         ?>
 
                 <?php foreach ( $reg as $r ) { ?>
+
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-block">
                                     <form method="post" action="<?=base_url()?>index.php/_registration/updatePembayaran" class="form-horizontal form-material">
+                                        
                                         <div class="form-group">
                                             <label class="col-md-12 font-weight-bold">Full Name</label>
                                             <div class="col-md-12">
@@ -308,6 +310,7 @@
                                                 <input type="submit" class="btn btn-info font-weight-bold" value="Update Registration">
                                             </div>
                                         </div>
+
                                     </form>
                                 </div>
                             </div>
