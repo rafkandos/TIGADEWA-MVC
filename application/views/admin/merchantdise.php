@@ -220,7 +220,7 @@
                                                                     class="m-t-5 waves-effect waves-dark btn btn-primary">
                                                                     <i class="mdi mdi-grease-pencil"></i> Edit
                                                                 </a>
-                                                                <a href="'.base_url('index.php/_merchantdise/delete/'.$o->id_merchantdise).'" 
+                                                                <a href="'.base_url('index.php/_merchantdise/delete/'.$o->id_merchantdise).'" onclick="return confirm(\'Apakah anda yakin untuk menghapus '.$o->name.'\')"
                                                                     class="m-t-5 waves-effect waves-light btn btn-danger">
                                                                     <i class="mdi mdi-delete"></i> Delete
                                                                 </a>

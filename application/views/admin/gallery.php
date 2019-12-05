@@ -224,7 +224,7 @@
                                                                     class="m-t-5 waves-effect waves-dark btn btn-primary">
                                                                     <i class="mdi mdi-grease-pencil"></i> Edit
                                                                 </a>
-                                                                <a href="'.base_url('index.php/_gallery/delete/'.$o->id_gallery).'" 
+                                                                <a href="'.base_url('index.php/_gallery/delete/'.$o->id_gallery).'" onclick="return confirm(\'Apakah anda yakin untuk menghapus '.$o->tripName.'\')"
                                                                     class="m-t-5 waves-effect waves-light btn btn-danger">
                                                                     <i class="mdi mdi-delete"></i> Delete
                                                                 </a>

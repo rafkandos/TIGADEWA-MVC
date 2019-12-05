@@ -224,10 +224,7 @@
                                                                     class="m-t-5 waves-effect waves-dark btn btn-primary">
                                                                     <i class="mdi mdi-grease-pencil"></i> Edit
                                                                 </a>
-                                                                <a href="'.base_url('index.php/_guides/delete/'.$o->id_guides).'" 
-                                                                    class="m-t-5 waves-effect waves-light btn btn-danger">
-                                                                    <i class="mdi mdi-delete"></i> Delete
-                                                                </a>
+                                                                <a href="'.base_url('index.php/_guides/delete/'.$o->id_guides).'" onclick="return confirm(\'Apakah anda yakin untuk menghapus '.$o->name.'\')" class="btn btn-danger">Delete</a>
                                                                 <a onclick="upload('.$o->id_guides.')" href="#" 
                                                                     data-toggle="modal" data-target="#upload" 
                                                                     class="m-t-5 waves-effect waves-dark btn btn-success">
@@ -382,6 +379,10 @@
 
         function upload(id_guides){
             $("#id_reg").val(id_guides);
+        }
+
+        function infox(id_guides) {
+            
         }
 
         //opentrip

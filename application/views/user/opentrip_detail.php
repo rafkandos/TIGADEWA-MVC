@@ -500,122 +500,140 @@
             </div>
 
             <div id="priceDetailContent" class="container mt-5" style="display: none">
-                <div class="row mt-5">
-                <div class="col-md-10 site-section-heading mb-3 text-center w-border col-md-6 mx-auto">
-                    <h2 class="mb-3">PRICE DETAIL</h2>
-                </div>
-                <div class="container">
-                    <div class="row justify-content-center">
-                    <div class="col-md-10">
-                        <!-- <table class="table table-bordered">
-                            <thead>
-                                <tr class="text-center">
-                                <th scope="col">INCLUDE</th>
-                                <th scope="col">EXCLUDE</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                <td>Transportasi PP dari Stasiun Asal - Stasiun Tujuan</td>
-                                <td>Transportasi dari Kota Asal</td>
-                                </tr>
-                                <tr>
-                                <td>Transportasi Stasiun Tujuan - Stasiun Asal</td>
-                                <td>Makan Selama Perjalanan</td>
-                                </tr>
-                                <tr>
-                                <td>Simaksi Pendakian</td>
-                                <td>Porter Pribadi</td>
-                                </tr>
-                                <tr>
-                                <td>Guide Berlisensi APGI</td>
-                                <td>Surat Kesehatan</td>
-                                </tr>
-                                <tr>
-                                <td>Porter Team</td>
-                                <td>Perlengkapan Pribadi</td>
-                                </tr>
-                                <tr>
-                                <td>Makan Selama Pendakian (Breakfast, Dinner, Summit), Lunch pakai cemilan pribadi</td>
-                                <td>Cemilan dan Air Mineral</td>
-                                </tr>
-                                <tr>
-                                <td>Makan Sebelum Sesudah 2x</td>
-                                <td></td>
-                                </tr>
-                                <tr>
-                                <td>Perlengkapan Makan dan Minum</td>
-                                <td></td>
-                                </tr>
-                                <tr>
-                                <td>T-Shirt Pendakian</td>
-                                <td></td>
-                                </tr>
-                                <tr>
-                                <td>Tenda Kapasitas 4-5 diisi Max 4 Orang</td>
-                                <td></td>
-                                </tr>
-                                <tr>
-                                <td>Alat Masak (Kompor, Nesting, Bahan Bakar)</td>
-                                <td></td>
-                                </tr>
-                                <tr>
-                                <td>Rumah Singgah (Free Wifi)</td>
-                                <td></td>
-                                </tr>
-                                <tr>
-                                <td>Kebersihan Rumah Singgah</td>
-                                <td></td>
-                                </tr>
-                                <tr>
-                                <td>Welcome Drink dan Sop Buah</td>
-                                <td></td>
-                                </tr>
-                                <tr>
-                                <td>Snack Gunung (Pisang Greentea)</td>
-                                <td></td>
-                                </tr>
-                                <tr>
-                                <td>Asuransi TNBTS</td>
-                                <td></td>
-                                </tr>
-                                <tr>
-                                <td>Logistik Team</td>
-                                <td></td>
-                                </tr>
-                                <tr>
-                                <td>First Aid Kid</td>
-                                <td></td>
-                                </tr>
-                                <tr>
-                                <td>Dokumentasi Kegiatan (Jasa Foto Video Minimal 30 Peserta)</td>
-                                <td></td>
-                                </tr>
-                                <tr>
-                                <td>Sertifikat Pendakian (Format Pdf)</td>
-                                <td></td>
-                                </tr>
-                            </tbody>
-                        </table> -->
-                        <p>
-                            <span class="font-weight-bold" style="font-size:20px;">Include : </span>
-                            <span class="pl-2" style="font-size: 18px;">
-                                <?php foreach ($detail as $d ) {
-                                    echo $d->include;
-                                } ?>
-                            </span>
-                        </p>
-                        <p>
-                            <span class="font-weight-bold" style="font-size:20px;">Exclude : </span>
-                            <span class="pl-2" style="font-size: 18px;">
-                                <?php foreach ($detail as $d ) {
-                                    echo $d->exclude;
-                                } ?>
-                            </span>
-                        </p>
+
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 col-md-5">
+                        <!-- INCLUDE -->
+                        <div class="row">
+                            <div class="col-md-10 site-section-heading mb-2 text-center w-border col-md-6 mx-auto">
+                                <h2>INCLUDE</h2>
+                            </div>
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-10 text-center">
+                                        <!-- <table class="table table-bordered">
+                                            <thead>
+                                                <tr class="text-center">
+                                                <th scope="col">INCLUDE</th>
+                                                <th scope="col">EXCLUDE</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                <td>Transportasi PP dari Stasiun Asal - Stasiun Tujuan</td>
+                                                <td>Transportasi dari Kota Asal</td>
+                                                </tr>
+                                                <tr>
+                                                <td>Transportasi Stasiun Tujuan - Stasiun Asal</td>
+                                                <td>Makan Selama Perjalanan</td>
+                                                </tr>
+                                                <tr>
+                                                <td>Simaksi Pendakian</td>
+                                                <td>Porter Pribadi</td>
+                                                </tr>
+                                                <tr>
+                                                <td>Guide Berlisensi APGI</td>
+                                                <td>Surat Kesehatan</td>
+                                                </tr>
+                                                <tr>
+                                                <td>Porter Team</td>
+                                                <td>Perlengkapan Pribadi</td>
+                                                </tr>
+                                                <tr>
+                                                <td>Makan Selama Pendakian (Breakfast, Dinner, Summit), Lunch pakai cemilan pribadi</td>
+                                                <td>Cemilan dan Air Mineral</td>
+                                                </tr>
+                                                <tr>
+                                                <td>Makan Sebelum Sesudah 2x</td>
+                                                <td></td>
+                                                </tr>
+                                                <tr>
+                                                <td>Perlengkapan Makan dan Minum</td>
+                                                <td></td>
+                                                </tr>
+                                                <tr>
+                                                <td>T-Shirt Pendakian</td>
+                                                <td></td>
+                                                </tr>
+                                                <tr>
+                                                <td>Tenda Kapasitas 4-5 diisi Max 4 Orang</td>
+                                                <td></td>
+                                                </tr>
+                                                <tr>
+                                                <td>Alat Masak (Kompor, Nesting, Bahan Bakar)</td>
+                                                <td></td>
+                                                </tr>
+                                                <tr>
+                                                <td>Rumah Singgah (Free Wifi)</td>
+                                                <td></td>
+                                                </tr>
+                                                <tr>
+                                                <td>Kebersihan Rumah Singgah</td>
+                                                <td></td>
+                                                </tr>
+                                                <tr>
+                                                <td>Welcome Drink dan Sop Buah</td>
+                                                <td></td>
+                                                </tr>
+                                                <tr>
+                                                <td>Snack Gunung (Pisang Greentea)</td>
+                                                <td></td>
+                                                </tr>
+                                                <tr>
+                                                <td>Asuransi TNBTS</td>
+                                                <td></td>
+                                                </tr>
+                                                <tr>
+                                                <td>Logistik Team</td>
+                                                <td></td>
+                                                </tr>
+                                                <tr>
+                                                <td>First Aid Kid</td>
+                                                <td></td>
+                                                </tr>
+                                                <tr>
+                                                <td>Dokumentasi Kegiatan (Jasa Foto Video Minimal 30 Peserta)</td>
+                                                <td></td>
+                                                </tr>
+                                                <tr>
+                                                <td>Sertifikat Pendakian (Format Pdf)</td>
+                                                <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table> -->
+                                        <p>
+                                            <span class="font-weight-bold" style="font-size: 18px;">
+                                                <?php foreach ($detail as $d ) {
+                                                    echo $d->include;
+                                                } ?>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="col-sm-12 col-md-5">
+                        <!-- EXCLUDE -->
+                        <div class="row">
+                            <div class="col-md-10 site-section-heading mb-2 text-center w-border col-md-6 mx-auto">
+                                <h2>EXCLUDE</h2>
+                            </div>
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-10 text-center">
+                                        <p>
+                                            <span class="font-weight-bold" style="font-size: 18px;">
+                                                <?php foreach ($detail as $d ) {
+                                                    echo $d->exclude;
+                                                } ?>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
                 </div>
             </div>
 

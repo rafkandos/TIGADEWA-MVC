@@ -52,6 +52,7 @@ class _privatetripmodel extends CI_Model {
   {
     return $this->db->join('privatetrip', 'privatetrip.id_privatetrip = pricing.id_pt')
                     ->where('pricing.id_pt !=', null, false)
+                    ->where('pricing.id_pt !=', 22222)
                     ->get('pricing')->result();
   }
 
@@ -59,6 +60,7 @@ class _privatetripmodel extends CI_Model {
   {
     return $this->db->join('privatetrip', 'privatetrip.id_privatetrip = schedule.pt_id')
                     ->where('schedule.pt_id !=', null, false)
+                    ->where('schedule.pt_id !=', 22222)
                     ->get('schedule')->result();
   }
 

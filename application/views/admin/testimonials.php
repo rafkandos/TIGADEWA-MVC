@@ -222,7 +222,7 @@
                                                                     class="m-t-5 waves-effect waves-dark btn btn-primary">
                                                                     <i class="mdi mdi-grease-pencil"></i> Edit
                                                                 </a>
-                                                                <a href="'.base_url('index.php/_testimonials/delete/'.$o->id_testimonials).'" 
+                                                                <a href="'.base_url('index.php/_testimonials/delete/'.$o->id_testimonials).'" onclick="return confirm(\'Apakah anda yakin untuk menghapus '.$o->name.'\')"
                                                                     class="m-t-5 waves-effect waves-light btn btn-danger">
                                                                     <i class="mdi mdi-delete"></i> Delete
                                                                 </a>

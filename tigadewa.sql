@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 04 Des 2019 pada 18.30
+-- Generation Time: 05 Des 2019 pada 10.50
 -- Versi Server: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -86,8 +86,7 @@ INSERT INTO `gallery` (`id_gallery`, `picture`, `tripDate`, `year`, `tripName`, 
 (2, '9h61AwU248mHdpnN.jpg', '19 - 22 DESEMBER', 2017, 'Gunung Kecil', 'dan tunggulah aku disana memecahkan celengan rinduuuuuukuuuuu.....\r\n\r\nberboncengan denganmu mengelilingi kota menikmati surya perlahan menghilang.\r\n\r\nHingga kejamnya waktu menarik paksa kau dari pelukku lalu kita kembali menabung rasa rindu saling mengirim doa sampai nanti sayangkuuu hehe.'),
 (3, 'x6Fr1eNLOdoiI2Dj.jpg', '23 - 27 JANUARI', 2018, 'Gunung Pendek', 'dan tunggulah aku disana memecahkan celengan rinduuuuuukuuuuu.....\r\n\r\nberboncengan denganmu mengelilingi kota menikmati surya perlahan menghilang.\r\n\r\nHingga kejamnya waktu menarik paksa kau dari pelukku lalu kita kembali menabung rasa rindu saling mengirim doa sampai nanti sayangkuuu hehe.'),
 (4, '1sXCTlbqP7htd3K2.jpg', '04 - 10 MARET', 2018, 'Gunung Panjang', 'dan tunggulah aku disana memecahkan celengan rinduuuuuukuuuuu.....\r\n\r\nberboncengan denganmu mengelilingi kota menikmati surya perlahan menghilang.\r\n\r\nHingga kejamnya waktu menarik paksa kau dari pelukku lalu kita kembali menabung rasa rindu saling mengirim doa sampai nanti sayangkuuu hehe.'),
-(5, '0cJMV4yhCPKDRE3p.jpg', '12 - 15 AGUSTUS', 2019, 'Gunung Rendah', 'dan tunggulah aku disana memecahkan celengan rinduuuuuukuuuuu.....\r\n\r\nberboncengan denganmu mengelilingi kota menikmati surya perlahan menghilang.\r\n\r\nHingga kejamnya waktu menarik paksa kau dari pelukku lalu kita kembali menabung rasa rindu saling mengirim doa sampai nanti sayangkuuu hehe.'),
-(6, 'bXhyITSBKl0jMrF3.jpg', '19 - 23 NOVEMBER', 2019, 'Gunung Tinggi', 'ini adalah gunung bosque');
+(5, '0cJMV4yhCPKDRE3p.jpg', '12 - 15 AGUSTUS', 2019, 'Gunung Rendah', 'dan tunggulah aku disana memecahkan celengan rinduuuuuukuuuuu.....\r\n\r\nberboncengan denganmu mengelilingi kota menikmati surya perlahan menghilang.\r\n\r\nHingga kejamnya waktu menarik paksa kau dari pelukku lalu kita kembali menabung rasa rindu saling mengirim doa sampai nanti sayangkuuu hehe.');
 
 -- --------------------------------------------------------
 
@@ -240,7 +239,8 @@ INSERT INTO `opentrip` (`id_opentrip`, `OtripName`, `overview`, `preparation`, `
 (11111, 'biarkan kosong', 'kosong', 'kosong', '', '0', '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (22222, 'Trip to Bromo', 'Taman nasional Bromo Tengger Semeru mencakup 2 Gunung yang sangat popular di Indonesia maupun di dunia yakni, Gunung Semeru (tertinggi di Pulau Jawa pada ketinggian 3,676 M dan Gunung Bromo (yang paling populer). <br> <br>\r\n\r\nGunung Semeru juga terkenal dengan sebutan Mahameru (Puncak Gunung Semeru). Merupakan salah satu gunung berapi paling aktif di Indonesia. Apa yang paling menonjol tentang gunung ini adalah fakta bahwa gunung ini meletus secara berkala setiap 20 menit atau lebih, gunung berapi ini mengeluarkan awan besar uap dan asap, kadang-kadang diselingi dengan abu dan batu. Pendakian Gunung Semeru dapat dikategorikan level mudah dan menengah.<br> <br>\r\n\r\nSelain Gunung Semeru, kami dapat menawarkan Anda kunjungan ke Gunung Bromo sebagai tambahan. Gunung Bromo (2.329 m) mudah dikenali karena seluruh puncaknya telah hancur dan kawah di dalamnya terus-menerus menyemburkan asap belerang putih.', 'Pada saat summit attack perjalanan akan sangat melelahkan dan trek sudah mulai sulit dan di dominasi oleh tanjakan, bebatuan , pasir. Di harapkan sebelum mendaki untuk persiapan olahraga dua hingga tiga kali seminggu selama 45 menit sampai satu jam per sesi. Berlari pada rute yang memiliki ketinggian akan jauh lebih baik, atau menggunakan treadmill jika tidak ada medan seperti itu di kota asal Anda. Anda dapat mengubah salah satu sesi lari Anda dalam seminggu dengan bersepeda atau berenang dan terutama yang perlu Anda lakukan juga memanjat tangga. Selain itu, latihan otot sangat disarankan. Perkuat otot tubuh bagian atas dan bawah Anda, juga otot inti. Anda dapat melakukannya di gym atau melakukan push-up, sit-up, pull-up, papan, dll. Anda perlu berlatih 3 bulan sebelum mendaki. Ini akan meningkatkan tingkat keberhasilan dan Keselamatan.', 'FBUQtTJeaMKYwXdV.jpg', 'bantal, guling, perlengkapan mandi, sabun, deterjen', 'ayam goreng, sambal, lalapan, nasi uduk, nasi kuning, kertas minyak', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (22225, 'asjkdahkdj', 'jksadhakjdh', 'jksahjdah', 'eagXHM2crvDkFAN0.jpg', 'askjdhkajdh', 'ajskdhkjahdad', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(22226, 'asjdashd', 'hkjsahkdh', 'kjsahdkjahd', '', 'ksjahdkjah', 'kjsahkjhd', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(22226, 'asjdashd', 'hkjsahkdh', 'kjsahdkjahd', '', 'ksjahdkjah', 'kjsahkjhd', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(22227, 'Gunung Panderman', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> <br>\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> <br>\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'jEX4UoscwkqTiRgK.jpg', 'Sandal gunung, backpacker, sarung, tas, jaket, mantel, hape, laptop, kabel, kunci, carrier, gunung, botol bekas, sepatu, celana, dll.', 'Sandal gunung, backpacker, sarung, tas, jaket, mantel, hape, laptop, kabel, kunci, carrier, gunung, botol bekas, sepatu, celana, dll.', 'Camp di pintu masuk gunung panderman', 'Mulai mendaki dan sampai camp di pos 1 Latar Ombo', 'Lanjut mendaki dan sampai camp di pos 2 Watu Gede', 'Mendaki sampai ke puncak dan menikmati poto poto', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -285,11 +285,13 @@ CREATE TABLE `pricing` (
 INSERT INTO `pricing` (`id_pricing`, `id_ot`, `id_it`, `id_pt`, `meetingPoint`, `price`) VALUES
 (3, 22222, NULL, NULL, 'Stasiun Malang', '699.000'),
 (4, 22222, NULL, NULL, 'Stasiun Semarang', '799.000'),
-(7, NULL, 2, NULL, 'Stasiun Jember', '1.099.000'),
 (8, NULL, NULL, 22222, 'Stasiun Jombang', '1.399.000'),
 (9, NULL, NULL, 22222, 'Stasiun Balikpapan', '1.899.000'),
 (10, 22222, NULL, NULL, 'Stasiun Tangerang', '20.000'),
-(11, 22225, NULL, NULL, 'jkashdjh', 'jksahdkhasd');
+(11, 22225, NULL, NULL, 'jkashdjh', 'jksahdkhasd'),
+(12, 22227, NULL, NULL, 'Stasiun Malang', '200.000'),
+(13, 22227, NULL, NULL, 'Stasiun Tangerang', '500.000'),
+(14, 22227, NULL, NULL, 'Stasiun Bandung', '1.000.000');
 
 -- --------------------------------------------------------
 
@@ -380,7 +382,8 @@ CREATE TABLE `register` (
 --
 
 INSERT INTO `register` (`id_register`, `name`, `identityNumber`, `gender`, `region`, `province`, `city`, `fullAddress`, `email`, `teesSize`, `phoneNumber`, `emergencyContact`, `id_schedule`, `id_pricing`, `bookingCode`, `status`, `id_opentrip`, `id_privatetrip`, `id_internationaltrip`) VALUES
-(65, 'asdkhashd', 'ahkdhad', 'men', 'Indonesia', 'Jawa Tengah', 'Kab. Blora', 'sadhahsdk', 'askjhdkajhsd@g.com', 's', '21378', '812363713', 15, 11, 'OC5UNKGMSB', 'Belum Dibayar', 22225, 11111, 11111);
+(66, 'alskdjasjd', 'jsadjad', 'men', 'International', 'asdabsd', 'jhsadgajhgd', 'jashdjhasd', 'w@g.com', 's', '1823918', '13123123123', 15, 11, '52MKA31JLW', 'Belum Dibayar', 22225, 11111, 11111),
+(67, 'ashhjasd', 'sjadahd', 'women', 'International', 'sadsajd', 'asduadh', 'sahdh', 'w@g.com', 's', '1823918', '12312', 15, 11, 'QA6J2SFE7L', 'Belum Dibayar', 22225, 11111, 11111);
 
 -- --------------------------------------------------------
 
@@ -410,7 +413,9 @@ INSERT INTO `schedule` (`id_schedule`, `scheduleDate`, `ot_id`, `pt_id`, `it_id`
 (12, '26 - 29 Okt 2019', NULL, NULL, 2, 0),
 (13, '10 - 13 Okt 2019', NULL, 22222, NULL, 26),
 (14, '26 - 29 Okt 2019', NULL, 22222, NULL, 0),
-(15, 'sajdasjkdh', 22225, NULL, NULL, 122);
+(15, 'sajdasjkdh', 22225, NULL, NULL, 120),
+(16, '12 - 15 Oktober 2019', 22227, NULL, NULL, 12),
+(17, '09 - 12 Desember 2019', 22227, NULL, NULL, 20);
 
 -- --------------------------------------------------------
 
@@ -548,7 +553,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id_gallery` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_gallery` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `guides`
@@ -572,7 +577,7 @@ ALTER TABLE `merchantdise`
 -- AUTO_INCREMENT for table `opentrip`
 --
 ALTER TABLE `opentrip`
-  MODIFY `id_opentrip` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22227;
+  MODIFY `id_opentrip` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22228;
 
 --
 -- AUTO_INCREMENT for table `partner`
@@ -584,7 +589,7 @@ ALTER TABLE `partner`
 -- AUTO_INCREMENT for table `pricing`
 --
 ALTER TABLE `pricing`
-  MODIFY `id_pricing` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_pricing` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `privatetrip`
@@ -596,13 +601,13 @@ ALTER TABLE `privatetrip`
 -- AUTO_INCREMENT for table `register`
 --
 ALTER TABLE `register`
-  MODIFY `id_register` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `id_register` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- AUTO_INCREMENT for table `schedule`
 --
 ALTER TABLE `schedule`
-  MODIFY `id_schedule` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_schedule` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `testimonials`

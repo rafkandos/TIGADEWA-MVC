@@ -226,7 +226,7 @@
                                                                     class="m-t-5 waves-effect waves-dark btn btn-primary">
                                                                     <i class="mdi mdi-grease-pencil"></i> Edit
                                                                 </a>
-                                                                <a href="'.base_url('index.php/_internationaltrip/delete/'.$o->id_internationaltrip).'" 
+                                                                <a href="'.base_url('index.php/_internationaltrip/delete/'.$o->id_internationaltrip).'" onclick="return confirm(\'Apakah anda yakin untuk menghapus '.$o->ItripName.'\')"
                                                                     class="m-t-5 waves-effect waves-light btn btn-danger">
                                                                     <i class="mdi mdi-delete"></i> Delete
                                                                 </a>
@@ -294,7 +294,7 @@
                                                                     class="m-t-5 waves-effect waves-dark btn btn-primary">
                                                                     <i class="mdi mdi-grease-pencil"></i> Edit
                                                                 </a>
-                                                                <a href="'.base_url('index.php/_internationaltrip/deletemp/'.$m->id_pricing).'" 
+                                                                <a href="'.base_url('index.php/_internationaltrip/deletemp/'.$m->id_pricing).'" onclick="return confirm(\'Apakah anda yakin untuk menghapus '.$m->meetingPoint.'\')"
                                                                     class="m-t-5 waves-effect waves-light btn btn-danger">
                                                                     <i class="mdi mdi-delete"></i> Delete
                                                                 </a>
@@ -350,7 +350,7 @@
                                                                     class="m-t-5 waves-effect waves-dark btn btn-primary">
                                                                     <i class="mdi mdi-grease-pencil"></i> Edit
                                                                 </a>
-                                                                <a href="'.base_url('index.php/_internationaltrip/deletesch/'.$m->id_schedule).'" 
+                                                                <a href="'.base_url('index.php/_internationaltrip/deletesch/'.$m->id_schedule).'" onclick="return confirm(\'Apakah anda yakin untuk menghapus '.$m->scheduleDate.'\')"
                                                                     class="m-t-5 waves-effect waves-light btn btn-danger">
                                                                     <i class="mdi mdi-delete"></i> Delete
                                                                 </a>

@@ -221,9 +221,14 @@
                                                         <a href="<?=base_url('index.php/_registration/detail/'.$r->id_register)?>" class="btn btn-warning">
                                                             <i class="mdi mdi-eye"></i> Detail
                                                         </a>
-                                                        <a href="<?=base_url('index.php/_registration/delete/'.$r->id_register)?>" class="btn btn-danger">
+                                                        <!-- <a href="<?=base_url('index.php/_registration/delete/'.$r->id_register)?>"  class="btn btn-danger">
                                                             <i class="mdi mdi-delete"></i> Delete
-                                                        </a>
+                                                        </a> -->
+                                                        <?php
+                                                            echo '
+                                                                <a href="'.base_url('index.php/_registration/delete/'.$r->id_register).'" onclick="return confirm(\'Apakah anda yakin untuk menghapus '.$r->name.'\')" class="btn btn-danger">Delete</a>
+                                                            ';
+                                                        ?>
                                                     </td>
                                                 </tr>
                                             <?php } ?>
