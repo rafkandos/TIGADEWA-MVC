@@ -505,12 +505,12 @@
                     <div class="col-sm-12 col-md-5">
                         <!-- INCLUDE -->
                         <div class="row">
-                            <div class="col-md-10 site-section-heading mb-2 text-center w-border col-md-6 mx-auto">
+                            <div class="col-md-10 site-section-heading mb-3 text-center w-border col-md-6 mx-auto">
                                 <h2>INCLUDE</h2>
                             </div>
                             <div class="container">
                                 <div class="row justify-content-center">
-                                    <div class="col-md-10 text-center">
+                                    <div class="col-md-10">
                                         <!-- <table class="table table-bordered">
                                             <thead>
                                                 <tr class="text-center">
@@ -602,7 +602,7 @@
                                             </tbody>
                                         </table> -->
                                         <p>
-                                            <span class="font-weight-bold" style="font-size: 18px;">
+                                            <span style="font-size: 18px;">
                                                 <?php foreach ($detail as $d ) {
                                                     echo $d->include;
                                                 } ?>
@@ -616,14 +616,14 @@
                     <div class="col-sm-12 col-md-5">
                         <!-- EXCLUDE -->
                         <div class="row">
-                            <div class="col-md-10 site-section-heading mb-2 text-center w-border col-md-6 mx-auto">
+                            <div class="col-md-10 site-section-heading mb-3 text-center w-border col-md-6 mx-auto">
                                 <h2>EXCLUDE</h2>
                             </div>
                             <div class="container">
                                 <div class="row justify-content-center">
-                                    <div class="col-md-10 text-center">
+                                    <div class="col-md-10">
                                         <p>
-                                            <span class="font-weight-bold" style="font-size: 18px;">
+                                            <span style="font-size: 18px;">
                                                 <?php foreach ($detail as $d ) {
                                                     echo $d->exclude;
                                                 } ?>
