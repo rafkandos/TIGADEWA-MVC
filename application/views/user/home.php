@@ -143,24 +143,38 @@
       </div>
     </div>
 
+    
       <div class="container" 
         style="margin-top: -70px;">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
+          <!-- <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          </ol>
+          </ol> -->
           <div class="carousel-inner" 
             style="box-shadow: 0 0 20px -3px rgba(0, 0, 0, 0.9);">
-            <div class="carousel-item active">
-              <img class="d-block w-100" src="<?=base_url()?>assets/images/hiking4.jpg" alt="First slide">
-              <div class="carousel-caption d-none d-md-block">
-                <h1>MOST POPULAR TRIP</h1>
-                <p>Kilimanjaro Mountain (2019), 10 Members</p>
-              </div>
-            </div>
-            <div class="carousel-item">
+            <?php foreach($poptrip as $p) { ?>
+              <?php if($p->id_poptrip == 2):?>
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="<?=base_url()?>assets/uploads/<?php echo $p->picture?>" alt="First slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h1>MOST POPULAR TRIP</h1>
+                    <!-- <p>Kilimanjaro Mountain (2019), 10 Members</p> -->
+                    <p style="font-size: 15pt"><?php echo $p->tripName?> (<?php echo $p->year?>)</p>
+                  </div>
+                </div>
+              <?php else: ?>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="<?=base_url()?>assets/uploads/<?php echo $p->picture?>" alt="First slide">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h1>MOST POPULAR TRIP</h1>
+                    <!-- <p>Kilimanjaro Mountain (2019), 10 Members</p> -->
+                    <p style="font-size: 15pt"><?php echo $p->tripName?> (<?php echo $p->year?>)</p>
+                  </div>
+                </div>
+              <?php endif; ?>
+            <?php } ?>
+            <!-- <div class="carousel-item">
               <img class="d-block w-100" src="<?=base_url()?>assets/images/hiking2.jpg" alt="First slide">
               <div class="carousel-caption d-none d-md-block">
                 <h1>MOST POPULAR TRIP</h1>
@@ -173,7 +187,7 @@
                 <h1>MOST POPULAR TRIP</h1>
                 <p>Papandayan Mountain (2017), 5 Members</p>
               </div>
-            </div>
+            </div> -->
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -185,6 +199,7 @@
           </a>
         </div>
       </div>
+    
 
     <div class="site-section">
       <div class="container">
@@ -197,31 +212,48 @@
         
         <div class="site-block-retro d-block d-md-flex">
 
-          <a href="#" class="col1 unit-9 no-height">
-            <div class="image" style="background-image: url('<?=base_url()?>assets/images/hiking7.jpg');"></div>
-            <div class="unit-9-content">
-              <h2>Panderman Mountain</h2>
-              <span>June 20th, 2019</span>
-            </div>
-          </a>
+          <?php foreach($lastone as $a) { ?>
+            <a href="#" class="col1 unit-9 no-height">
+              <div class="image" style="background-image: url('<?=base_url()?>assets/uploads/<?php echo $a->picture?>');"></div>
+              <div class="unit-9-content">
+                <!-- <h2>Panderman Mountain</h2> -->
+                <h2><?php echo $a->tripName?></h2>
+                <span><?php echo $a->tripDate?>, <?php echo $a->year?></span>
+              </div>
+            </a>
+          <?php } ?>
 
           <div class="col2 ml-auto">
 
-            <a href="#" class="col2-row1 unit-9 no-height">
-              <div class="image" style="background-image: url('<?=base_url()?>assets/images/hiking4.jpg');"></div>
-              <div class="unit-9-content">
-                <h2>Buthak Mountain</h2>
-                <span>August 09th, 2019</span>
-              </div>
-            </a>
+            <?php foreach($lasttu as $b) { ?>
+              <a href="#" class="col2-row1 unit-9 no-height">
+                <div class="image" style="background-image: url('<?=base_url()?>assets/uploads/<?php echo $b->picture?>');"></div>
+                <div class="unit-9-content">
+                  <!-- <h2>Panderman Mountain</h2> -->
+                  <h2><?php echo $b->tripName?></h2>
+                  <span><?php echo $b->tripDate?>, <?php echo $b->year?></span>
+                </div>
+              </a>
+            <?php } ?>
 
-            <a href="#" class="col2-row2 unit-9 no-height">
+            <?php foreach($lasttri as $b) { ?>
+              <a href="#" class="col2-row1 unit-9 no-height">
+                <div class="image" style="background-image: url('<?=base_url()?>assets/uploads/<?php echo $b->picture?>');"></div>
+                <div class="unit-9-content">
+                  <!-- <h2>Panderman Mountain</h2> -->
+                  <h2><?php echo $b->tripName?></h2>
+                  <span><?php echo $b->tripDate?>, <?php echo $b->year?></span>
+                </div>
+              </a>
+            <?php } ?>
+
+            <!-- <a href="#" class="col2-row2 unit-9 no-height">
               <div class="image" style="background-image: url('<?=base_url()?>assets/images/hiking3.jpg');"></div>
               <div class="unit-9-content">
                 <h2>Papandayan Mountain</h2>
                 <span>October 10th, 2019</span>
               </div>
-            </a>
+            </a> -->
 
           </div>
 

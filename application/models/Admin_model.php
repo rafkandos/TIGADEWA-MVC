@@ -37,7 +37,17 @@ class Admin_model extends CI_Model {
   public function getAbout()
   {
     return $this->db->get('about')->result();
-    
+  }
+
+  public function getPopTrip()
+  {
+    return $this->db->join('gallery', 'gallery.id_gallery = popular_trip.gallery_id')
+                    ->get('popular_trip')->result();
+  }
+
+  public function getGallery()
+  {
+    return $this->db->get('gallery')->result();
   }
 
   public function update()
@@ -58,12 +68,68 @@ class Admin_model extends CI_Model {
 	            return false;
 	        } 
     }
+
+  //poptrip
+  public function addpt()
+  {
+    $data = array(
+      'gallery_id'   => $this->input->post('tn')
+    );
+
+    return $this->db->insert('popular_trip', $data);
+
+    if ($this->db->affected_rows() > 0) {
+            return true;
+        } else {
+            return false;
+        } 
+  }
+
+  //poptrip
+  public function updatept()
+  {
+    $data = array(
+     'gallery_id'   => $this->input->post('tn')
+    );
+
+    return $this->db->where('id_poptrip', $this->input->post('id_poptrip'))
+                    ->update('popular_trip', $data);
+    
+
+    if ($this->db->affected_rows() > 0) {
+            return true;
+        } else {
+            return false;
+        } 
+  }
+
+  //poptrip
+  public function delete($id_poptrip)
+  {
+    $this->db->where('id_poptrip', $id_poptrip)
+            ->delete('popular_trip');
+    
+    if ($this->db->affected_rows() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+  }
     
     public function get_id_ot($id_about)
 	  {
 	    return  $this->db->where('id_about', $id_about)
 	                    ->get('about')->row();
 	  }
+
+    //poptrip
+    public function get_id_pt($id_poptrip)
+    {
+      return  $this->db->where('id_poptrip', $id_poptrip)
+                      ->get('popular_trip')->row();
+    }
+
+    
 
   // ------------------------------------------------------------------------
 

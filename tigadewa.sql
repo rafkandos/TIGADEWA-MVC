@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 05 Des 2019 pada 10.50
+-- Generation Time: 13 Des 2019 pada 10.28
 -- Versi Server: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -240,7 +240,7 @@ INSERT INTO `opentrip` (`id_opentrip`, `OtripName`, `overview`, `preparation`, `
 (22222, 'Trip to Bromo', 'Taman nasional Bromo Tengger Semeru mencakup 2 Gunung yang sangat popular di Indonesia maupun di dunia yakni, Gunung Semeru (tertinggi di Pulau Jawa pada ketinggian 3,676 M dan Gunung Bromo (yang paling populer). <br> <br>\r\n\r\nGunung Semeru juga terkenal dengan sebutan Mahameru (Puncak Gunung Semeru). Merupakan salah satu gunung berapi paling aktif di Indonesia. Apa yang paling menonjol tentang gunung ini adalah fakta bahwa gunung ini meletus secara berkala setiap 20 menit atau lebih, gunung berapi ini mengeluarkan awan besar uap dan asap, kadang-kadang diselingi dengan abu dan batu. Pendakian Gunung Semeru dapat dikategorikan level mudah dan menengah.<br> <br>\r\n\r\nSelain Gunung Semeru, kami dapat menawarkan Anda kunjungan ke Gunung Bromo sebagai tambahan. Gunung Bromo (2.329 m) mudah dikenali karena seluruh puncaknya telah hancur dan kawah di dalamnya terus-menerus menyemburkan asap belerang putih.', 'Pada saat summit attack perjalanan akan sangat melelahkan dan trek sudah mulai sulit dan di dominasi oleh tanjakan, bebatuan , pasir. Di harapkan sebelum mendaki untuk persiapan olahraga dua hingga tiga kali seminggu selama 45 menit sampai satu jam per sesi. Berlari pada rute yang memiliki ketinggian akan jauh lebih baik, atau menggunakan treadmill jika tidak ada medan seperti itu di kota asal Anda. Anda dapat mengubah salah satu sesi lari Anda dalam seminggu dengan bersepeda atau berenang dan terutama yang perlu Anda lakukan juga memanjat tangga. Selain itu, latihan otot sangat disarankan. Perkuat otot tubuh bagian atas dan bawah Anda, juga otot inti. Anda dapat melakukannya di gym atau melakukan push-up, sit-up, pull-up, papan, dll. Anda perlu berlatih 3 bulan sebelum mendaki. Ini akan meningkatkan tingkat keberhasilan dan Keselamatan.', 'FBUQtTJeaMKYwXdV.jpg', 'bantal, guling, perlengkapan mandi, sabun, deterjen', 'ayam goreng, sambal, lalapan, nasi uduk, nasi kuning, kertas minyak', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (22225, 'asjkdahkdj', 'jksadhakjdh', 'jksahjdah', 'eagXHM2crvDkFAN0.jpg', 'askjdhkajdh', 'ajskdhkjahdad', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (22226, 'asjdashd', 'hkjsahkdh', 'kjsahdkjahd', '', 'ksjahdkjah', 'kjsahkjhd', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(22227, 'Gunung Panderman', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> <br>\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> <br>\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'jEX4UoscwkqTiRgK.jpg', 'Sandal gunung, backpacker, sarung, tas, jaket, mantel, hape, laptop, kabel, kunci, carrier, gunung, botol bekas, sepatu, celana, dll.', 'Sandal gunung, backpacker, sarung, tas, jaket, mantel, hape, laptop, kabel, kunci, carrier, gunung, botol bekas, sepatu, celana, dll.', 'Camp di pintu masuk gunung panderman', 'Mulai mendaki dan sampai camp di pos 1 Latar Ombo', 'Lanjut mendaki dan sampai camp di pos 2 Watu Gede', 'Mendaki sampai ke puncak dan menikmati poto poto', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+(22227, 'Gunung Panderman', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> <br>\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> <br>\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'jEX4UoscwkqTiRgK.jpg', '<ul>\r\n<li> Sandal gunung dan kawan kawan </li> \r\n<li> Backpacker dan kawan kawan </li> \r\n<li> Sarung dan kawan kawan sekalian </li>\r\n<li> Tas dan kawan kawan sekaligus kasur </li> \r\n</ul>', '<ul>\r\n<li> Sandal gunung dan kawan kawan </li> \r\n<li> Backpacker dan kawan kawan </li> \r\n<li> Sarung dan kawan kawan sekalian </li>\r\n<li> Tas dan kawan kawan sekaligus kasur </li> \r\n</ul>', 'Camp di pintu masuk gunung panderman', 'Mulai mendaki dan sampai camp di pos 1 Latar Ombo', 'Lanjut mendaki dan sampai camp di pos 2 Watu Gede', 'Mendaki sampai ke puncak dan menikmati poto poto', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -262,6 +262,25 @@ INSERT INTO `partner` (`id_partner`, `name`, `photo`) VALUES
 (1, 'Supername', 'logo-product-gameshow.png'),
 (2, 'Apapun', 'rea.png'),
 (4, 'haha', 'dock.png');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `popular_trip`
+--
+
+CREATE TABLE `popular_trip` (
+  `id_poptrip` int(11) NOT NULL,
+  `gallery_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `popular_trip`
+--
+
+INSERT INTO `popular_trip` (`id_poptrip`, `gallery_id`) VALUES
+(2, 1),
+(3, 2);
 
 -- --------------------------------------------------------
 
@@ -493,6 +512,13 @@ ALTER TABLE `partner`
   ADD PRIMARY KEY (`id_partner`);
 
 --
+-- Indexes for table `popular_trip`
+--
+ALTER TABLE `popular_trip`
+  ADD PRIMARY KEY (`id_poptrip`),
+  ADD KEY `id_gallery` (`gallery_id`);
+
+--
 -- Indexes for table `pricing`
 --
 ALTER TABLE `pricing`
@@ -586,6 +612,12 @@ ALTER TABLE `partner`
   MODIFY `id_partner` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `popular_trip`
+--
+ALTER TABLE `popular_trip`
+  MODIFY `id_poptrip` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `pricing`
 --
 ALTER TABLE `pricing`
@@ -618,6 +650,12 @@ ALTER TABLE `testimonials`
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
+
+--
+-- Ketidakleluasaan untuk tabel `popular_trip`
+--
+ALTER TABLE `popular_trip`
+  ADD CONSTRAINT `popular_trip_ibfk_1` FOREIGN KEY (`gallery_id`) REFERENCES `gallery` (`id_gallery`);
 
 --
 -- Ketidakleluasaan untuk tabel `pricing`

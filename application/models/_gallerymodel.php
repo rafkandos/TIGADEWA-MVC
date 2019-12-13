@@ -8,6 +8,25 @@ class _gallerymodel extends CI_Model {
 		return $this->db->get('gallery')->result();
 	}
 
+	public function getFirst()
+	{
+		return $this->db->order_by('id_gallery', 'desc')
+						->get('gallery', 1)
+						->result();
+	}
+
+	public function getSecond()
+	{
+		return $this->db->order_by('id_gallery', 'desc')
+						->get('gallery', 1, 1)->result();
+	}
+
+	public function getThird()
+	{
+		return $this->db->order_by('id_gallery', 'desc')
+						->get('gallery', 1, 2)->result();
+	}
+
 	public function upload()
 	  {
 	    $hai = $this->upload->data('file_name');

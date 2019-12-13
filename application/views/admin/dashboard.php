@@ -234,12 +234,92 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- POPULAR TRIP -->
+                <div class="row">
+                    <!-- column -->
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-block">
+                                <div class="row mb-2">
+                                    <div class="col-md-6">
+                                        <h4 class="card-title text-uppercase">Popular Trip</h4>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a href="#" data-toggle="modal" data-target="#addpt" class="btn waves-effect waves-light btn-warning pull-right">
+                                            <i class="mdi mdi-library-plus"></i> Add Popular Trip
+                                        </a>
+                                        
+                                    </div>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-bordered" id="dtTables">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Popular Trip</th>
+                                                <th>Banner</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        
+                                        <tbody>
+                                            <?php
+                                                foreach ($poptrip as $o ) {
+                                                    if ($o->id_poptrip == 2) {
+                                                        echo '
+                                                            <tr>
+                                                                <td>'.$o->id_poptrip.'</td>
+                                                                <td>'.$o->tripName.'</td>
+                                                                <td><img src="'.base_url('assets/uploads/'.$o->picture).'" style="width: 100px;" alt="img"></td>
+                                                                <td>
+                                                                    <a onclick="editpt('.$o->id_poptrip.')" href="#" 
+                                                                        data-toggle="modal" data-target="#updatept" 
+                                                                        class="m-t-5 waves-effect waves-dark btn btn-primary">
+                                                                        <i class="mdi mdi-grease-pencil"></i> Edit
+                                                                    </a>
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                        ';
+                                                    }
+                                                    else{
+                                                        echo '
+                                                            <tr>
+                                                                <td>'.$o->id_poptrip.'</td>
+                                                                <td>'.$o->tripName.'</td>
+                                                                <td><img src="'.base_url('assets/uploads/'.$o->picture).'" style="width: 100px;" alt="img"></td>
+                                                                <td>
+                                                                    <a onclick="editpt('.$o->id_poptrip.')" href="#" 
+                                                                        data-toggle="modal" data-target="#updatept" 
+                                                                        class="m-t-5 waves-effect waves-dark btn btn-primary">
+                                                                        <i class="mdi mdi-grease-pencil"></i> Edit
+                                                                    </a>
+                                                                    <a href="'.base_url('index.php/Admin/delete/'.$o->id_poptrip).'" onclick="return confirm(\'Apakah anda yakin untuk menghapus '.$o->tripName.'\')"
+                                                                        class="m-t-5 waves-effect waves-light btn btn-danger">
+                                                                        <i class="mdi mdi-delete"></i> Delete
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        ';
+                                                    }
+                                                    
+                                                }
+                                            ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <footer class="footer"> ©2019 </footer>
         </div>
 
     </div>
 
+    <!-- UPDATE ABOUT -->
     <div class="modal fade" id="update" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -264,6 +344,96 @@
                                         <label class="font-weight-bold">Layanan</label>
                                         <textarea rows="5" class="form-control form-control-line" id="layanan" name="layanan"></textarea>
                                         <br><br>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" name="update" class="btn btn-success font-weight-bold" value="SUBMIT">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ADD POPTRIP -->
+    <div class="modal fade" id="addpt" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Popular Trip</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="<?php base_url()?>Admin/addpt" method="post">
+                    <div class="modal-body">
+                        <div class="tab-pane" id="settings" role="tabpanel">
+                            <div class="card-block">
+                                    <div class="form-horizontal form-material form-group">
+                                        <input type="hidden" name="id_opentrip">
+                                        <label class="font-weight-bold">Trip Name</label>
+                                        <select name="tn" class="form-control form-control-line">
+                                            <?php 
+                                                foreach ($gallery as $o) {
+                                                    echo '
+                                                        <option value="'.$o->id_gallery.'">'.$o->tripName.'</option>
+                                                    ';
+                                                }
+                                            ?>
+                                        </select>
+                                        <!-- <input type="text" class="form-control form-control-line" name="tn"> -->
+                                        <!-- <br><br>
+                                        <label class="font-weight-bold">Meeting Point</label>
+                                        <input type="text" class="form-control form-control-line" name="mp">
+                                        <br><br>
+                                        <label class="font-weight-bold">Price</label>
+                                        <input type="text" class="form-control form-control-line" name="pr"> -->
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" name="add" class="btn btn-success font-weight-bold" value="SUBMIT">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- EDIT POPTRIP -->
+    <div class="modal fade" id="updatept" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Popular Trip</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="<?php base_url()?>Admin/updatept" method="post">
+                    <div class="modal-body">
+                        <div class="tab-pane" id="settings" role="tabpanel">
+                            <div class="card-block">
+                                    <div class="form-horizontal form-material form-group">
+                                        <input type="hidden" name="id_poptrip" id="id_poptrip">
+                                        <label class="font-weight-bold">TripName</label>
+                                        <select name="tn" id="tnpt" class="form-control form-control-line">
+                                            <?php 
+                                                foreach ($gallery as $o) {
+                                                    echo '
+                                                        <option value="'.$o->id_gallery.'">'.$o->tripName.'</option>
+                                                    ';
+                                                }
+                                            ?>
+                                        </select>
+                                        <!-- <input type="text" class="form-control form-control-line" name="tn"> -->
+                                        <!-- <br><br>
+                                        <label class="font-weight-bold">Meeting Point</label>
+                                        <input id="mpmp" type="text" class="form-control form-control-line" name="mp">
+                                        <br><br>
+                                        <label class="font-weight-bold">Price</label>
+                                        <input id="prmp" type="text" class="form-control form-control-line" name="pr"> -->
                                     </div>
                             </div>
                         </div>
@@ -308,6 +478,16 @@
                 $('#visi').val(data.visi);
                 $('#misi').val(data.misi);
                 $('#layanan').val(data.layanan);
+            });
+        }
+
+        function editpt(id) {
+            $('#id_poptrip').val();
+            $('#tnpt').val();
+
+            $.getJSON("<?php echo base_url('index.php/Admin/get_id_pt/') ?>"+ id, function(data){
+                $('#id_poptrip').val(data.id_poptrip);
+                $('#tnpt').val(data.gallery_id);
             });
         }
     </script>
