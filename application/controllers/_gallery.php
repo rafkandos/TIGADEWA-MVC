@@ -46,7 +46,7 @@ class _gallery extends CI_Controller {
                     redirect('_gallery');
                 }
                 redirect('_gallery');
-            }      
+            }
 	}
 
 	//opentrip

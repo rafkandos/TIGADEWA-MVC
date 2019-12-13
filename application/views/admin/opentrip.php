@@ -239,6 +239,10 @@
                                                                     class="m-t-5 waves-effect waves-dark btn btn-info">
                                                                     <i class="mdi mdi-eye"></i> Itinerary
                                                                 </a>
+                                                                <a target="_blank" href="'.base_url('index.php/OpenTrip/Detail/'.$o->id_opentrip).'" 
+                                                                    class="m-t-5 waves-effect waves-dark btn btn-secondary">
+                                                                    <i class="mdi mdi-eye"></i> Preview
+                                                                </a>
                                                             </td>
                                                         </tr>
                                                     ';
