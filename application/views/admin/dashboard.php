@@ -210,10 +210,11 @@
                                         <tbody>
                                             <?php
                                                 foreach ($about as $o ) {
+                                                    $limited_word = word_limiter($o->visi,25);
                                                     echo '
                                                         <tr>
                                                             <td>'.$o->id_about.'</td>
-                                                            <td>'.$o->visi.'</td>
+                                                            <td>'.$limited_word.'</td>
                                                             <td>'.$o->misi.'</td>
                                                             <td>'.$o->layanan.'</td>
                                                             <td align="center">

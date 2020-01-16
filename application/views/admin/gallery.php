@@ -210,12 +210,13 @@
                                         <tbody>
                                             <?php
                                                 foreach ($gallery as $o ) {
+                                                    $w1 = word_limiter($o->detail,10);
                                                     echo '
                                                         <tr>
                                                             <td>'.$o->id_gallery.'</td>
                                                             <td>'.$o->tripName.'</td>
                                                             <td>'.$o->tripDate.' '.$o->year.'</td>
-                                                            <td>'.$o->detail.'</td>
+                                                            <td>'.$w1.'</td>
                                                             <td align="center"><img src="'.base_url('assets/uploads/'.$o->picture).'" style="width: 70px;" alt="img"></td>
                                                             
                                                             <td align="center">

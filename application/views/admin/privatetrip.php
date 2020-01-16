@@ -209,14 +209,18 @@
                                         <tbody>
                                             <?php
                                                 foreach ($privatetrip as $o ) {
+                                                    $w1 = word_limiter($o->overview,10);
+                                                    $w2 = word_limiter($o->preparation,10);
+                                                    $w3 = word_limiter($o->include,10);
+                                                    $w4 = word_limiter($o->exclude,10);
                                                     echo '
                                                         <tr>
                                                             <td>'.$o->id_privatetrip.'</td>
                                                             <td>'.$o->PtripName.'</td>
-                                                            <td>'.$o->overview.'</td>
-                                                            <td>'.$o->preparation.'</td>
-                                                            <td>'.$o->include.'</td>
-                                                            <td>'.$o->exclude.'</td>
+                                                            <td>'.$w1.'</td>
+                                                            <td>'.$w2.'</td>
+                                                            <td>'.$w3.'</td>
+                                                            <td>'.$w4.'</td>
                                                             <td align="center"><img src="'.base_url('assets/uploads/'.$o->tripImages).'" style="width: 70px;" alt="img"></td>
                                                             
                                                             <td align="center">
@@ -327,7 +331,7 @@
                                     </div>
                                 </div>
                                 <div class="table-responsive">
-                                    <table class="table table-striped table-bordered" id="dtTablesz">
+                                    <table class="table table-striped table-bordered" id="dtTablesx">
                                         <thead>
                                             <tr>
                                                 <th>#</th>
@@ -692,6 +696,8 @@
 
         $(document).ready( function () {
             $('#dtTables').DataTable();
+            $('#dtTablesz').DataTable();
+            $('#dtTablesx').DataTable();
         } );
 
         function upload(id_privatetrip){

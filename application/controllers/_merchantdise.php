@@ -67,7 +67,7 @@ class _merchantdise extends CI_Controller
         $name = substr(str_shuffle($permitted_chars), 0, 16);
 
             $config['upload_path'] = './assets/uploads/';
-            $config['allowed_types'] = 'gif|jpg|png';
+            $config['allowed_types'] = '*';
             $config['max_size']  = '10000';
             $config['max_width']  = '102400';
 			      $config['max_height']  = '76800';

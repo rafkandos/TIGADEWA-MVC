@@ -107,6 +107,11 @@
                         ';
                     }
                 ?>
+                <br>
+                <div class="text-center">
+                    <a class="btn btn-brown" href="<?=base_url()?>assets/file/kandoscv.pdf" download>
+                    Download Document Briefing</a>
+                </div>
                 <!-- <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
             </div>
             </div>

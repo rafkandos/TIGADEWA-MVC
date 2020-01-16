@@ -70,7 +70,7 @@
                             </div>
                         </div>
 
-					<div class="text-center p-t-45">
+					<!-- <div class="text-center p-t-45">
 						<span class="txt1">
 							Don’t have an account?
 						</span>
@@ -78,7 +78,7 @@
 						<a class="txt2" href="#">
 							Sign Up
 						</a>
-					</div>
+					</div> -->
 				</form>
 			</div>
 		</div>

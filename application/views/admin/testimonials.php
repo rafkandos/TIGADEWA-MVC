@@ -209,11 +209,12 @@
                                         <tbody>
                                             <?php
                                                 foreach ($testi as $o ) {
+                                                    $w1 = word_limiter($o->caption,10);
                                                     echo '
                                                         <tr>
                                                             <td>'.$o->id_testimonials.'</td>
                                                             <td>'.$o->name.'</td>
-                                                            <td>'.$o->caption.'</td>
+                                                            <td>'.$w1.'</td>
                                                             <td align="center"><img src="'.base_url('assets/uploads/'.$o->photo).'" style="width: 70px;" alt="img"></td>
                                                             
                                                             <td align="center">
