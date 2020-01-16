@@ -67,12 +67,15 @@ class _privatetripmodel extends CI_Model {
   //privatetrip
   public function add()
   {
+    $hai = $this->upload->data('file_name');
+
     $data = array(
       'PtripName'       => $this->input->post('tn'), 
       'overview'        => $this->input->post('ov'),
       'preparation'     => $this->input->post('pre'),
       'include'         => $this->input->post('ic'),
-      'exclude'         => $this->input->post('ec')
+      'exclude'         => $this->input->post('ec'),
+      'document'        => $hai
     );
 
     return $this->db->insert('privatetrip', $data);
@@ -123,13 +126,16 @@ class _privatetripmodel extends CI_Model {
   //privatetrip
   public function update()
   {
+    $hai = $this->upload->data('file_name');
+
     $data = array(
       'id_privatetrip'     => $this->input->post('id_privatetrip'),
       'PtripName'       => $this->input->post('tn'), 
       'overview'        => $this->input->post('ov'),
       'preparation'     => $this->input->post('pre'),
       'include'         => $this->input->post('ic'),
-      'exclude'         => $this->input->post('ec')
+      'exclude'         => $this->input->post('ec'),
+      'document'        => $hai
     );
 
     return $this->db->where('id_privatetrip', $this->input->post('id_privatetrip'))

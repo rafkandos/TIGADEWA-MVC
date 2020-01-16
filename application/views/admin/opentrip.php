@@ -380,51 +380,6 @@
         </div>
     </div>
 
-    <div class="modal fade" id="itinerary" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add Trip</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form action="<?php base_url()?>_opentrip/add" method="post">
-                    <div class="modal-body">
-                        <div class="tab-pane" id="settings" role="tabpanel">
-                            <div class="card-block">
-                                    <div class="form-horizontal form-material form-group">
-                                        <input type="hidden" name="id_opentrip">
-                                        <label class="font-weight-bold">TripName</label>
-                                        <input type="text" class="form-control form-control-line" name="tn">
-                                        <br><br>
-                                        <label class="font-weight-bold">Overview</label>
-                                        <textarea rows="5" class="form-control form-control-line" name="ov"></textarea>
-                                        <br><br>
-                                        <!-- 
-                                        <div id="haha">
-                                        </div> -->
-                                        <label class="font-weight-bold">Preparation</label>
-                                        <textarea rows="5" class="form-control form-control-line" name="pre"></textarea>
-                                        <br><br>
-                                        <label class="font-weight-bold">Include</label>
-                                        <textarea rows="5" class="form-control form-control-line" name="ic"></textarea>
-                                        <br><br>
-                                        <label class="font-weight-bold">Exclude</label>
-                                        <textarea rows="5" class="form-control form-control-line" name="ec"></textarea>
-                                        <br><br>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <input type="submit" name="add" class="btn btn-success font-weight-bold" value="SUBMIT">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
     <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -434,7 +389,7 @@
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="<?php base_url()?>_opentrip/add" method="post"  enctype="multipart/form-data">
+                <form action="<?php base_url()?>_opentrip/add" method="post" enctype="multipart/form-data">
                     <div class="modal-body">
                         <div class="tab-pane" id="settings" role="tabpanel">
                             <div class="card-block">
@@ -570,7 +525,7 @@
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="<?php base_url()?>_opentrip/update" method="post">
+                <form action="<?php base_url()?>_opentrip/update" method="post" enctype="multipart/form-data">
                     <div class="modal-body">
                         <div class="tab-pane" id="settings" role="tabpanel">
                             <div class="card-block">
@@ -578,6 +533,9 @@
                                         <input type="hidden" name="id_opentrip" id="id_opentrip">
                                         <label class="font-weight-bold">TripName</label>
                                         <input type="text" class="form-control form-control-line" name="tn" id="tn">
+                                        <br><br>
+                                        <label class="font-weight-bold">Document</label>
+                                        <input type="file" class="form-control form-control-line" name="doc">
                                         <br><br>
                                         <label class="font-weight-bold">Overview</label>
                                         <textarea rows="5" class="form-control form-control-line" name="ov" id="ov"></textarea>

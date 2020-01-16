@@ -160,23 +160,39 @@ class _opentrip extends CI_Controller {
 	public function update()
 	{
 		if ($this->input->post('update')) {
+            $permitted_chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZqwertyuioplkjhgfdsazxcvbnm';
+            $nam = substr(str_shuffle($permitted_chars), 0, 16);
+
+            $config['upload_path'] = './assets/uploads/document/';
+            $config['allowed_types'] = 'pdf|doc|docx';
+            $config['max_size']  = '10000';
+            $config['max_width']  = '102400';
+            $config['max_height']  = '76800';
+            $config['file_name'] = $nam;
+            
+            $this->load->library('upload', $config);
+
             $this->form_validation->set_rules('tn', 'Trip Name', 'trim|required');
             $this->form_validation->set_rules('ov', 'Overview', 'trim|required');
             $this->form_validation->set_rules('pre', 'Prepararation', 'trim|required');
             
-            if ($this->form_validation->run() == true) {
-                if ($this->otm->update() == true) {
-                    $this->session->set_flashdata('notif_sukses', 'Edit Meeting Point Success');
+            if ( !$this->upload->do_upload('doc')){
+                $this->session->set_flashdata('notif_gagal', $this->upload->display_errors());
+                redirect('_opentrip');
+            }
+            else{
+                $update = $this->otm->update();
+                if($update == true){
+                    $this->session->set_flashdata('notif_sukses', 'Edit Trip Success');
                     redirect('_opentrip');
                 } else {
-                    $this->session->set_flashdata('notif_gagal', 'Edit Meeting Point Failure');
+                    $this->session->set_flashdata('notif_gagal', 'Edit Trip Failure');
                     redirect('_opentrip');
                     
                 }
-            } else {
-                $this->session->set_flashdata('notif_gagal', validation_errors());
-                redirect('_opentrip','refresh');   
+                redirect('_opentrip');
             }
+
         } else {
             $this->session->set_flashdata('notif_gagal', validation_errors());
             redirect('_opentrip','refresh');

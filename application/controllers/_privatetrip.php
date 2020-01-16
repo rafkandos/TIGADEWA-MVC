@@ -63,23 +63,39 @@ class _privatetrip extends CI_Controller {
 	public function add()
 	{
 		if ($this->input->post('add')) {
+
+            $permitted_chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZqwertyuioplkjhgfdsazxcvbnm';
+            $nam = substr(str_shuffle($permitted_chars), 0, 16);
+
+            $config['upload_path'] = './assets/uploads/document/';
+            $config['allowed_types'] = 'pdf|doc|docx';
+            $config['max_size']  = '10000';
+            $config['max_width']  = '102400';
+            $config['max_height']  = '76800';
+            $config['file_name'] = $nam;
+            
+            $this->load->library('upload', $config);
+
             $this->form_validation->set_rules('tn', 'Trip Name', 'trim|required');
             $this->form_validation->set_rules('ov', 'Overview', 'trim|required');
             $this->form_validation->set_rules('pre', 'Prepararation', 'trim|required');
             
-            if ($this->form_validation->run() == true) {
-                if ($this->ptm->add() == true) {
+            if ( !$this->upload->do_upload('document')){
+                $this->session->set_flashdata('notif_gagal', $this->upload->display_errors());
+                redirect('_privatetrip');
+            }
+            else{
+                $add = $this->ptm->add();
+                if($add == true){
                     $this->session->set_flashdata('notif_sukses', 'Add Trip Success');
                     redirect('_privatetrip');
                 } else {
                     $this->session->set_flashdata('notif_gagal', 'Add Trip Failure');
                     redirect('_privatetrip');
-                    
                 }
-            } else {
-                $this->session->set_flashdata('notif_gagal', validation_errors());
-                redirect('_privatetrip','refresh');   
+                redirect('_privatetrip');
             }
+
         } else {
             $this->session->set_flashdata('notif_gagal', validation_errors());
             redirect('_privatetrip','refresh');
@@ -144,12 +160,29 @@ class _privatetrip extends CI_Controller {
 	public function update()
 	{
 		if ($this->input->post('update')) {
+            $permitted_chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZqwertyuioplkjhgfdsazxcvbnm';
+            $nam = substr(str_shuffle($permitted_chars), 0, 16);
+
+            $config['upload_path'] = './assets/uploads/document/';
+            $config['allowed_types'] = 'pdf|doc|docx';
+            $config['max_size']  = '10000';
+            $config['max_width']  = '102400';
+            $config['max_height']  = '76800';
+            $config['file_name'] = $nam;
+            
+            $this->load->library('upload', $config);
+
             $this->form_validation->set_rules('tn', 'Trip Name', 'trim|required');
             $this->form_validation->set_rules('ov', 'Overview', 'trim|required');
             $this->form_validation->set_rules('pre', 'Prepararation', 'trim|required');
             
-            if ($this->form_validation->run() == true) {
-                if ($this->ptm->update() == true) {
+            if ( !$this->upload->do_upload('document')){
+                $this->session->set_flashdata('notif_gagal', $this->upload->display_errors());
+                redirect('_privatetrip');
+            }
+            else{
+                $update = $this->ptm->update();
+                if($update == true){
                     $this->session->set_flashdata('notif_sukses', 'Edit Trip Success');
                     redirect('_privatetrip');
                 } else {
@@ -157,10 +190,9 @@ class _privatetrip extends CI_Controller {
                     redirect('_privatetrip');
                     
                 }
-            } else {
-                $this->session->set_flashdata('notif_gagal', validation_errors());
-                redirect('_privatetrip','refresh');   
+                redirect('_privatetrip');
             }
+
         } else {
             $this->session->set_flashdata('notif_gagal', validation_errors());
             redirect('_privatetrip','refresh');

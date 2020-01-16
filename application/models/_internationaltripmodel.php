@@ -65,12 +65,15 @@ class _internationaltripmodel extends CI_Model {
   //internationaltrip
   public function add()
   {
+    $hai = $this->upload->data('file_name');
+
     $data = array(
       'ItripName'       => $this->input->post('tn'), 
       'overview'        => $this->input->post('ov'),
       'preparation'     => $this->input->post('pre'),
       'include'         => $this->input->post('ic'),
-      'exclude'         => $this->input->post('ec')
+      'exclude'         => $this->input->post('ec'),
+      'document'        => $hai
     );
 
     return $this->db->insert('internationaltrip', $data);
@@ -121,13 +124,16 @@ class _internationaltripmodel extends CI_Model {
   //internationaltrip
   public function update()
   {
+    $hai = $this->upload->data('file_name');
+
     $data = array(
       'id_internationaltrip'     => $this->input->post('id_internationaltrip'),
       'ItripName'       => $this->input->post('tn'), 
       'overview'        => $this->input->post('ov'),
       'preparation'     => $this->input->post('pre'),
       'include'         => $this->input->post('ic'),
-      'exclude'         => $this->input->post('ec')
+      'exclude'         => $this->input->post('ec'),
+      'document'        => $hai
     );
 
     return $this->db->where('id_internationaltrip', $this->input->post('id_internationaltrip'))
