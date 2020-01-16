@@ -224,14 +224,15 @@
                                 foreach ($detail as $d) {
                                     echo '
                                         <p style="float: left;">'.$d->overview.'</p>
+                                        <br>
+                                        <div class="text-center">
+                                            <a class="btn btn-brown" href="'.base_url('assets/uploads/document/'.$d->document).'" download>
+                                        Download Document Briefing</a>
+                                        </div>
                                     ';
                                 }
                             ?>
-                            <br>
-                            <div class="text-center">
-                                <a class="btn btn-brown" href="<?=base_url()?>assets/file/kandoscv.pdf" download>
-                            Download Document Briefing</a>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>

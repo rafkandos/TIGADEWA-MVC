@@ -67,12 +67,15 @@ class _opentripmodel extends CI_Model {
   public function add()
   {
 
+    $hai = $this->upload->data('file_name');
+
     $data = array(
       'OtripName'       => $this->input->post('tn'), 
       'overview'        => $this->input->post('ov'),
       'preparation'     => $this->input->post('pre'),
       'include'         => $this->input->post('ic'),
-      'exclude'         => $this->input->post('ec')
+      'exclude'         => $this->input->post('ec'),
+      'document'        => $hai
     );
 
     return $this->db->insert('opentrip', $data);
